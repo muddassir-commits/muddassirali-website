@@ -1551,14 +1551,51 @@ h4 {
   }
 
   section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   .hero {
-    padding: 130px 0 60px;
+    padding: 20px 0 40px;
+  }
+
+  .hero-container {
+    padding-top: 0;
   }
 
   .primary-glow-box {
     padding: 80px 20px;
+  }
+}
+
+/* Dedicated Screen-Size Fixes for Smart Phones */
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    margin-bottom: 25px;
+  }
+
+  .hero-form {
+    padding: 25px 20px;
+  }
+
+  .input-group input, 
+  .input-group textarea {
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+
+  .bento-box {
+    padding: 25px;
   }
 }
