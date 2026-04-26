@@ -323,3 +323,66 @@ document.addEventListener("DOMContentLoaded", () => {
   setupLeadForm('footer-lead-form');
 });
 
+/* --- GA4 Advanced Event Tracking --- */
+document.addEventListener("DOMContentLoaded", function () {
+  // Safe sender wrapper to avoid errors if gtag isn't loaded or adblock is on
+  function sendGAEvent(eventName, params) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, params);
+    }
+  }
+
+  // 1 & 2. Click Tracking (Delegated Event Listener on Body)
+  // This captures dynamic and static elements cleanly without duplication
+  document.body.addEventListener("click", function (e) {
+    const target = e.target.closest("a, button");
+    if (!target) return; // Exit if not a link or button
+
+    const textStr = (target.innerText || "").toLowerCase().trim();
+    const hrefStr = (target.getAttribute("href") || "").toLowerCase().trim();
+    
+    // EVENT 1: Book Call Checks
+    const isBookCall = textStr.includes("book a call") || 
+                       textStr.includes("strategy call") || 
+                       textStr.includes("implementation call") || 
+                       textStr.includes("book an implementation call") ||
+                       hrefStr.includes("calendly") || 
+                       hrefStr.includes("booking");
+
+    if (isBookCall) {
+      sendGAEvent('book_call_click', {
+        event_category: 'engagement',
+        event_label: 'Book Call CTA',
+        value: 1
+      });
+      return; // Prevent triggering both events on a single multi-purpose button
+    }
+
+    // EVENT 2: WhatsApp Checks
+    const isWhatsApp = hrefStr.includes("wa.me") || 
+                       hrefStr.includes("whatsapp") || 
+                       textStr.includes("whatsapp");
+
+    if (isWhatsApp) {
+      sendGAEvent('whatsapp_click', {
+        event_category: 'engagement',
+        event_label: 'WhatsApp Contact',
+        value: 1
+      });
+    }
+  });
+
+  // 3. Form Submission Tracking
+  // Hooks into existing forms without preventing default actions
+  const leadForms = document.querySelectorAll("form");
+  leadForms.forEach(form => {
+    form.addEventListener("submit", function () {
+      sendGAEvent('form_submit', {
+        event_category: 'lead',
+        event_label: 'Website Form Submission',
+        value: 1
+      });
+    });
+  });
+});
+
