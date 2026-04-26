@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muddassir Ali | Systems-Driven Growth Strategist</title>
+  <meta name="description" content="I build lead generation & automation systems that turn traffic into qualified sales opportunities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8JPSTDLC1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W8JPSTDLC1');
+  </script>
+</head>
+<body>
+  
+  <!-- Global Ambient Network Layer (Canvas Motion Graphics) -->
+  <div class="noise-overlay"></div>
+  <canvas id="ambient-particles" class="ambient-layer"></canvas>
+  
+  <!-- Custom Cursor System -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="logo magnetic-target">Muddassir Ali.</div>
+      <div class="nav-links">
+        <a href="#system" class="magnetic-target">The System</a>
+        <a href="#capabilities" class="magnetic-target">Capabilities</a>
+        <a href="#experience" class="magnetic-target">Experience</a>
+      </div>
+      <a href="#contact" class="btn btn-primary btn-sm magnetic-target">Book a Call</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 1. HERO SECTION (Level 1 Motion) -->
+    <section class="hero" id="hero">
+      <div class="container hero-container">
+        <!-- LEFT: Text Block -->
+        <div class="hero-content">
+          <div class="badge hero-el">System-Driven Growth Operator</div>
+          <h1 class="hero-title">
+            <div class="hero-line"><span class="hero-word">I Build Lead Generation</span></div>
+            <div class="hero-line"><span class="hero-word">& Automation Systems</span></div>
+            <div class="hero-line"><span class="hero-word">That Turn Traffic Into</span></div>
+            <div class="hero-line"><span class="hero-word"><span class="highlight">Qualified Sales</span></span></div>
+          </h1>
+          <p class="hero-subtitle hero-el">Helping real estate, healthcare, and service businesses generate, manage, and convert leads using structured systems.</p>
+        </div>
+
+        <!-- RIGHT: Form Card -->
+        <div class="hero-form-wrapper hero-el interactable">
+          <div class="hero-form tilt-card">
+            <h3>Optimize Your Pipeline</h3>
+            <p>Ready to scale? Drop your details below.</p>
+            <form id="hero-lead-form">
+              <div class="input-group">
+                <input type="text" name="name" placeholder="Name" required />
+              </div>
+              <div class="input-group">
+                <input type="email" name="email" placeholder="Email Address" required />
+              </div>
+              <div class="input-group">
+                <textarea name="message" placeholder="What do you need help with?" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full magnetic-target">Get Free Strategy Insight</button>
+              <div class="form-status" style="display: none; margin-top: 15px; font-size: 0.9rem; text-align: center; color: var(--accent-amber);"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PROOF / METRICS -->
+    <section class="proof" id="proof">
+      <div class="container proof-container bento-grid">
+        <div class="bento-box metric-box interactable tilt-card">
+          <div class="metric-value"><span class="counter" data-target="47">0</span>+</div>
+          <div class="metric-label">Inquiries Generated in 27 Days</div>
+          <div class="metric-desc">Proven rapid lead acquisition models</div>
+        </div>
+        <div class="bento-box metric-box interactable tilt-card">
+          <div class="metric-value"><span class="counter" data-target="17">0</span>+</div>
+          <div class="metric-label">Batches Trained</div>
+          <div class="metric-desc">Educating the next wave of digital operators</div>
+        </div>
+        <div class="bento-box metric-box outline-box interactable tilt-card">
+          <div class="metric-value icon-value"><i data-lucide="layers" class="icon-accent"></i> Multi-Industry</div>
+          <div class="metric-label">Real Estate, Healthcare, Services</div>
+          <div class="metric-desc">Adaptable systems across diverse niches</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE SYSTEM (GSAP Scroll Activated & Protected Flex) -->
+    <section class="system" id="system">
+      <div class="container">
+        <div class="section-header reveal-group">
+          <h2>The Engine Behind The Growth</h2>
+          <p>I don't just run ads. I architect complete lead generation ecosystems.</p>
+        </div>
+        
+        <div class="system-flow interactable">
+          <div class="flow-step" id="step-1">
+            <div class="step-icon"><i data-lucide="megaphone"></i></div>
+            <h4>Ads & Outreach</h4>
+            <p>Targeted traffic generation</p>
+          </div>
+          <div class="flow-arrow"><div class="arrow-line"></div></div>
+          <div class="flow-step" id="step-2">
+            <div class="step-icon"><i data-lucide="filter"></i></div>
+            <h4>Lead Capture</h4>
+            <p>Optimized funnels</p>
+          </div>
+          <div class="flow-arrow"><div class="arrow-line"></div></div>
+          <div class="flow-step" id="step-3">
+            <div class="step-icon"><i data-lucide="database"></i></div>
+            <h4>CRM Routing</h4>
+            <p>Data centralization</p>
+          </div>
+          <div class="flow-arrow"><div class="arrow-line"></div></div>
+          <div class="flow-step" id="step-4">
+            <div class="step-icon"><i data-lucide="zap"></i></div>
+            <h4>Automation (n8n)</h4>
+            <p>Seamless handoffs</p>
+          </div>
+          <div class="flow-arrow"><div class="arrow-line"></div></div>
+          <div class="flow-step" id="step-5">
+            <div class="step-icon"><i data-lucide="phone-call"></i></div>
+            <h4>Qualified Sales</h4>
+            <p>Closing the loop</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CAPABILITIES (Global Tilt 3D Mount) -->
+    <section class="capabilities" id="capabilities">
+      <div class="container">
+        <div class="section-header reveal-group">
+          <h2>Capabilities & Scope</h2>
+          <p>End-to-end implementation focusing on actionable revenue.</p>
+        </div>
+        <div class="capabilities-grid bento-grid">
+          <div class="bento-box capability-card interactable tilt-card">
+            <i data-lucide="target" class="card-icon"></i>
+            <h3>Lead Generation</h3>
+            <p>Meta Ads, Instagram campaigns, and high-volume outbound outreach systems.</p>
+          </div>
+          <div class="bento-box capability-card active-card interactable tilt-card">
+            <i data-lucide="workflow" class="card-icon"></i>
+            <h3>Automation & Systems</h3>
+            <p>n8n workflows, CRM setup, lead routing, and WhatsApp automations.</p>
+          </div>
+          <div class="bento-box capability-card interactable tilt-card">
+            <i data-lucide="bar-chart-2" class="card-icon"></i>
+            <h3>Conversion Systems</h3>
+            <p>Robust follow-ups, pipeline management, and lead nurturing sequences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. OPERATOR INSIGHT -->
+    <section class="insight" id="insight">
+      <div class="container insight-container">
+        <div class="insight-content interactable outline-box tilt-card">
+          <h2>Growth Requires Systems, <span class="text-accent">Not Isolated Tactics</span></h2>
+          <div class="insight-statements">
+            <div class="statement reveal-group">
+              <i data-lucide="alert-circle" class="accent-icon"></i>
+              <p>Most businesses generate leads but <span class="text-accent">fail entirely to convert them</span> due to operational gaps.</p>
+            </div>
+            <div class="statement reveal-group">
+              <i data-lucide="x-octagon" class="accent-icon"></i>
+              <p>Without structured follow-up systems, ad spend is <span class="text-accent">effectively wasted.</span></p>
+            </div>
+            <div class="statement reveal-group">
+              <i data-lucide="check-circle-2" class="accent-icon"></i>
+              <p>A systematic approach guarantees tracking, proper nurturing, and <span class="text-accent">higher ROI.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EXPERIENCE / AUTHORITY (Center-Split Timeline Construction) -->
+    <section class="experience" id="experience">
+      <div class="container">
+        <div class="section-header reveal-group text-center-wrap">
+          <h2>Execution & Experience</h2>
+          <p>Real-world operators build real-world systems.</p>
+        </div>
+        <div class="timeline">
+          <!-- Item 1 (Left) -->
+          <div class="timeline-item reveal-group">
+            <div class="timeline-content bento-box interactable tilt-card">
+              <div class="timeline-meta">Founder</div>
+              <h3>Veloxis Global</h3>
+              <p>Digital Marketing & AI Automation agency delivering high-ticket systems.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+          <!-- Item 2 (Right) -->
+          <div class="timeline-item reveal-group">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content bento-box interactable tilt-card">
+              <div class="timeline-meta">Trainer & Mentor</div>
+              <h3>Digital Marketing Trainer</h3>
+              <p>Educated and trained 17+ batches of professionals and students.</p>
+            </div>
+          </div>
+          <!-- Item 3 (Left) -->
+          <div class="timeline-item reveal-group">
+            <div class="timeline-content bento-box interactable tilt-card">
+              <div class="timeline-meta">Consultant</div>
+              <h3>B2B & B2C Strategy</h3>
+              <p>Deep experience mapping sales flows, outreach cadences, and automation pipelines.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CASE STUDIES (Tilt Engine Restored) -->
+    <section class="case-studies" id="case-studies">
+      <div class="container">
+        <div class="section-header reveal-group">
+          <h2>Proof of Work</h2>
+        </div>
+        <div class="cases-grid">
+          <div class="case-card bento-box interactable tilt-card">
+            <div class="case-hover-overlay colored-overlay"></div>
+            <div class="case-info">
+              <div class="case-tag">Real Estate Ecosystem</div>
+              <h3>47 Inquiries in 27 Days</h3>
+              <div class="case-details">
+                <strong>Problem:</strong> Lack of qualified flow.<br>
+                <strong>Approach:</strong> Meta Ads + automated WhatsApp routing.<br>
+                <strong class="text-accent">Result:</strong> Consistent, trackable pipeline generation.
+              </div>
+            </div>
+          </div>
+          <div class="case-card bento-box interactable tilt-card">
+            <div class="case-hover-overlay colored-overlay"></div>
+            <div class="case-info">
+              <div class="case-tag">Brand Positioning</div>
+              <h3>Premium Candle Brand</h3>
+              <div class="case-details">
+                <strong>Problem:</strong> Unknown brand, low sales.<br>
+                <strong>Approach:</strong> Visual storytelling & targeted outreach.<br>
+                <strong class="text-accent">Result:</strong> Rapid market penetration.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. DUAL PATH -->
+    <section class="dual-path" id="mentor">
+      <div class="container dual-container">
+        <div class="path-panel primary-path bento-box interactable tilt-card dual-lift">
+          <div class="path-content">
+            <h3>Work With Me</h3>
+            <p>For businesses seeking to overhaul lead generation, CRM implementation, and automation workflows.</p>
+            <a href="#contact" class="btn btn-primary magnetic-target">Book an Implementation Call</a>
+          </div>
+        </div>
+        <div class="path-panel secondary-path bento-box interactable tilt-card dual-lift">
+          <div class="path-content">
+            <h3>Learn My Systems</h3>
+            <p>For individuals and operators who want to master digital marketing, systems, and AI automation.</p>
+            <a href="https://mentorship.muddassirali.com" target="_blank" class="btn btn-secondary magnetic-target">Join the Mentorship</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- 9. TOOLS BENTO GRID (Visible Matrix Support) -->
+    <section class="tools" id="tools">
+      <div class="container">
+        <div class="section-header reveal-group">
+          <h2>The Tech Stack</h2>
+          <p>Modern tools integrated into autonomous workflows.</p>
+        </div>
+        <div class="bento-grid stack-grid">
+          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="facebook"></i> <span class="text-inner">Meta Ads</span></div>
+          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="table"></i> <span class="text-inner">Google Sheets</span></div>
+          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="workflow"></i> <span class="text-inner">n8n</span></div>
+          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="linkedin"></i> <span class="text-inner">LinkedIn Outreach</span></div>
+          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="message-circle"></i> <span class="text-inner">WhatsApp Automations</span></div>
+          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="pen-tool"></i> <span class="text-inner">Canva / AI Tools</span></div>
+          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="box"></i> <span class="text-inner">HubSpot</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FINAL CTA / CONTACT (Signature Sequence) -->
+    <section class="contact" id="contact">
+      <div class="container contact-container bento-box interactable primary-glow-box tilt-card">
+        <div class="footer-glow"></div>
+        <div class="contact-header">
+          <h2>Let's Architect Your Growth</h2>
+          <p>Ready to deploy systems that scale? Book a strategy call directly or drop a message.</p>
+        </div>
+        
+        <div class="footer-form-wrapper" style="max-width: 500px; margin: 0 auto 40px auto; text-align: left;">
+          <div class="hero-form tilt-card" style="box-shadow: 0 40px 80px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.08);">
+            <h3>Optimize Your Pipeline</h3>
+            <p style="text-align: left; margin-bottom: 24px; color: var(--text-muted);">Ready to scale? Drop your details below.</p>
+            <form id="footer-lead-form">
+              <div class="input-group">
+                <input type="text" name="name" placeholder="Name" required />
+              </div>
+              <div class="input-group">
+                <input type="email" name="email" placeholder="Email Address" required />
+              </div>
+              <div class="input-group">
+                <textarea name="message" placeholder="What do you need help with?" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full magnetic-target">Get Free Strategy Insight</button>
+              <div class="form-status" style="display: none; margin-top: 15px; font-size: 0.9rem; text-align: center; color: var(--accent-amber);"></div>
+            </form>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a href="https://wa.me/918887620727?text=Hi%20Muddassir,%20I%20want%20to%20optimize%20my%20pipeline" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large magnetic-target"><i data-lucide="message-square"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="copy">© 2026 Muddassir Ali. Designed for structured growth.</div>
+      <div class="footer-links">
+        <a href="#hero" class="magnetic-target">Back to Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
