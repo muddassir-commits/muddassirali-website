@@ -1596,6 +1596,80 @@ h4 {
   }
 
   .bento-box {
-    padding: 25px;
+    padding: 22px;
+  }
+
+  .insight-content {
+    padding: 30px 20px;
+  }
+
+  .insight-content h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .statement {
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .statement p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .case-details {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Increase top clearance completely for the hero section to solve the overlapping logo issue */
+  .hero {
+    padding: 130px 0 40px;
+  }
+
+  /* Redesign Engine Flow to be Vertical Rows on very small screens instead of tight pillars */
+  .system-flow {
+    padding: 30px 15px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .flow-step {
+    flex-direction: row;
+    text-align: left;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03); /* slight resting background */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .step-icon {
+    margin-bottom: 0;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .step-icon i {
+    width: 20px;
+    height: 20px;
+  }
+
+  .flow-step h4 {
+    margin-bottom: 4px;
+    font-size: 1.05rem;
+  }
+
+  .flow-step p {
+    font-size: 0.85rem;
+  }
+
+  .flow-arrow {
+    display: none; /* Flow arrows look chaotic on vertical lists, disabling for pure cleanliness */
+  }
+
+  .path-panel {
+    padding: 30px 22px;
   }
 }
