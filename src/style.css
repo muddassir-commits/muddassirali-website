@@ -1599,6 +1599,14 @@ h4 {
     padding: 22px;
   }
 
+  .case-card.bento-box {
+    padding: 0;
+  }
+
+  .case-info {
+    padding: 25px 20px;
+  }
+
   .insight-content {
     padding: 30px 20px;
   }
