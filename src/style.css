@@ -1555,11 +1555,11 @@ h4 {
   }
 
   .hero {
-    padding: 20px 0 40px;
+    padding: 90px 0 40px;
   }
 
   .hero-container {
-    padding-top: 0;
+    padding-top: 10px;
   }
 
   .primary-glow-box {
