@@ -257,6 +257,20 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // --------------------------------------------------------
+  // 6. STICKY CTA VISIBILITY
+  // --------------------------------------------------------
+  const stickyCta = document.getElementById('sticky-cta');
+  if (stickyCta) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 800) {
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+    }, { passive: true });
+  }
 });
 
 /* --- Lead Generation Form Integration (n8n Webhook) --- */
@@ -368,6 +382,17 @@ document.addEventListener("DOMContentLoaded", function () {
         event_category: 'engagement',
         event_label: 'WhatsApp Contact',
         value: 1
+      });
+      return;
+    }
+
+    // EVENT 3: Veloxis Click Tracking
+    const isVeloxis = hrefStr.includes("veloxisglobal.com");
+    if (isVeloxis) {
+      sendGAEvent('veloxis_click', {
+        event_category: 'outbound',
+        event_label: 'Veloxis Global System Link',
+        destination_url: hrefStr
       });
     }
   });

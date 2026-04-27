@@ -129,6 +129,10 @@ section {
   color: var(--accent-amber);
 }
 
+.text-success {
+  color: #25D366;
+}
+
 .icon-accent {
   color: var(--accent-purple);
 }
@@ -513,6 +517,52 @@ i[data-lucide]::after {
   max-width: 540px;
 }
 
+.trust-strip {
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trust-strip::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--accent-amber);
+  opacity: 0.6;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  opacity: 0.6;
+  z-index: 5;
+}
+
+.scroll-dot {
+  width: 4px;
+  height: 4px;
+  background: var(--text-main);
+  border-radius: 50%;
+  animation: scrollAnim 2s infinite;
+}
+
+@keyframes scrollAnim {
+  0% { transform: translateY(0); opacity: 0; }
+  50% { transform: translateY(10px); opacity: 1; }
+  100% { transform: translateY(20px); opacity: 0; }
+}
+
 /* HERO FORM CARD (Crucial Focus) */
 .hero-form-wrapper {
   width: 100%;
@@ -557,6 +607,31 @@ i[data-lucide]::after {
   color: var(--text-muted);
   font-size: 0.95rem;
   margin-bottom: 24px;
+}
+
+.urgency-line {
+  font-size: 0.85rem;
+  color: var(--accent-amber);
+  margin-bottom: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.micro-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.whatsapp-prompt {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 15px;
+  display: block;
 }
 
 .input-group {
@@ -620,10 +695,40 @@ i[data-lucide]::after {
 }
 
 .metric-box.interactable:hover {
-  border-color: rgba(139, 92, 246, 0.3);
+  border-color: rgba(139, 92, 246, 0.4);
   transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
+}
+
+.metric-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.metric-box:hover::after {
+  opacity: 1;
+}
+
+.proof-context {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.proof-cta {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .metric-value {
@@ -1679,5 +1784,129 @@ h4 {
 
   .path-panel {
     padding: 30px 22px;
+  }
+}
+/* --- STICKY CTA --- */
+.sticky-cta {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.sticky-cta.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .sticky-cta {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+  }
+  .sticky-cta .btn {
+    width: 100%;
+  }
+}
+
+/* --- TRUST LAYER SECTION --- */
+.trust-layer {
+  background: rgba(139, 92, 246, 0.03);
+}
+
+.trust-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.trust-point {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: transform 0.4s;
+}
+
+.trust-point:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.trust-point i {
+  margin-bottom: 20px;
+  color: var(--accent-amber);
+}
+
+.trust-point h4 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.trust-point p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .trust-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- MICRO CASE STUDIES --- */
+.micro-cases {
+  padding-top: 0;
+}
+
+.micro-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.micro-case-card {
+  padding: 24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.micro-case-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.micro-case-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 auto;
+}
+
+.veloxis-note {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.veloxis-note a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .micro-cases-grid {
+    grid-template-columns: 1fr;
   }
 }
