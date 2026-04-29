@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   createIcons({ icons });
 
   // --------------------------------------------------------
-  // 1. CANVAS MOTION GRAPHICS (Network Nodes Engine)
+  // 1. CANVAS MOTION GRAPHICS (Fluid Plasma Engine)
   // --------------------------------------------------------
   const canvas = document.getElementById("ambient-particles");
   const ctx = canvas.getContext("2d");
@@ -30,29 +30,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
   class Node {
     constructor() {
+      this.init();
+    }
+    init() {
       this.x = Math.random() * w;
       this.y = Math.random() * h;
-      this.vx = (Math.random() - 0.5) * 0.5;
-      this.vy = (Math.random() - 0.5) * 0.5;
+      this.vx = (Math.random() - 0.5) * 0.4;
+      this.vy = (Math.random() - 0.5) * 0.4;
       this.size = Math.random() * 2 + 1;
+      this.color = Math.random() > 0.5 ? "rgba(139, 92, 246, 0.3)" : "rgba(59, 130, 246, 0.3)";
     }
     update() {
       this.x += this.vx;
       this.y += this.vy;
+
+      // Mouse Attraction
+      const dx = mouseX - this.x;
+      const dy = mouseY - this.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 200) {
+        this.x += dx * 0.01;
+        this.y += dy * 0.01;
+      }
+
       if (this.x < 0 || this.x > w) this.vx *= -1;
       if (this.y < 0 || this.y > h) this.vy *= -1;
     }
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(139, 92, 246, 0.4)";
+      ctx.fillStyle = this.color;
       ctx.fill();
     }
   }
 
   const initNetwork = () => {
     particles = [];
-    const count = window.innerWidth < 768 ? 40 : 100;
+    const count = window.innerWidth < 768 ? 30 : 80;
     for (let i = 0; i < count; i++) {
       particles.push(new Node());
     }
@@ -65,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ctx.clearRect(0, 0, w, h);
 
-    // Draw Nodes and Connecting Lines
+    // Draw Connections with Pulse effect
     for (let i = 0; i < particles.length; i++) {
       particles[i].update();
       particles[i].draw();
@@ -75,10 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const dy = particles[i].y - particles[j].y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < 120) {
+        if (distance < 150) {
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(139, 92, 246, ${0.15 - distance / 120})`;
-          ctx.lineWidth = 1.5;
+          const opacity = (1 - distance / 150) * 0.2;
+          ctx.strokeStyle = `rgba(139, 92, 246, ${opacity})`;
+          ctx.lineWidth = 1;
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
           ctx.stroke();
@@ -91,12 +106,25 @@ document.addEventListener("DOMContentLoaded", () => {
   resizeCanvas();
   initNetwork();
 
-  // Disable canvas on heavily mobile environments to save battery, else run
   if (window.matchMedia("(pointer: fine)").matches) {
     requestAnimationFrame(renderNetwork);
   } else {
     canvas.style.display = "none";
   }
+
+  // --------------------------------------------------------
+  // 1.1 BENTO BOX GLOW TRACKING
+  // --------------------------------------------------------
+  const boxes = document.querySelectorAll('.bento-box');
+  boxes.forEach(box => {
+    box.addEventListener('mousemove', (e) => {
+      const rect = box.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      box.style.setProperty('--mouse-x', `${x}%`);
+      box.style.setProperty('--mouse-y', `${y}%`);
+    });
+  });
 
   // --------------------------------------------------------
   // 2. NAVBAR SCROLL EFFECT
@@ -121,9 +149,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroEls = gsap.utils.toArray('.hero-el');
   gsap.to(heroEls, { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power2.out", delay: 0.1 });
 
-  // Headline Text Splitting (Simulated without SplitText plugin)
+  // Headline Text Splitting (Cinematic Reveal)
   const heroWords = gsap.utils.toArray('.hero-word');
-  gsap.to(heroWords, { y: 0, opacity: 1, duration: 0.7, stagger: 0.12, ease: "back.out(1.2)" });
+  gsap.fromTo(heroWords, 
+    { y: 100, opacity: 0, rotateX: -45 }, 
+    { y: 0, opacity: 1, rotateX: 0, duration: 1.2, stagger: 0.1, ease: "power4.out", delay: 0.2 }
+  );
+
+  // Parallax on Scroll for Hero elements
+  gsap.to('.hero-content', {
+    y: 100,
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true
+    }
+  });
 
   // -- LEVEL 2: SYSTEM FLOW SHOWCASE
   const flowSteps = gsap.utils.toArray('.flow-step');
@@ -259,19 +301,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --------------------------------------------------------
-  // 6. STICKY CTA VISIBILITY
+  // 6. STICKY CTA & POPUP VISIBILITY
   // --------------------------------------------------------
   const stickyCta = document.getElementById('sticky-cta');
-  if (stickyCta) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 800) {
-        stickyCta.classList.add('visible');
-      } else {
-        stickyCta.classList.remove('visible');
-      }
-    }, { passive: true });
+  const strategyPopup = document.getElementById('strategy-popup');
+  const closePopup = document.getElementById('close-popup');
+  let popupShown = false;
+
+  const showPopup = () => {
+    if (!popupShown) {
+      strategyPopup.classList.add('visible');
+      popupShown = true;
+    }
+  };
+
+  if (closePopup) {
+    closePopup.addEventListener('click', () => {
+      strategyPopup.classList.remove('visible');
+    });
   }
+
+  window.addEventListener('scroll', () => {
+    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    
+    // Sticky CTA
+    if (window.scrollY > 800) {
+      stickyCta.classList.add('visible');
+    } else {
+      stickyCta.classList.remove('visible');
+    }
+
+    // Trigger Popup at 40% scroll
+    if (scrollPercent > 40) {
+      showPopup();
+    }
+  }, { passive: true });
+
+  // Fallback: Trigger Popup after 45 seconds
+  setTimeout(showPopup, 45000);
 });
+
 
 /* --- Lead Generation Form Integration (n8n Webhook) --- */
 // NOTE: Make sure your n8n Webhook Node is set to:

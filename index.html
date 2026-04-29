@@ -79,6 +79,13 @@
   <div class="noise-overlay"></div>
   <canvas id="ambient-particles" class="ambient-layer"></canvas>
   
+  <!-- Floating Ambient Shapes -->
+  <div class="ambient-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  
   <!-- Custom Cursor System -->
   <div class="cursor-dot" id="cursor-dot"></div>
   <div class="cursor-trail" id="cursor-trail"></div>
@@ -484,6 +491,18 @@
     <!-- STICKY CTA -->
     <div class="sticky-cta" id="sticky-cta">
       <a href="#contact" class="btn btn-primary magnetic-target">Book a Strategy Call</a>
+    </div>
+
+    <!-- STRATEGY POPUP (Exit Intent / Scroll Triggered) -->
+    <div class="strategy-popup" id="strategy-popup">
+      <div class="popup-overlay"></div>
+      <div class="popup-content bento-box interactable tilt-card">
+        <button class="close-popup" id="close-popup"><i data-lucide="x"></i></button>
+        <div class="badge">Limited Availability</div>
+        <h3>Ready to optimize your lead flow?</h3>
+        <p>I'm currently opening 2 slots for a deep-dive systems audit. Get a roadmap for your growth engine in 30 minutes.</p>
+        <a href="#contact" class="btn btn-primary btn-full magnetic-target" id="popup-cta">Claim Your Audit →</a>
+      </div>
     </div>
   </main>
 
