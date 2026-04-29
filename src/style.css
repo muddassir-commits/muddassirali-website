@@ -243,6 +243,46 @@ i[data-lucide]::after {
   filter: blur(160px);
 }
 
+.geo-accent {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.geo-1 {
+  top: 15%;
+  right: 5%;
+  animation: rotateShape 60s linear infinite;
+}
+
+.geo-2 {
+  bottom: 20%;
+  left: 5%;
+  animation: pulseShape 10s ease-in-out infinite alternate;
+}
+
+.geo-grid {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(rgba(139, 92, 246, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+}
+
+@keyframes rotateShape {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseShape {
+  from { transform: scale(1); opacity: 0.2; }
+  to { transform: scale(1.2); opacity: 0.5; }
+}
+
 @keyframes floatOrb {
   0% {
     transform: translate(0, 0) scale(1) rotate(0deg);
@@ -1925,6 +1965,12 @@ h4 {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.sticky-cta.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {

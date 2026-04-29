@@ -363,10 +363,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener('scroll', () => {
     const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const footerTop = document.querySelector('footer').offsetTop;
     
     // Sticky CTA
     if (window.scrollY > 800) {
-      stickyCta.classList.add('visible');
+      if (window.scrollY + window.innerHeight > footerTop) {
+        stickyCta.classList.add('hidden');
+      } else {
+        stickyCta.classList.remove('hidden');
+        stickyCta.classList.add('visible');
+      }
     } else {
       stickyCta.classList.remove('visible');
     }
@@ -376,6 +382,40 @@ document.addEventListener("DOMContentLoaded", () => {
       showPopup();
     }
   }, { passive: true });
+
+  // --------------------------------------------------------
+  // 7. RANDOM AMBIENT ANIMATIONS
+  // --------------------------------------------------------
+  gsap.to('.geo-1', {
+    y: 200,
+    scrollTrigger: {
+      trigger: 'body',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1
+    }
+  });
+
+  gsap.to('.geo-2', {
+    y: -300,
+    scrollTrigger: {
+      trigger: 'body',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1.5
+    }
+  });
+
+  gsap.to('.geo-grid', {
+    y: 100,
+    rotation: 15,
+    scrollTrigger: {
+      trigger: 'body',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 2
+    }
+  });
 
   // Fallback: Trigger Popup after 45 seconds
   setTimeout(showPopup, 45000);
