@@ -1853,9 +1853,31 @@ h4 {
     margin-bottom: 25px;
   }
 
-  .hero-form {
-    padding: 25px 20px;
-  }
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.radio-option:has(input:checked) {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+}
+
+.radio-option input {
+  width: auto;
+  margin: 0;
+  accent-color: var(--accent-purple);
+}
 
   .input-group input, 
   .input-group textarea {

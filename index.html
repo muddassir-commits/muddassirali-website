@@ -524,6 +524,22 @@
               <div class="input-group">
                 <input type="email" name="email" placeholder="Email Address" required />
               </div>
+              
+              <!-- SERVICE SELECTION -->
+              <div class="input-group" style="margin-bottom: 25px;">
+                <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">What can I help you with?</label>
+                <div style="display: flex; gap: 15px;">
+                  <label class="radio-option">
+                    <input type="radio" name="service" value="general" checked>
+                    <span>General Inquiry</span>
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="service" value="audit" id="audit-radio">
+                    <span>Strategy Audit</span>
+                  </label>
+                </div>
+              </div>
+
               <div class="input-group">
                 <textarea name="message" placeholder="What’s your biggest growth challenge right now?" rows="3" required></textarea>
               </div>
@@ -533,29 +549,6 @@
               </div>
               <button type="submit" class="btn btn-primary btn-full magnetic-target">Book a Strategy Call</button>
               <div class="micro-text">No pressure. Just clarity.</div>
-              <div class="form-status" style="display: none; margin-top: 15px; font-size: 0.9rem; text-align: center; color: var(--accent-amber);"></div>
-            </form>
-          </div>
-        </div>
-        
-        <!-- NEW: Dedicated Strategy Audit Form (Target for Popup) -->
-        <div id="audit-form" class="reveal-group footer-form-wrapper" style="max-width: 500px; margin: 60px auto; text-align: left;">
-          <div class="hero-form tilt-card" style="box-shadow: 0 40px 80px rgba(139, 92, 246, 0.3); border: 1px solid var(--accent-purple);">
-            <div class="badge" style="margin-bottom: 10px;">Exclusive Audit</div>
-            <h3>Claim Your Strategy Audit</h3>
-            <p style="text-align: left; margin-bottom: 24px; color: var(--text-muted);">Fill this out to get your custom growth roadmap.</p>
-            <form id="audit-lead-form">
-              <input type="hidden" name="source" value="Strategy Popup Audit">
-              <div class="input-group">
-                <input type="text" name="name" placeholder="Name" required />
-              </div>
-              <div class="input-group">
-                <input type="email" name="email" placeholder="Email Address" required />
-              </div>
-              <div class="input-group">
-                <textarea name="challenge" placeholder="What is your #1 goal for the next 90 days?" rows="3" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full magnetic-target">Get My Audit Roadmap →</button>
               <div class="form-status" style="display: none; margin-top: 15px; font-size: 0.9rem; text-align: center; color: var(--accent-amber);"></div>
             </form>
           </div>
@@ -581,7 +574,7 @@
         <div class="badge">Limited Availability</div>
         <h3>Ready to optimize your lead flow?</h3>
         <p>I'm currently opening 2 slots for a deep-dive systems audit. Get a roadmap for your growth engine in 30 minutes.</p>
-        <a href="#audit-form" class="btn btn-primary btn-full magnetic-target" id="popup-cta">Claim Your Audit →</a>
+        <a href="#contact" class="btn btn-primary btn-full magnetic-target" id="popup-cta">Claim Your Audit →</a>
       </div>
     </div>
   </main>

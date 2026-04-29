@@ -359,7 +359,13 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   if (closePopup) closePopup.addEventListener('click', hidePopup);
-  if (popupCta) popupCta.addEventListener('click', hidePopup);
+  if (popupCta) {
+    popupCta.addEventListener('click', () => {
+      hidePopup();
+      const auditRadio = document.getElementById('audit-radio');
+      if (auditRadio) auditRadio.checked = true;
+    });
+  }
 
   window.addEventListener('scroll', () => {
     const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
