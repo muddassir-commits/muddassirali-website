@@ -480,10 +480,11 @@ function setupLeadForm(formId) {
   });
 }
 
-// Initialize webhook routing for both top and bottom forms
+// Initialize webhook routing for all lead forms
 document.addEventListener("DOMContentLoaded", () => {
   setupLeadForm('hero-lead-form');
   setupLeadForm('footer-lead-form');
+  setupLeadForm('audit-lead-form');
 });
 
 /* --- GA4 Advanced Event Tracking --- */
