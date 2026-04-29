@@ -362,8 +362,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (popupCta) {
     popupCta.addEventListener('click', () => {
       hidePopup();
-      const auditRadio = document.getElementById('audit-radio');
-      if (auditRadio) auditRadio.checked = true;
+      const footerToggle = document.getElementById('footer-service-toggle');
+      if (footerToggle) footerToggle.checked = true;
     });
   }
 

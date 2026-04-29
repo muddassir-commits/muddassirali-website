@@ -133,7 +133,7 @@
         <div class="hero-form-wrapper hero-el interactable">
           <div class="hero-form tilt-card">
             <h3>Optimize Your Pipeline</h3>
-            <p>Ready to scale? Drop your details below.</p>
+            <p style="text-align: left; margin-bottom: 24px; color: var(--text-muted);">Ready to scale? Drop your details below.</p>
             <form id="hero-lead-form">
               <div class="input-group">
                 <input type="text" name="name" placeholder="Name" required />
@@ -141,15 +141,30 @@
               <div class="input-group">
                 <input type="email" name="email" placeholder="Email Address" required />
               </div>
+
+              <!-- PREMIUM SERVICE TOGGLE -->
+              <div class="service-toggle-wrapper">
+                <div class="toggle-labels">
+                  <span class="toggle-label label-general">General</span>
+                  <span class="toggle-label label-audit">Strategy Audit</span>
+                </div>
+                <div class="toggle-container">
+                  <input type="checkbox" id="hero-service-toggle" class="toggle-input" name="service_type">
+                  <label for="hero-service-toggle" class="toggle-slider">
+                    <div class="toggle-glow-pill"></div>
+                  </label>
+                </div>
+              </div>
+
               <div class="input-group">
                 <textarea name="message" placeholder="What’s your biggest growth challenge right now?" rows="3" required></textarea>
               </div>
-              <div class="urgency-line hero-el">
+              <div class="urgency-line">
                 <i data-lucide="clock" style="width: 14px; height: 14px;"></i>
                 Get clarity on your growth system in 15 minutes
               </div>
-              <button type="submit" class="btn btn-primary btn-full magnetic-target">Get Free Strategy Insight</button>
-              <div class="micro-text hero-el">No fluff. Just actionable insights.</div>
+              <button type="submit" class="btn btn-primary btn-full magnetic-target">Book a Strategy Call</button>
+              <div class="micro-text">No pressure. Just clarity.</div>
               <div class="form-status" style="display: none; margin-top: 15px; font-size: 0.9rem; text-align: center; color: var(--accent-amber);"></div>
             </form>
           </div>
@@ -525,17 +540,16 @@
                 <input type="email" name="email" placeholder="Email Address" required />
               </div>
               
-              <!-- SERVICE SELECTION -->
-              <div class="input-group" style="margin-bottom: 25px;">
-                <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">What can I help you with?</label>
-                <div style="display: flex; gap: 15px;">
-                  <label class="radio-option">
-                    <input type="radio" name="service" value="general" checked>
-                    <span>General Inquiry</span>
-                  </label>
-                  <label class="radio-option">
-                    <input type="radio" name="service" value="audit" id="audit-radio">
-                    <span>Strategy Audit</span>
+              <!-- PREMIUM SERVICE TOGGLE -->
+              <div class="service-toggle-wrapper">
+                <div class="toggle-labels">
+                  <span class="toggle-label label-general">General</span>
+                  <span class="toggle-label label-audit">Strategy Audit</span>
+                </div>
+                <div class="toggle-container">
+                  <input type="checkbox" id="footer-service-toggle" class="toggle-input" name="service_type">
+                  <label for="footer-service-toggle" class="toggle-slider">
+                    <div class="toggle-glow-pill"></div>
                   </label>
                 </div>
               </div>
