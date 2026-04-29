@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://muddassirali.com/</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://muddassirali.com/og-image.png</image:loc>
-      <image:title>Muddassir Ali | Systems-Driven Growth Strategist</image:title>
-      <image:caption>Lead Generation and Automation Systems for Real Estate and Healthcare</image:caption>
+      <image:title>Muddassir Ali - Growth & Automation Systems</image:title>
+      <image:caption>Visualizing high-ticket lead generation systems and n8n automation workflows by Muddassir Ali.</image:caption>
     </image:image>
   </url>
 </urlset>

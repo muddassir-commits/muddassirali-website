@@ -2092,9 +2092,93 @@ h4 {
   font-size: 0.95rem;
 }
 
+/* --- ENHANCED SEO FOOTER --- */
+footer {
+  padding: 80px 0 40px;
+  background: rgba(5, 7, 12, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 60px;
+}
+
+.footer-branding .logo {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.footer-branding p {
+  color: var(--text-muted);
+  max-width: 320px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 80px;
+}
+
+.footer-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent-purple);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.footer-group a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.footer-group a:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
-  .trust-points {
+  .footer-content {
     grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-branding p {
+    max-width: 100%;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
