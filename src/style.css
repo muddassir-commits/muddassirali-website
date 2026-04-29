@@ -1853,19 +1853,18 @@ h4 {
     margin-bottom: 25px;
   }
 
-/* --- PREMIUM SERVICE TOGGLE (BULLETPROOF) --- */
+/* --- PREMIUM SERVICE TOGGLE (STABILITY MODE) --- */
 .service-toggle-wrapper {
-  margin: 20px 0 35px;
+  margin: 25px 0 35px;
   width: 100%;
   position: relative;
-  z-index: 10;
 }
 
 .toggle-labels {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   padding: 0 5px;
 }
 
@@ -1875,37 +1874,20 @@ h4 {
   color: var(--text-dim);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  pointer-events: none; /* Let the track handle clicks */
   transition: all 0.4s ease;
-}
-
-.toggle-track-container {
-  position: relative;
-  width: 100%;
-  height: 48px;
-}
-
-.toggle-input {
-  position: absolute;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  z-index: 5;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  top: 0;
+  pointer-events: none;
 }
 
 .toggle-track {
-  position: absolute;
-  inset: 0;
+  display: block;
+  width: 100%;
+  height: 48px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   padding: 4px;
-  pointer-events: none; /* Let input handle click */
+  cursor: pointer;
+  position: relative;
   box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -1918,20 +1900,27 @@ h4 {
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Logic */
+/* HIDDEN INPUT LOGIC */
+.toggle-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Animation & Highlighting */
 .toggle-input:checked ~ .toggle-track .toggle-pill {
   transform: translateX(100%);
   background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
   box-shadow: 0 0 25px rgba(6, 182, 212, 0.4);
 }
 
-/* Active Label Highlighting */
-.service-toggle-wrapper:has(.toggle-input:not(:checked)) .label-general {
+.toggle-input:not(:checked) ~ .toggle-labels .label-general {
   color: #fff;
   text-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
 }
 
-.service-toggle-wrapper:has(.toggle-input:checked) .label-audit {
+.toggle-input:checked ~ .toggle-labels .label-audit {
   color: #fff;
   text-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
 }
