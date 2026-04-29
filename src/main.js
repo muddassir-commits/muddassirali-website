@@ -127,6 +127,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --------------------------------------------------------
+  // 1.2 HERO GLOW FOLLOW
+  // --------------------------------------------------------
+  const heroContainer = document.querySelector('.hero-container');
+  const heroGlow = document.getElementById('hero-glow-follow');
+  
+  if (heroContainer && heroGlow) {
+    heroContainer.addEventListener('mousemove', (e) => {
+      const rect = heroContainer.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      gsap.to(heroGlow, { x, y, duration: 0.6, ease: "power2.out" });
+    });
+  }
+
+  // --------------------------------------------------------
   // 2. NAVBAR SCROLL EFFECT
   // --------------------------------------------------------
   const navbar = document.getElementById("navbar");
@@ -210,6 +225,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // -- LEVEL 5: TIMELINE SCROLL SYNC
+  const timelineItems = document.querySelectorAll('.timeline-scroll-target');
+  timelineItems.forEach((item) => {
+    const dot = item.querySelector('.timeline-dot');
+    const content = item.querySelector('.timeline-content');
+    
+    ScrollTrigger.create({
+      trigger: item,
+      start: "top 60%",
+      end: "bottom 40%",
+      onEnter: () => {
+        dot?.classList.add('active');
+        gsap.to(content, { x: 0, opacity: 1, duration: 0.8, ease: "power2.out" });
+      },
+      onLeaveBack: () => {
+        dot?.classList.remove('active');
+      }
+    });
+  });
+
   // --------------------------------------------------------
   // 4. GLOBAL 3D TILT ENGINE (Capabilities, Tech, Cases)
   // --------------------------------------------------------
@@ -219,9 +254,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
+      
+      const tiltFactor = parseFloat(getComputedStyle(card).getPropertyValue('--tilt-factor')) || 1;
+      
       gsap.to(card, {
-        rotationY: x / 25,
-        rotationX: -y / 25,
+        rotationY: (x / 25) * tiltFactor,
+        rotationX: (-y / 25) * tiltFactor,
         transformPerspective: 1000,
         ease: "power2.out",
         duration: 0.4
@@ -306,6 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const stickyCta = document.getElementById('sticky-cta');
   const strategyPopup = document.getElementById('strategy-popup');
   const closePopup = document.getElementById('close-popup');
+  const popupCta = document.getElementById('popup-cta');
   let popupShown = false;
 
   const showPopup = () => {
@@ -315,11 +354,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  if (closePopup) {
-    closePopup.addEventListener('click', () => {
-      strategyPopup.classList.remove('visible');
-    });
-  }
+  const hidePopup = () => {
+    strategyPopup.classList.remove('visible');
+  };
+
+  if (closePopup) closePopup.addEventListener('click', hidePopup);
+  if (popupCta) popupCta.addEventListener('click', hidePopup);
 
   window.addEventListener('scroll', () => {
     const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;

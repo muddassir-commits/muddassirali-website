@@ -106,6 +106,9 @@
     <!-- 1. HERO SECTION (Level 1 Motion) -->
     <section class="hero" id="hero">
       <div class="container hero-container">
+        <!-- Mouse Reactive Glow Layer -->
+        <div class="hero-glow-follow" id="hero-glow-follow"></div>
+        
         <!-- LEFT: Text Block -->
         <div class="hero-content">
           <div class="badge hero-el">Expert Lead Generation & Automation Systems</div>
@@ -343,7 +346,7 @@
         </div>
         <div class="timeline">
           <!-- Item 1 (Left) -->
-          <div class="timeline-item reveal-group">
+          <div class="timeline-item reveal-group timeline-scroll-target">
             <div class="timeline-content bento-box interactable tilt-card">
               <div class="timeline-meta">Founder</div>
               <h3>Veloxis Global</h3>
@@ -352,7 +355,7 @@
             <div class="timeline-dot"></div>
           </div>
           <!-- Item 2 (Right) -->
-          <div class="timeline-item reveal-group">
+          <div class="timeline-item reveal-group timeline-scroll-target">
             <div class="timeline-dot"></div>
             <div class="timeline-content bento-box interactable tilt-card">
               <div class="timeline-meta">Trainer & Mentor</div>
@@ -361,7 +364,7 @@
             </div>
           </div>
           <!-- Item 3 (Left) -->
-          <div class="timeline-item reveal-group">
+          <div class="timeline-item reveal-group timeline-scroll-target">
             <div class="timeline-content bento-box interactable tilt-card">
               <div class="timeline-meta">Consultant</div>
               <h3>B2B & B2C Strategy</h3>
@@ -436,13 +439,62 @@
           <p>Modern tools integrated into autonomous workflows.</p>
         </div>
         <div class="bento-grid stack-grid">
-          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="facebook"></i> <span class="text-inner">Meta Ads</span></div>
-          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="table"></i> <span class="text-inner">Google Sheets</span></div>
-          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="workflow"></i> <span class="text-inner">n8n</span></div>
-          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="linkedin"></i> <span class="text-inner">LinkedIn Outreach</span></div>
-          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="message-circle"></i> <span class="text-inner">WhatsApp Automations</span></div>
-          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="pen-tool"></i> <span class="text-inner">Canva / AI Tools</span></div>
-          <div class="bento-box tool-box interactable tilt-card float-hover"><i data-lucide="box"></i> <span class="text-inner">HubSpot</span></div>
+          <div class="bento-box tool-box interactable tilt-card float-hover">
+            <div class="tool-main"><i data-lucide="facebook"></i> <span class="text-inner">Meta Ads</span></div>
+            <ul class="tool-features">
+              <li>• Precision audience targeting</li>
+              <li>• Automated retargeting funnels</li>
+              <li>• Lowest cost-per-acquisition</li>
+            </ul>
+          </div>
+          <div class="bento-box tool-box interactable tilt-card float-hover">
+            <div class="tool-main"><i data-lucide="table"></i> <span class="text-inner">Google Sheets</span></div>
+            <ul class="tool-features">
+              <li>• Real-time lead tracking</li>
+              <li>• Seamless data centralization</li>
+              <li>• Client-ready dashboards</li>
+            </ul>
+          </div>
+          <div class="bento-box tool-box interactable tilt-card float-hover">
+            <div class="tool-main"><i data-lucide="workflow"></i> <span class="text-inner">n8n</span></div>
+            <ul class="tool-features">
+              <li>• Zero-leakage lead routing</li>
+              <li>• 24/7 autonomous operations</li>
+              <li>• Complex multi-app syncing</li>
+            </ul>
+          </div>
+          <div class="bento-box tool-box interactable tilt-card float-hover">
+            <div class="tool-main"><i data-lucide="linkedin"></i> <span class="text-inner">LinkedIn Outreach</span></div>
+            <ul class="tool-features">
+              <li>• High-ticket B2B targeting</li>
+              <li>• Relationship-first automation</li>
+              <li>• Decision-maker access</li>
+            </ul>
+          </div>
+          <div class="bento-box tool-box interactable tilt-card float-hover">
+            <div class="tool-main"><i data-lucide="message-circle"></i> <span class="text-inner">WhatsApp Automations</span></div>
+            <ul class="tool-features">
+              <li>• Instant response (under 60s)</li>
+              <li>• 98% open rates for alerts</li>
+              <li>• Automated nurture cadences</li>
+            </ul>
+          </div>
+          <div class="bento-box tool-box interactable tilt-card float-hover">
+            <div class="tool-main"><i data-lucide="pen-tool"></i> <span class="text-inner">Canva / AI Tools</span></div>
+            <ul class="tool-features">
+              <li>• Premium visual storytelling</li>
+              <li>• Rapid content production</li>
+              <li>• Brand-consistent assets</li>
+            </ul>
+          </div>
+          <div class="bento-box tool-box interactable tilt-card float-hover">
+            <div class="tool-main"><i data-lucide="box"></i> <span class="text-inner">HubSpot</span></div>
+            <ul class="tool-features">
+              <li>• End-to-end CRM management</li>
+              <li>• Detailed sales forecasting</li>
+              <li>• Automated pipeline stages</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -510,7 +562,7 @@
     <div class="container footer-content">
       <div class="copy">© 2026 Muddassir Ali. Designed for structured growth.</div>
       <div class="footer-links">
-        <a href="#hero" class="magnetic-target">Back to Top</a>
+        <a href="#hero" class="magnetic-target" id="back-to-top">Back to Top</a>
       </div>
     </div>
   </footer>
