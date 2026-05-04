@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Past Projects | Muddassir Ali</title>
+  <meta name="description" content="A showcase of high-performance lead generation systems and automation projects built by Muddassir Ali." />
+  
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://muddassirali.com/projects.html" />
+  <meta property="og:site_name" content="Muddassir Ali Portfolio" />
+  <meta property="og:title" content="Past Projects | Muddassir Ali" />
+  <meta property="og:description" content="Explore high-performance lead generation systems and automation workflows built for scale." />
+  <meta property="og:image" content="https://muddassirali.com/og-image.png" />
+  <meta name="theme-color" content="#030509" />
+</head>
+<body>
+  
+  <div class="noise-overlay"></div>
+  <canvas id="ambient-particles" class="ambient-layer"></canvas>
+  
+  <div class="ambient-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="geo-grid geo-3"></div>
+  </div>
+  
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-container">
+      <a href="/" class="logo magnetic-target">Muddassir Ali.</a>
+      <div class="nav-links">
+        <a href="/#system" class="magnetic-target">The System</a>
+        <a href="/#capabilities" class="magnetic-target">Capabilities</a>
+        <a href="/projects.html" class="magnetic-target active" style="color: var(--text-main);">Past Projects</a>
+      </div>
+      <a href="/#contact" class="btn btn-primary btn-sm magnetic-target" aria-label="Book a Growth Strategy Call">Book a Call</a>
+    </div>
+  </nav>
+
+  <main style="padding-top: 150px;">
+    <section class="portfolio-hero">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge">Portfolio</div>
+          <h1 class="hero-title">Selected <span class="highlight">Projects.</span></h1>
+          <p>A collection of high-ticket lead generation systems, automation workflows, and digital products designed for scale.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-list-section">
+      <div class="container">
+        <div class="portfolio-list">
+          <!-- Project 1 -->
+          <div class="portfolio-item interactable magnetic-target" data-img="/demo_website_thumbnail_1777870388995.png">
+            <div class="project-info">
+              <span class="project-category">Real Estate & Automation</span>
+              <h2 class="project-name">Veloxis Prime System</h2>
+            </div>
+            <div class="project-action">
+              <span class="view-project">View System →</span>
+            </div>
+          </div>
+
+          <!-- Project 2 (Placeholder) -->
+          <div class="portfolio-item interactable magnetic-target" data-img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800">
+            <div class="project-info">
+              <span class="project-category">Healthcare Lead Gen</span>
+              <h2 class="project-name">MediFlow Automations</h2>
+            </div>
+            <div class="project-action">
+              <span class="view-project">View System →</span>
+            </div>
+          </div>
+
+          <!-- Project 3 (Placeholder) -->
+          <div class="portfolio-item interactable magnetic-target" data-img="https://images.unsplash.com/photo-1551288049-bbbda5366392?auto=format&fit=crop&q=80&w=800">
+            <div class="project-info">
+              <span class="project-category">B2B SaaS Strategy</span>
+              <h2 class="project-name">GrowthEngine AI</h2>
+            </div>
+            <div class="project-action">
+              <span class="view-project">View System →</span>
+            </div>
+          </div>
+
+          <!-- Project 4 (Placeholder) -->
+          <div class="portfolio-item interactable magnetic-target" data-img="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800">
+            <div class="project-info">
+              <span class="project-category">Educational Systems</span>
+              <h2 class="project-name">Mentorship Hub V2</h2>
+            </div>
+            <div class="project-action">
+              <span class="view-project">View System →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Preview Container -->
+    <div class="project-preview" id="project-preview">
+      <div class="preview-inner">
+        <img src="" alt="Project Preview" id="preview-img" loading="lazy">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-branding">
+        <div class="logo">Muddassir Ali.</div>
+        <p>Building autonomous growth systems that scale businesses with precision and automation.</p>
+      </div>
+      <div class="footer-bottom">
+        <div class="copy">© 2026 Muddassir Ali.</div>
+        <div class="footer-links">
+          <a href="/" class="magnetic-target">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

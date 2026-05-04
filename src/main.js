@@ -158,43 +158,55 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------------------------------------------------
 
   // Fix Hero Visibility Explicitly First (Wait slightly so it doesn't snap)
-  gsap.to('.hero-form', { opacity: 1, y: 0, duration: 1, delay: 0.2, ease: "power3.out" });
+  if (document.querySelector('.hero-form')) {
+    gsap.to('.hero-form', { opacity: 1, y: 0, duration: 1, delay: 0.2, ease: "power3.out" });
+  }
 
   // -- LEVEL 1: HERO REVEAL
   const heroEls = gsap.utils.toArray('.hero-el');
-  gsap.to(heroEls, { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power2.out", delay: 0.1 });
+  if (heroEls.length > 0) {
+    gsap.to(heroEls, { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power2.out", delay: 0.1 });
+  }
 
   // Headline Text Splitting (Cinematic Reveal)
   const heroWords = gsap.utils.toArray('.hero-word');
-  gsap.fromTo(heroWords, 
-    { y: 100, opacity: 0, rotateX: -45 }, 
-    { y: 0, opacity: 1, rotateX: 0, duration: 1.2, stagger: 0.1, ease: "power4.out", delay: 0.2 }
-  );
+  if (heroWords.length > 0) {
+    gsap.fromTo(heroWords, 
+      { y: 100, opacity: 0, rotateX: -45 }, 
+      { y: 0, opacity: 1, rotateX: 0, duration: 1.2, stagger: 0.1, ease: "power4.out", delay: 0.2 }
+    );
+  }
 
   // Parallax on Scroll for Hero elements
-  gsap.to('.hero-content', {
-    y: 100,
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'top top',
-      end: 'bottom top',
-      scrub: true
-    }
-  });
+  if (document.querySelector('.hero')) {
+    gsap.to('.hero-content', {
+      y: 100,
+      scrollTrigger: {
+        trigger: '.hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+  }
 
   // -- LEVEL 2: SYSTEM FLOW SHOWCASE
   const flowSteps = gsap.utils.toArray('.flow-step');
-  gsap.fromTo(flowSteps,
-    { y: 20, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out", scrollTrigger: { trigger: '.system-flow', start: "top 80%", once: true } }
-  );
+  if (flowSteps.length > 0) {
+    gsap.fromTo(flowSteps,
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out", scrollTrigger: { trigger: '.system-flow', start: "top 80%", once: true } }
+    );
+  }
 
   // Scroll logic for system arrows filling up
   const flowArrows = gsap.utils.toArray('.flow-arrow');
-  gsap.fromTo(flowArrows,
-    { opacity: 0, scaleX: 0, transformOrigin: "left" },
-    { opacity: 1, scaleX: 1, duration: 0.6, stagger: 0.2, delay: 0.2, ease: "power2.out", scrollTrigger: { trigger: '.system-flow', start: "top 80%", once: true } }
-  );
+  if (flowArrows.length > 0) {
+    gsap.fromTo(flowArrows,
+      { opacity: 0, scaleX: 0, transformOrigin: "left" },
+      { opacity: 1, scaleX: 1, duration: 0.6, stagger: 0.2, delay: 0.2, ease: "power2.out", scrollTrigger: { trigger: '.system-flow', start: "top 80%", once: true } }
+    );
+  }
 
   flowSteps.forEach((step) => {
     ScrollTrigger.create({ trigger: step, start: "bottom 80%", end: "bottom 20%", toggleClass: "active" });
@@ -207,11 +219,13 @@ document.addEventListener("DOMContentLoaded", () => {
     once: true
   });
 
-  ScrollTrigger.batch(".reveal-group", {
-    onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" }),
-    start: "top 95%",
-    once: true
-  });
+  if (document.querySelectorAll(".reveal-group").length > 0) {
+    ScrollTrigger.batch(".reveal-group", {
+      onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" }),
+      start: "top 95%",
+      once: true
+    });
+  }
 
   // -- LEVEL 4: METRICS COUNTERS
   const counters = document.querySelectorAll('.counter');
@@ -369,18 +383,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener('scroll', () => {
     const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    const footerTop = document.querySelector('footer').offsetTop;
-    
-    // Sticky CTA
-    if (window.scrollY > 800) {
-      if (window.scrollY + window.innerHeight > footerTop) {
-        stickyCta.classList.add('hidden');
+    const footerSection = document.querySelector('footer');
+    if (footerSection) {
+      const footerTop = footerSection.offsetTop;
+      
+      // Sticky CTA
+      if (window.scrollY > 800) {
+        if (window.scrollY + window.innerHeight > footerTop) {
+          stickyCta.classList.add('hidden');
+        } else {
+          stickyCta.classList.remove('hidden');
+          stickyCta.classList.add('visible');
+        }
       } else {
-        stickyCta.classList.remove('hidden');
-        stickyCta.classList.add('visible');
+        stickyCta.classList.remove('visible');
       }
-    } else {
-      stickyCta.classList.remove('visible');
     }
 
     // Trigger Popup at 40% scroll
@@ -392,15 +409,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------------------------------------------------------
   // 7. RANDOM AMBIENT ANIMATIONS
   // --------------------------------------------------------
-  gsap.to('.geo-1', {
-    y: 200,
-    scrollTrigger: {
-      trigger: 'body',
-      start: 'top top',
-      end: 'bottom bottom',
-      scrub: 1
-    }
-  });
+  if (document.querySelector('.geo-1')) {
+    gsap.to('.geo-1', {
+      y: 200,
+      scrollTrigger: {
+        trigger: 'body',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 1
+      }
+    });
+  }
 
   gsap.to('.geo-2', {
     y: -300,
@@ -422,6 +441,42 @@ document.addEventListener("DOMContentLoaded", () => {
       scrub: 2
     }
   });
+
+  // --------------------------------------------------------
+  // 8. PORTFOLIO HOVER PREVIEW LOGIC
+  // --------------------------------------------------------
+  const projectPreview = document.getElementById('project-preview');
+  const previewImg = document.getElementById('preview-img');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  if (projectPreview && portfolioItems.length > 0) {
+    portfolioItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        const imgSrc = item.getAttribute('data-img');
+        if (imgSrc) {
+          previewImg.src = imgSrc;
+          projectPreview.classList.add('visible');
+        }
+      });
+
+      item.addEventListener('mouseleave', () => {
+        projectPreview.classList.remove('visible');
+      });
+
+      item.addEventListener('mousemove', (e) => {
+        // Move the preview relative to mouse
+        const x = e.clientX + 20;
+        const y = e.clientY - 150;
+        
+        gsap.to(projectPreview, {
+          x: x,
+          y: y,
+          duration: 0.8,
+          ease: "power3.out"
+        });
+      });
+    });
+  }
 
   // Fallback: Trigger Popup after 45 seconds
   setTimeout(showPopup, 45000);
