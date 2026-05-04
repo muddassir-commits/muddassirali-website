@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   server: {
@@ -9,6 +10,10 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        projects: resolve(__dirname, 'projects.html')
+      },
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
