@@ -189,4 +189,76 @@ export function initAnimations() {
       progress.style.width = scrolled + '%';
     });
   }
+
+  // 9. Curriculum scatter + settle animation (training.html)
+  const curriculumGrid = document.querySelector('.curriculum-grid');
+  const curriculumItems = document.querySelectorAll('.curriculum-item');
+  if (curriculumGrid && curriculumItems.length > 0) {
+    // Set all items invisible at start
+    gsap.set(curriculumItems, { opacity: 0, scale: 0, rotation: 0 });
+
+    // Assign random starting positions (scattered)
+    curriculumItems.forEach(item => {
+      const randomX = (Math.random() - 0.5) * 400;
+      const randomY = (Math.random() - 0.5) * 300;
+      const randomRot = (Math.random() - 0.5) * 60;
+      const randomScale = 0.3 + Math.random() * 0.4;
+      gsap.set(item, {
+        x: randomX,
+        y: randomY,
+        rotation: randomRot,
+        scale: randomScale,
+        opacity: 0
+      });
+    });
+
+    ScrollTrigger.create({
+      trigger: curriculumGrid,
+      start: 'top 75%',
+      once: true,
+      onEnter: () => {
+        // Phase 1: All items flash into existence (scattered, random)
+        gsap.to(curriculumItems, {
+          opacity: 1,
+          duration: 0.15,
+          stagger: { each: 0.04, from: 'random' },
+          ease: 'power1.in'
+        });
+
+        // Phase 2: All items fly to their correct grid position
+        gsap.to(curriculumItems, {
+          x: 0,
+          y: 0,
+          rotation: 0,
+          scale: 1,
+          duration: 0.7,
+          stagger: { each: 0.06, from: 'random' },
+          ease: 'back.out(1.4)',
+          delay: 0.3
+        });
+
+        // Phase 3: Subtle pulse glow on each item as it lands
+        curriculumItems.forEach((item, i) => {
+          gsap.fromTo(item,
+            { boxShadow: '0 0 20px rgba(0, 212, 200, 0.6)' },
+            { 
+              boxShadow: '0 0 0px rgba(0, 212, 200, 0)', 
+              duration: 0.8,
+              delay: 0.3 + (i * 0.06) + 0.4,
+              ease: 'power2.out'
+            }
+          );
+        });
+
+        // Phase 4: Fade in the timeline connecting line
+        const line = document.querySelector('.curriculum-line');
+        if (line) {
+          gsap.fromTo(line, 
+            { opacity: 0 }, 
+            { opacity: 0.35, duration: 1.2, delay: 1.2 }
+          );
+        }
+      }
+    });
+  }
 }
