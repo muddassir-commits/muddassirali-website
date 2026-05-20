@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* Anti-FOUC: hide body until CSS is ready */
+    body { visibility: hidden; opacity: 0; }
+  </style>
+  <script>
+    // Fallback: make body visible if JS fails to run
+    setTimeout(() => {
+      document.body.style.visibility = 'visible';
+      document.body.style.opacity = '1';
+    }, 800);
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Work & Projects — Muddassir Ali</title>
+  <meta name="description" content="Portfolio of 8 live client websites, 5 SEO retainers, and social media campaigns by Muddassir Ali." />
+  <link rel="canonical" href="https://muddassirali.com/projects" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Work & Projects — Muddassir Ali" />
+  <meta property="og:description" content="Portfolio of 8 live client websites, 5 SEO retainers, and social media campaigns by Muddassir Ali." />
+  <meta property="og:image" content="https://muddassirali.com/images/Muddassir_Ali.webp" />
+  <meta property="og:url" content="https://muddassirali.com/projects" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Google Fonts Stack -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- GA4 tracking ID (Preserved) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8JPSTDLC1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W8JPSTDLC1');
+  </script>
+
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="" />
+  <script type="module" crossorigin src="/assets/vendor-gsap-CiEuWA-R.js"></script>
+  <script type="module" crossorigin src="/assets/vendor-lucide-BVN7-cbO.js"></script>
+  <script type="module" crossorigin src="/assets/main-DrPJAdlO.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-C1CYx4s0.css">
+</head>
+<body class="bg-bg text-text-primary selection:bg-accent selection:text-bg">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+    <!-- Fixed Header -->
+    <header id="navbar" class="nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="nav-logo hover-underline" id="logo-ma">MA</a>
+        
+        <!-- Desktop Nav Links -->
+        <nav class="hidden md:flex items-center space-x-10">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/projects" class="nav-link">Work</a>
+          <a href="/training" class="nav-link">Training</a>
+          <a href="/about" class="nav-link">About</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none z-50 cursor-pointer" aria-label="Toggle Menu">
+          <span class="w-6 h-0.5 bg-accent transition-transform duration-300 origin-center" id="hamburger-line1"></span>
+          <span class="w-6 h-0.5 bg-accent transition-opacity duration-300" id="hamburger-line2"></span>
+          <span class="w-6 h-0.5 bg-accent transition-transform duration-300 origin-center" id="hamburger-line3"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay Menu -->
+    <div id="mobile-menu" class="mobile-menu-overlay md:hidden">
+      <div class="flex flex-col space-y-8 text-center">
+        <a href="/" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Home</a>
+        <a href="/projects" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Work</a>
+        <a href="/training" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Training</a>
+        <a href="/about" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">About</a>
+        <a href="/contact" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Contact</a>
+      </div>
+    </div>
+
+  <!-- Global Wrapper -->
+  <div class="page-wrapper min-h-screen flex flex-col">
+
+    <!-- Main Content Area -->
+    <main class="flex-grow pt-32 pb-24">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Hero Section -->
+        <section class="mb-20 border-l border-accent pl-8 py-2">
+          <span class="section-label block mb-3">Selected Work</span>
+          <h1 class="text-display uppercase leading-none mb-4">
+            Things I've Built<br>& Delivered
+          </h1>
+          <p class="text-body text-base md:text-lg">
+            8 client websites &middot; 5 SEO retainers &middot; campaigns, systems, results.
+          </p>
+        </section>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-3 border-b border-border pb-6 mb-16">
+          <button class="filter-tab active px-6 py-2 border border-accent bg-accent-glow text-accent font-mono text-xs uppercase tracking-wider rounded transition-all cursor-pointer" data-filter="all">All</button>
+          <button class="filter-tab px-6 py-2 border border-border text-text-muted font-mono text-xs uppercase tracking-wider rounded transition-all cursor-pointer hover:border-accent hover:text-accent" data-filter="website">Websites</button>
+          <button class="filter-tab px-6 py-2 border border-border text-text-muted font-mono text-xs uppercase tracking-wider rounded transition-all cursor-pointer hover:border-accent hover:text-accent" data-filter="seo">SEO</button>
+          <button class="filter-tab px-6 py-2 border border-border text-text-muted font-mono text-xs uppercase tracking-wider rounded transition-all cursor-pointer hover:border-accent hover:text-accent" data-filter="social">Social Media</button>
+          <button class="filter-tab px-6 py-2 border border-border text-text-muted font-mono text-xs uppercase tracking-wider rounded transition-all cursor-pointer hover:border-accent hover:text-accent" data-filter="automation">Automation</button>
+        </div>
+
+        <!-- Section: Client Websites -->
+        <section class="projects-section-group mb-24">
+          <h2 class="section-heading text-heading font-medium uppercase mb-12 text-accent">Client Websites</h2>
+          
+          <div class="space-y-24">
+            <!-- Project 01 (Odd: Image Left, Text Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-project-cat="website seo">
+              <div class="lg:col-span-7 select-none">
+                <!-- CSS Browser Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-2xl aspect-[16/10] flex flex-col">
+                  <!-- Browser Header -->
+                  <div class="bg-[#181818] px-4 py-3 flex items-center space-x-2 border-b border-border">
+                    <div class="flex space-x-1.5">
+                      <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
+                    </div>
+                    <div class="bg-bg text-text-muted text-[10px] py-1 px-4 rounded-md flex-grow text-center font-mono truncate">
+                      www.muddassirali.com
+                    </div>
+                  </div>
+                  <!-- Browser Content Mock (Real Screenshot) -->
+                  <div class="flex-grow relative overflow-hidden select-none bg-surface-2">
+                    <img src="/images/projects/portfolio.png" alt="Personal Portfolio Website" class="w-full h-full object-cover object-top select-none pointer-events-none" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-5 flex flex-col justify-center space-y-6 relative overflow-hidden p-6 rounded-lg bg-surface/20 border border-border/50">
+                <div class="absolute right-4 bottom-0 font-display text-[150px] font-bold text-[var(--color-teal)] opacity-[0.08] select-none pointer-events-none leading-none">01</div>
+                <div class="z-10">
+                  <span class="text-mono block mb-2">01 / Website</span>
+                  <h3 class="font-body text-2xl font-medium text-text-primary uppercase leading-tight">Personal Portfolio Website</h3>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Personal Brand</span>
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Portfolio</span>
+                  </div>
+                </div>
+                <p class="text-body text-sm leading-relaxed z-10">
+                  Full personal brand website built from scratch — multi-page architecture, SEO-optimized, GA4 + GSC integrated, and deployed on Vercel.
+                </p>
+                <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-text-muted uppercase tracking-widest z-10">
+                  <span>Vite</span> &middot; <span>Tailwind v4</span> &middot; <span>GSAP</span> &middot; <span>Lucide Icons</span>
+                </div>
+                <div class="z-10">
+                  <a href="https://www.muddassirali.com/" class="btn btn-ghost">
+                    Visit &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 02 (Even: Text Left, Image Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-project-cat="website automation">
+              <div class="lg:col-span-5 lg:order-1 order-2 flex flex-col justify-center space-y-6 relative overflow-hidden p-6 rounded-lg bg-surface/20 border border-border/50">
+                <div class="absolute right-4 bottom-0 font-display text-[150px] font-bold text-[var(--color-teal)] opacity-[0.08] select-none pointer-events-none leading-none">02</div>
+                <div class="z-10">
+                  <span class="text-mono block mb-2">02 / Landing</span>
+                  <h3 class="font-body text-2xl font-medium text-text-primary uppercase leading-tight">The Mentorship Studio</h3>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Education</span>
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Landing Page</span>
+                  </div>
+                </div>
+                <p class="text-body text-sm leading-relaxed z-10">
+                  A focused digital marketing mentorship platform — built to convert visitors into enrolled students through a clean, outcome-led layout.
+                </p>
+                <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-text-muted uppercase tracking-widest z-10">
+                  <span>HTML5</span> &middot; <span>Tailwind CSS</span> &middot; <span>n8n Webhook</span> &middot; <span>HubSpot</span>
+                </div>
+                <div class="z-10">
+                  <a href="https://mentorship.muddassirali.com/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                    Visit &rarr;
+                  </a>
+                </div>
+              </div>
+              <div class="lg:col-span-7 lg:order-2 order-1 select-none">
+                <!-- CSS Browser Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-2xl aspect-[16/10] flex flex-col">
+                  <!-- Browser Header -->
+                  <div class="bg-[#181818] px-4 py-3 flex items-center space-x-2 border-b border-border">
+                    <div class="flex space-x-1.5">
+                      <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
+                    </div>
+                    <div class="bg-bg text-text-muted text-[10px] py-1 px-4 rounded-md flex-grow text-center font-mono truncate">
+                      mentorship.muddassirali.com
+                    </div>
+                  </div>
+                  <!-- Browser Content Mock (Real Screenshot) -->
+                  <div class="flex-grow relative overflow-hidden select-none bg-surface-2">
+                    <img src="/images/projects/mentorship.png" alt="The Mentorship Studio" class="w-full h-full object-cover object-top select-none pointer-events-none" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 03 (Odd: Image Left, Text Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-project-cat="website seo automation">
+              <div class="lg:col-span-7 select-none">
+                <!-- CSS Browser Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-2xl aspect-[16/10] flex flex-col">
+                  <!-- Browser Header -->
+                  <div class="bg-[#181818] px-4 py-3 flex items-center space-x-2 border-b border-border">
+                    <div class="flex space-x-1.5">
+                      <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
+                    </div>
+                    <div class="bg-bg text-text-muted text-[10px] py-1 px-4 rounded-md flex-grow text-center font-mono truncate">
+                      veloxis-global.vercel.app
+                    </div>
+                  </div>
+                  <!-- Browser Content Mock (Real Screenshot) -->
+                  <div class="flex-grow relative overflow-hidden select-none bg-surface-2">
+                    <img src="/images/projects/veloxis.png" alt="Veloxis Global" class="w-full h-full object-cover object-top select-none pointer-events-none" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-5 flex flex-col justify-center space-y-6 relative overflow-hidden p-6 rounded-lg bg-surface/20 border border-border/50">
+                <div class="absolute right-4 bottom-0 font-display text-[150px] font-bold text-[var(--color-teal)] opacity-[0.08] select-none pointer-events-none leading-none">03</div>
+                <div class="z-10">
+                  <span class="text-mono block mb-2">03 / Platform</span>
+                  <h3 class="font-body text-2xl font-medium text-text-primary uppercase leading-tight">Veloxis Global</h3>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Digital Agency</span>
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Web</span>
+                  </div>
+                </div>
+                <p class="text-body text-sm leading-relaxed z-10">
+                  Enterprise-grade agency website for a digital growth company — built for trust, lead generation, and service positioning.
+                </p>
+                <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-text-muted uppercase tracking-widest z-10">
+                  <span>Tailwind CSS</span> &middot; <span>Vite</span> &middot; <span>Webhook</span> &middot; <span>Framer Motion</span>
+                </div>
+                <div class="z-10">
+                  <a href="https://veloxis-global.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                    Visit &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 04 (Even: Text Left, Image Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-project-cat="website social">
+              <div class="lg:col-span-5 lg:order-1 order-2 flex flex-col justify-center space-y-6 relative overflow-hidden p-6 rounded-lg bg-surface/20 border border-border/50">
+                <div class="absolute right-4 bottom-0 font-display text-[150px] font-bold text-[var(--color-teal)] opacity-[0.08] select-none pointer-events-none leading-none">04</div>
+                <div class="z-10">
+                  <span class="text-mono block mb-2">04 / Academy</span>
+                  <h3 class="font-body text-2xl font-medium text-text-primary uppercase leading-tight">Skill Development Institute</h3>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Education</span>
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Admissions</span>
+                  </div>
+                </div>
+                <p class="text-body text-sm leading-relaxed z-10">
+                  Professional institute website built to drive admissions — course listings, batch info, and enrollment CTAs with full SEO.
+                </p>
+                <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-text-muted uppercase tracking-widest z-10">
+                  <span>HTML5</span> &middot; <span>Tailwind CSS</span> &middot; <span>Local SEO Schema</span>
+                </div>
+                <div class="z-10">
+                  <a href="https://asdckanpur.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                    Visit &rarr;
+                  </a>
+                </div>
+              </div>
+              <div class="lg:col-span-7 lg:order-2 order-1 select-none">
+                <!-- CSS Browser Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-2xl aspect-[16/10] flex flex-col">
+                  <!-- Browser Header -->
+                  <div class="bg-[#181818] px-4 py-3 flex items-center space-x-2 border-b border-border">
+                    <div class="flex space-x-1.5">
+                      <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
+                    </div>
+                    <div class="bg-bg text-text-muted text-[10px] py-1 px-4 rounded-md flex-grow text-center font-mono truncate">
+                      asdckanpur.vercel.app
+                    </div>
+                  </div>
+                  <!-- Browser Content Mock (Real Screenshot) -->
+                  <div class="flex-grow relative overflow-hidden select-none bg-surface-2">
+                    <img src="/images/projects/asdckanpur.png" alt="Skill Development Institute" class="w-full h-full object-cover object-top select-none pointer-events-none" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 05 (Odd: Image Left, Text Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-project-cat="website automation">
+              <div class="lg:col-span-7 select-none">
+                <!-- CSS Browser Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-2xl aspect-[16/10] flex flex-col">
+                  <!-- Browser Header -->
+                  <div class="bg-[#181818] px-4 py-3 flex items-center space-x-2 border-b border-border">
+                    <div class="flex space-x-1.5">
+                      <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
+                    </div>
+                    <div class="bg-bg text-text-muted text-[10px] py-1 px-4 rounded-md flex-grow text-center font-mono truncate">
+                      skyline-estate-project.vercel.app
+                    </div>
+                  </div>
+                  <!-- Browser Content Mock (Real Screenshot) -->
+                  <div class="flex-grow relative overflow-hidden select-none bg-surface-2">
+                    <img src="/images/projects/skyline.png" alt="Skyline Estate" class="w-full h-full object-cover object-top select-none pointer-events-none" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-5 flex flex-col justify-center space-y-6 relative overflow-hidden p-6 rounded-lg bg-surface/20 border border-border/50">
+                <div class="absolute right-4 bottom-0 font-display text-[150px] font-bold text-[var(--color-teal)] opacity-[0.08] select-none pointer-events-none leading-none">05</div>
+                <div class="z-10">
+                  <span class="text-mono block mb-2">05 / Showcase</span>
+                  <h3 class="font-body text-2xl font-medium text-text-primary uppercase leading-tight">Skyline Estate</h3>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Real Estate</span>
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Landing Page</span>
+                  </div>
+                </div>
+                <p class="text-body text-sm leading-relaxed z-10">
+                  Agricultural land real estate landing page — keyword-mapped, schema-marked, and built for high-intent search traffic.
+                </p>
+                <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-text-muted uppercase tracking-widest z-10">
+                  <span>HTML5</span> &middot; <span>Vite</span> &middot; <span>n8n Routing</span> &middot; <span>WhatsApp Alerts</span>
+                </div>
+                <div class="z-10">
+                  <a href="https://skyline-estate-project.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                    Visit &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 06 (Even: Text Left, Image Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-project-cat="website seo">
+              <div class="lg:col-span-5 lg:order-1 order-2 flex flex-col justify-center space-y-6 relative overflow-hidden p-6 rounded-lg bg-surface/20 border border-border/50">
+                <div class="absolute right-4 bottom-0 font-display text-[150px] font-bold text-[var(--color-teal)] opacity-[0.08] select-none pointer-events-none leading-none">06</div>
+                <div class="z-10">
+                  <span class="text-mono block mb-2">06 / Retail</span>
+                  <h3 class="font-body text-2xl font-medium text-text-primary uppercase leading-tight">Modest Fashion & Hijab Store</h3>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">E-Commerce</span>
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Fashion</span>
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Retail</span>
+                  </div>
+                </div>
+                <p class="text-body text-sm leading-relaxed z-10">
+                  A modern Islamic modest fashion storefront — built for browsing, discovery, and clean product-to-cart user flow.
+                </p>
+                <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-text-muted uppercase tracking-widest z-10">
+                  <span>Vite</span> &middot; <span>Tailwind CSS</span> &middot; <span>Product Schema</span>
+                </div>
+                <div class="z-10">
+                  <a href="https://cloth-theta-ten.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                    Visit &rarr;
+                  </a>
+                </div>
+              </div>
+              <div class="lg:col-span-7 lg:order-2 order-1 select-none">
+                <!-- CSS Browser Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-2xl aspect-[16/10] flex flex-col">
+                  <!-- Browser Header -->
+                  <div class="bg-[#181818] px-4 py-3 flex items-center space-x-2 border-b border-border">
+                    <div class="flex space-x-1.5">
+                      <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
+                    </div>
+                    <div class="bg-bg text-text-muted text-[10px] py-1 px-4 rounded-md flex-grow text-center font-mono truncate">
+                      cloth-theta-ten.vercel.app
+                    </div>
+                  </div>
+                  <!-- Browser Content Mock (Real Screenshot) -->
+                  <div class="flex-grow relative overflow-hidden select-none bg-surface-2">
+                    <img src="/images/projects/cloth.png" alt="Modest Fashion & Hijab Store" class="w-full h-full object-cover object-top select-none pointer-events-none" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 07 (Odd: Image Left, Text Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-project-cat="website seo">
+              <div class="lg:col-span-7 select-none">
+                <!-- CSS Browser Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-2xl aspect-[16/10] flex flex-col">
+                  <!-- Browser Header -->
+                  <div class="bg-[#181818] px-4 py-3 flex items-center space-x-2 border-b border-border">
+                    <div class="flex space-x-1.5">
+                      <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
+                    </div>
+                    <div class="bg-bg text-text-muted text-[10px] py-1 px-4 rounded-md flex-grow text-center font-mono truncate">
+                      makeup-lac.vercel.app
+                    </div>
+                  </div>
+                  <!-- Browser Content Mock (Real Screenshot) -->
+                  <div class="flex-grow relative overflow-hidden select-none bg-surface-2">
+                    <img src="/images/projects/makeup.png" alt="Glow & Beauty Store" class="w-full h-full object-cover object-top select-none pointer-events-none" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-5 flex flex-col justify-center space-y-6 relative overflow-hidden p-6 rounded-lg bg-surface/20 border border-border/50">
+                <div class="absolute right-4 bottom-0 font-display text-[150px] font-bold text-[var(--color-teal)] opacity-[0.08] select-none pointer-events-none leading-none">07</div>
+                <div class="z-10">
+                  <span class="text-mono block mb-2">07 / Cosmetics</span>
+                  <h3 class="font-body text-2xl font-medium text-text-primary uppercase leading-tight">Glow & Beauty Store</h3>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">E-Commerce</span>
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Beauty</span>
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Cosmetics</span>
+                  </div>
+                </div>
+                <p class="text-body text-sm leading-relaxed z-10">
+                  Beauty and cosmetics e-commerce store — product showcase, category navigation, and conversion-focused layout.
+                </p>
+                <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-text-muted uppercase tracking-widest z-10">
+                  <span>HTML5</span> &middot; <span>Vite</span> &middot; <span>Tailwind CSS</span>
+                </div>
+                <div class="z-10">
+                  <a href="https://makeup-lac.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                    Visit &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 08 (Even: Text Left, Image Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-project-cat="website">
+              <div class="lg:col-span-5 lg:order-1 order-2 flex flex-col justify-center space-y-6 relative overflow-hidden p-6 rounded-lg bg-surface/20 border border-border/50">
+                <div class="absolute right-4 bottom-0 font-display text-[150px] font-bold text-[var(--color-teal)] opacity-[0.08] select-none pointer-events-none leading-none">08</div>
+                <div class="z-10">
+                  <span class="text-mono block mb-2">08 / Food D2C</span>
+                  <h3 class="font-body text-2xl font-medium text-text-primary uppercase leading-tight">Sweet Ritual — Dessert Subscription</h3>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Subscription</span>
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">Food</span>
+                    <span class="px-3 py-1 border border-accent-dim text-accent text-[9px] font-mono uppercase tracking-wider rounded-full">D2C</span>
+                  </div>
+                </div>
+                <p class="text-body text-sm leading-relaxed z-10">
+                  A premium dessert subscription box website — brand storytelling, subscription tier presentation, and lifestyle-led content layout.
+                </p>
+                <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-text-muted uppercase tracking-widest z-10">
+                  <span>Vite</span> &middot; <span>Tailwind CSS</span> &middot; <span>Scheduler Integration</span>
+                </div>
+                <div class="z-10">
+                  <a href="https://lizrogers.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                    Visit &rarr;
+                  </a>
+                </div>
+              </div>
+              <div class="lg:col-span-7 lg:order-2 order-1 select-none">
+                <!-- CSS Browser Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-2xl aspect-[16/10] flex flex-col">
+                  <!-- Browser Header -->
+                  <div class="bg-[#181818] px-4 py-3 flex items-center space-x-2 border-b border-border">
+                    <div class="flex space-x-1.5">
+                      <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+                      <span class="w-3 h-3 rounded-full bg-[#27C93F]"></span>
+                    </div>
+                    <div class="bg-bg text-text-muted text-[10px] py-1 px-4 rounded-md flex-grow text-center font-mono truncate">
+                      lizrogers.vercel.app
+                    </div>
+                  </div>
+                  <!-- Browser Content Mock (Real Screenshot) -->
+                  <div class="flex-grow relative overflow-hidden select-none bg-surface-2">
+                    <img src="/images/projects/lizrogers.png" alt="Sweet Ritual — Dessert Subscription" class="w-full h-full object-cover object-top select-none pointer-events-none" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section: SEO Retainers -->
+        <section class="projects-section-group mb-24" data-project-cat="seo">
+          <h2 class="section-heading text-heading font-medium uppercase mb-12 text-accent">SEO Retainers</h2>
+          
+          <!-- Accordion Group -->
+          <div class="space-y-4 max-w-4xl">
+            
+            <!-- Accordion Item 1 -->
+            <div class="accordion-item bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300">
+              <button class="accordion-header w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none">
+                <div class="flex items-start">
+                  <span class="font-mono text-sm text-[var(--color-amber)] mt-1 mr-4">01</span>
+                  <div>
+                    <span class="text-mono block">E-Commerce Retainer</span>
+                    <h3 class="font-body text-lg font-medium text-text-primary mt-1">E-Commerce Shopify Campaign</h3>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <span class="font-mono text-[var(--color-teal)] text-xs hidden sm:inline">628 Pages Audited</span>
+                  <svg class="accordion-icon w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="accordion-content bg-bg/50 border-t border-border">
+                <div class="p-6 space-y-4 text-body text-sm leading-relaxed">
+                  <p><strong>Scope:</strong> Complete diagnostic overhaul of an online store consisting of 628 indexable product pages.</p>
+                  <p><strong>Strategy deployed:</strong> Optimizing meta layouts, structuring semantic schema parameters, fixing broken navigation clusters, and managing dynamic page structures.</p>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-border text-xs">
+                    <div>
+                      <span class="block font-semibold text-text-primary">Keywords Optimized</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">200+ Keywords</span>
+                    </div>
+                    <div>
+                      <span class="block font-semibold text-text-primary">Audit Issues Solved</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">3,000+ Errors Resolved</span>
+                    </div>
+                    <div>
+                      <span class="block font-semibold text-text-primary">Timeline</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">6 Months</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="accordion-item bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300">
+              <button class="accordion-header w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none">
+                <div class="flex items-start">
+                  <span class="font-mono text-sm text-[var(--color-amber)] mt-1 mr-4">02</span>
+                  <div>
+                    <span class="text-mono block">EdTech Retainer</span>
+                    <h3 class="font-body text-lg font-medium text-text-primary mt-1">EdTech Education Campaign</h3>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <span class="font-mono text-[var(--color-teal)] text-xs hidden sm:inline">Positions #34 &rarr; Top 20</span>
+                  <svg class="accordion-icon w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="accordion-content bg-bg/50 border-t border-border">
+                <div class="p-6 space-y-4 text-body text-sm leading-relaxed">
+                  <p><strong>Scope:</strong> Building domain authority and ranking high-intent service queries for an online certifications academy.</p>
+                  <p><strong>Strategy deployed:</strong> Establishing a monthly organic link-acquisition framework alongside granular content gap mapping and competitive audits.</p>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-border text-xs">
+                    <div>
+                      <span class="block font-semibold text-text-primary">Backlink Acquisition</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">40+ Backlinks/Month</span>
+                    </div>
+                    <div>
+                      <span class="block font-semibold text-text-primary">Ranking Boost</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">Top 20 Visibility</span>
+                    </div>
+                    <div>
+                      <span class="block font-semibold text-text-primary">Authority Change</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">+18 DA Growth</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="accordion-item bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300">
+              <button class="accordion-header w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none">
+                <div class="flex items-start">
+                  <span class="font-mono text-sm text-[var(--color-amber)] mt-1 mr-4">03</span>
+                  <div>
+                    <span class="text-mono block">Travel Retainer</span>
+                    <h3 class="font-body text-lg font-medium text-text-primary mt-1">International Tourism Retainer</h3>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <span class="font-mono text-[var(--color-teal)] text-xs hidden sm:inline">2,385 Errors to 0</span>
+                  <svg class="accordion-icon w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="accordion-content bg-bg/50 border-t border-border">
+                <div class="p-6 space-y-4 text-body text-sm leading-relaxed">
+                  <p><strong>Scope:</strong> Overhauling an index of 97 landing pages targeting regional travel packages.</p>
+                  <p><strong>Strategy deployed:</strong> Resolving technical crawl blockages, implementing robust Event Schema markup to secure Google search rich snippets, and restructuring redirects.</p>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-border text-xs">
+                    <div>
+                      <span class="block font-semibold text-text-primary">Pages Restructured</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">97 Target Pages</span>
+                    </div>
+                    <div>
+                      <span class="block font-semibold text-text-primary">Crawling Health</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">100% Crawl Rate</span>
+                    </div>
+                    <div>
+                      <span class="block font-semibold text-text-primary">Event Schema</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">Rich Snippets Enabled</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 4 -->
+            <div class="accordion-item bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300">
+              <button class="accordion-header w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none">
+                <div class="flex items-start">
+                  <span class="font-mono text-sm text-[var(--color-amber)] mt-1 mr-4">04</span>
+                  <div>
+                    <span class="text-mono block">Real Estate Retainer</span>
+                    <h3 class="font-body text-lg font-medium text-text-primary mt-1">High-Ticket Property Retainer</h3>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <span class="font-mono text-[var(--color-teal)] text-xs hidden sm:inline">10 Core Pages Audited</span>
+                  <svg class="accordion-icon w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="accordion-content bg-bg/50 border-t border-border">
+                <div class="p-6 space-y-4 text-body text-sm leading-relaxed">
+                  <p><strong>Scope:</strong> Local authority and schema indexing for premium luxury property developer listings.</p>
+                  <p><strong>Strategy deployed:</strong> On-page optimization for 10 high-value listings, setting up nested breadcrumb schema, and configuring localized map profiles.</p>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-border text-xs">
+                    <div>
+                      <span class="block font-semibold text-text-primary">Listing Optimization</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">Full On-Page Build</span>
+                    </div>
+                    <div>
+                      <span class="block font-semibold text-text-primary">Schema Markup</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">Property Schema</span>
+                    </div>
+                    <div>
+                      <span class="block font-semibold text-text-primary">Conversion Growth</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">+25% Local Queries</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 5 -->
+            <div class="accordion-item bg-surface border border-border rounded-lg overflow-hidden transition-all duration-300">
+              <button class="accordion-header w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none">
+                <div class="flex items-start">
+                  <span class="font-mono text-sm text-[var(--color-amber)] mt-1 mr-4">05</span>
+                  <div>
+                    <span class="text-mono block">SaaS Retainer</span>
+                    <h3 class="font-body text-lg font-medium text-text-primary mt-1">B2B SaaS Growth Campaign</h3>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <span class="font-mono text-[var(--color-teal)] text-xs hidden sm:inline">700+ Content Pages</span>
+                  <svg class="accordion-icon w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="accordion-content bg-bg/50 border-t border-border">
+                <div class="p-6 space-y-4 text-body text-sm leading-relaxed">
+                  <p><strong>Scope:</strong> Scaling informational inbound traffic for a developer workflow optimization suite.</p>
+                  <p><strong>Strategy deployed:</strong> Formatting content schema, fixing structural code layout rendering errors, configuring redirects, and editing 500+ blog resources.</p>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-border text-xs">
+                    <div>
+                      <span class="block font-semibold text-text-primary">Content Optimized</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">500+ Articles</span>
+                    </div>
+                    <div>
+                      <span class="block font-semibold text-text-primary">Crawl Resolution</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">97 Errors to 0</span>
+                    </div>
+                    <div>
+                      <span class="block font-semibold text-text-primary">Organic Traffic</span>
+                      <span class="text-[var(--color-teal)] mt-0.5 block font-bold font-mono text-sm">+42% Growth</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section: Social Media Results -->
+        <section class="projects-section-group" data-project-cat="social">
+          <h2 class="section-heading text-heading font-medium uppercase mb-12 text-accent">Social Media Results</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+            <!-- Card 1 -->
+            <div class="card flex flex-col justify-between min-h-[220px]">
+              <div>
+                <div class="flex items-center space-x-3 text-accent mb-6">
+                  <i data-lucide="instagram" class="w-6 h-6"></i>
+                  <span class="font-mono tracking-wider text-xs">@asdc_kanpur</span>
+                </div>
+                <h3 class="card-title text-2xl font-bold mb-2">ASDC Kanpur</h3>
+                <p class="text-body text-sm leading-relaxed">
+                  Managing social campaigns and reels distribution driving high engagement and local training enrollments.
+                </p>
+              </div>
+              <div class="grid grid-cols-3 gap-4 pt-6 border-t border-border mt-6 text-center text-xs">
+                <div>
+                  <span class="block text-text-muted uppercase text-[9px] tracking-wider mb-0.5 font-mono">Followers</span>
+                  <span class="font-mono text-[var(--color-amber)] font-bold text-sm">1,933</span>
+                </div>
+                <div>
+                  <span class="block text-text-muted uppercase text-[9px] tracking-wider mb-0.5 font-mono">Monthly Views</span>
+                  <span class="font-mono text-[var(--color-amber)] font-bold text-sm">27.7K+</span>
+                </div>
+                <div>
+                  <span class="block text-text-muted uppercase text-[9px] tracking-wider mb-0.5 font-mono">Posts</span>
+                  <span class="font-mono text-[var(--color-amber)] font-bold text-sm">125</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card flex flex-col justify-between min-h-[220px]">
+              <div>
+                <div class="flex items-center space-x-3 text-accent mb-6">
+                  <i data-lucide="instagram" class="w-6 h-6"></i>
+                  <span class="font-mono tracking-wider text-xs">@dm_institute_project</span>
+                </div>
+                <h3 class="card-title text-2xl font-bold mb-2">Digital Marketing Institute</h3>
+                <p class="text-body text-sm leading-relaxed">
+                  Managed organic content strategy, student Reels, batch announcements, and Meta Ads for enrollment campaigns at a digital marketing institute.
+                </p>
+              </div>
+              <div class="grid grid-cols-3 gap-4 pt-6 border-t border-border mt-6 text-center text-xs">
+                <div>
+                  <span class="block text-text-muted uppercase text-[9px] tracking-wider mb-0.5 font-mono">Followers</span>
+                  <span class="font-mono text-[var(--color-amber)] font-bold text-sm">316</span>
+                </div>
+                <div>
+                  <span class="block text-text-muted uppercase text-[9px] tracking-wider mb-0.5 font-mono">Monthly Views</span>
+                  <span class="font-mono text-[var(--color-amber)] font-bold text-sm">8,000+</span>
+                </div>
+                <div>
+                  <span class="block text-text-muted uppercase text-[9px] tracking-wider mb-0.5 font-mono">Posts</span>
+                  <span class="font-mono text-[var(--color-amber)] font-bold text-sm">190</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-16 mt-auto">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Upper Footer -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12">
+          <!-- Branding -->
+          <div class="flex flex-col space-y-4">
+            <h3 class="footer-name">Muddassir Ali</h3>
+            <p class="footer-tagline">
+              Systems-driven Digital Marketing Educator and Consultant. Rebuilding operations and pipeline acquisitions.
+            </p>
+          </div>
+
+          <!-- Links -->
+          <div class="flex flex-col space-y-4">
+            <h4 class="font-mono text-xs uppercase tracking-widest text-[var(--color-teal)] font-bold">Quick Navigation</h4>
+            <nav class="flex flex-col space-y-2 text-sm font-body font-light">
+              <a href="/" class="footer-link transition-colors">Home</a>
+              <a href="/projects" class="footer-link transition-colors">Work</a>
+              <a href="/training" class="footer-link transition-colors">Training</a>
+              <a href="/about" class="footer-link transition-colors">About</a>
+              <a href="/contact" class="footer-link transition-colors">Contact</a>
+            </nav>
+          </div>
+
+          <!-- Socials / Contacts -->
+          <div class="flex flex-col space-y-4">
+            <h4 class="font-mono text-xs uppercase tracking-widest text-[var(--color-teal)] font-bold">Connect</h4>
+            <div class="flex items-center space-x-6 text-[var(--color-teal)]">
+              <a href="https://linkedin.com/in/muddassirali" target="_blank" rel="noopener noreferrer" class="footer-social-icon transition-colors" aria-label="LinkedIn">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </a>
+              <a href="https://instagram.com/asdc_kanpur" target="_blank" rel="noopener noreferrer" class="footer-social-icon transition-colors" aria-label="Instagram">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="mailto:theofficialmuddassir@gmail.com" class="footer-social-icon transition-colors" aria-label="Email">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <p class="text-text-muted font-body text-xs mt-2">
+              Kanpur, India &middot; Open to remote
+            </p>
+          </div>
+        </div>
+
+        <!-- Lower Footer -->
+        <div class="footer-bottom pt-8 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+          <div>
+            &copy; 2025 Muddassir Ali. All rights reserved.
+          </div>
+          <div class="tracking-widest uppercase text-[10px]">
+            Built with intention
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Interactive JavaScript logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. FILTER TABS LOGIC
+      const tabs = document.querySelectorAll('.filter-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Remove active styles from all
+          tabs.forEach(t => {
+            t.classList.remove('active', 'border-accent', 'bg-accent-glow', 'text-accent');
+            t.classList.add('text-text-muted', 'border-border');
+          });
+          
+          // Add active style to selected tab
+          tab.classList.add('active', 'border-accent', 'bg-accent-glow', 'text-accent');
+          tab.classList.remove('text-text-muted', 'border-border');
+
+          const filterVal = tab.getAttribute('data-filter');
+
+          // Hide / Show elements based on cat attribute
+          const items = document.querySelectorAll('[data-project-cat]');
+          items.forEach(item => {
+            const categories = item.getAttribute('data-project-cat').split(' ');
+            if (filterVal === 'all' || categories.includes(filterVal)) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+
+          // Check if sections are completely empty and hide headings
+          document.querySelectorAll('.projects-section-group').forEach(section => {
+            if (section.hasAttribute('data-project-cat')) {
+              return;
+            }
+            const visibleItemsInSec = section.querySelectorAll('[data-project-cat]:not([style*="display: none"])');
+            if (visibleItemsInSec.length === 0) {
+              section.style.display = 'none';
+            } else {
+              section.style.display = '';
+            }
+          });
+        });
+      });
+
+      // 2. ACCORDION EXPANSION LOGIC
+      const accHeaders = document.querySelectorAll('.accordion-header');
+      accHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+          const item = header.parentElement;
+          const isActive = item.classList.contains('active');
+
+          // Close all open items first
+          document.querySelectorAll('.accordion-item').forEach(acc => {
+            acc.classList.remove('active');
+            const cont = acc.querySelector('.accordion-content');
+            if (cont) cont.style.maxHeight = null;
+          });
+
+          // Toggle clicked item
+          if (!isActive) {
+            item.classList.add('active');
+            const content = item.querySelector('.accordion-content');
+            if (content) content.style.maxHeight = content.scrollHeight + 'px';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

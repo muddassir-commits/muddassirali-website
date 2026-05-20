@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* Anti-FOUC: hide body until CSS is ready */
+    body { visibility: hidden; opacity: 0; }
+  </style>
+  <script>
+    // Fallback: make body visible if JS fails to run
+    setTimeout(() => {
+      document.body.style.visibility = 'visible';
+      document.body.style.opacity = '1';
+    }, 800);
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Muddassir Ali — Digital Marketing Educator & Strategist</title>
+  <meta name="description" content="Muddassir Ali is a Digital Marketing Educator & Strategist from Kanpur with 6+ years in SEO, Meta Ads, training, and automation. 300+ learners trained, 8 websites delivered." />
+  <meta name="keywords" content="Muddassir Ali, Digital Marketing Trainer, SEO Kanpur, Meta Ads Strategist, Marketing Automation Expert, Kanpur Digital Marketing, n8n Automation, HubSpot" />
+  <link rel="canonical" href="https://muddassirali.com/" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Muddassir Ali — Digital Marketing Educator & Strategist" />
+  <meta property="og:description" content="Muddassir Ali is a Digital Marketing Educator & Strategist from Kanpur with 6+ years in SEO, Meta Ads, training, and automation. 300+ learners trained, 8 websites delivered." />
+  <meta property="og:image" content="https://muddassirali.com/images/Muddassir_Ali.webp" />
+  <meta property="og:url" content="https://muddassirali.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Google Fonts Stack -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- GA4 tracking ID (Preserved) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8JPSTDLC1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W8JPSTDLC1');
+  </script>
+
+  <!-- Google Search Console verification (Preserved) -->
+  <meta name="google-site-verification" content="" />
+  <script type="module" crossorigin src="/assets/vendor-gsap-CiEuWA-R.js"></script>
+  <script type="module" crossorigin src="/assets/vendor-lucide-BVN7-cbO.js"></script>
+  <script type="module" crossorigin src="/assets/main-DrPJAdlO.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-C1CYx4s0.css">
+</head>
+<body class="bg-bg text-text-primary selection:bg-accent selection:text-bg">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Noise Overlay for Premium Texture -->
+  <div class="noise-overlay"></div>
+
+    <!-- Fixed Header -->
+    <header id="navbar" class="nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="nav-logo hover-underline" id="logo-ma">MA</a>
+        
+        <!-- Desktop Nav Links -->
+        <nav class="hidden md:flex items-center space-x-10">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/projects" class="nav-link">Work</a>
+          <a href="/training" class="nav-link">Training</a>
+          <a href="/about" class="nav-link">About</a>
+          <a href="/contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none z-50 cursor-pointer" aria-label="Toggle Menu">
+          <span class="w-6 h-0.5 bg-accent transition-transform duration-300 origin-center" id="hamburger-line1"></span>
+          <span class="w-6 h-0.5 bg-accent transition-opacity duration-300" id="hamburger-line2"></span>
+          <span class="w-6 h-0.5 bg-accent transition-transform duration-300 origin-center" id="hamburger-line3"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay Menu -->
+    <div id="mobile-menu" class="mobile-menu-overlay md:hidden">
+      <div class="flex flex-col space-y-8 text-center">
+        <a href="/" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Home</a>
+        <a href="/projects" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Work</a>
+        <a href="/training" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Training</a>
+        <a href="/about" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">About</a>
+        <a href="/contact" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Contact</a>
+      </div>
+    </div>
+
+  <!-- Global Wrapper for transitions -->
+  <div class="page-wrapper min-h-screen flex flex-col">
+
+    <!-- Main Content Area -->
+    <main class="flex-grow pt-20">
+
+      <!-- Section 1 — Hero Section (100vh) -->
+      <section class="hero h-[calc(100vh-80px)] flex flex-col justify-between items-center px-6 relative overflow-hidden bg-grid-pattern">
+        <div></div> <!-- Spacer -->
+
+        <!-- Hero Text Content -->
+        <div class="text-center select-none z-10">
+          <h1 class="text-display flex flex-col items-center select-none uppercase text-center">
+            <span class="hero-line block overflow-hidden">Digital Marketing</span>
+            <span class="hero-line block overflow-hidden hero-highlight">Educator &</span>
+            <span class="hero-line block overflow-hidden">Strategist</span>
+          </h1>
+
+          <!-- Divider and Details -->
+          <div class="mt-8 flex flex-col items-center">
+            <div class="w-[200px] h-[1px] bg-accent mb-6"></div>
+            <p class="font-mono text-xs text-[var(--color-amber)] uppercase tracking-wider">
+              6+ years &middot; SEO &middot; Meta Ads &middot; Training &middot; Automation
+            </p>
+          </div>
+        </div>
+
+        <!-- Hero Bottom Info & Indicator -->
+        <div class="w-full max-w-7xl mx-auto flex justify-between items-end pb-8 z-10">
+          <div class="font-mono text-[10px] tracking-widest text-[var(--color-muted)] uppercase">
+            Kanpur, India &mdash; Open to Remote
+          </div>
+          
+          <!-- Animated Bouncing Chevron Scroll Indicator -->
+          <a href="#identity-marquee" class="flex flex-col items-center space-y-1 text-text-muted hover:text-accent transition-colors cursor-pointer" aria-label="Scroll Down">
+            <span class="font-mono text-[10px] tracking-widest uppercase">Scroll</span>
+            <svg class="w-4 h-4 animate-bounce text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 2 — Identity Strip (Marquee) -->
+      <section id="identity-marquee" class="py-6 marquee-strip border-y border-border overflow-hidden">
+        <div class="marquee-container">
+          <div class="marquee-inner">
+            <span class="mx-8 font-semibold uppercase tracking-widest">SEO STRATEGIST &middot; META ADS &middot; CONTENT EDUCATOR &middot; 300+ LEARNERS TRAINED &middot; 8 LIVE WEBSITES &middot; AUTOMATION BUILDER &middot;</span>
+            <span class="mx-8 font-semibold uppercase tracking-widest">SEO STRATEGIST &middot; META ADS &middot; CONTENT EDUCATOR &middot; 300+ LEARNERS TRAINED &middot; 8 LIVE WEBSITES &middot; AUTOMATION BUILDER &middot;</span>
+            <span class="mx-8 font-semibold uppercase tracking-widest">SEO STRATEGIST &middot; META ADS &middot; CONTENT EDUCATOR &middot; 300+ LEARNERS TRAINED &middot; 8 LIVE WEBSITES &middot; AUTOMATION BUILDER &middot;</span>
+            <span class="mx-8 font-semibold uppercase tracking-widest">SEO STRATEGIST &middot; META ADS &middot; CONTENT EDUCATOR &middot; 300+ LEARNERS TRAINED &middot; 8 LIVE WEBSITES &middot; AUTOMATION BUILDER &middot;</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 — "What I Do" (Bento grid) -->
+      <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="mb-16">
+          <p class="section-label mb-3">Capabilities</p>
+          <h2 class="section-heading text-heading font-medium tracking-tight uppercase">What I Do</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="card border-t-2 border-l-2 border-accent/80 flex flex-col justify-between min-h-[280px]">
+            <div>
+              <div class="text-accent mb-6">
+                <i data-lucide="search" class="w-8 h-8"></i>
+              </div>
+              <h3 class="card-title text-xl mb-3">SEO & Strategy</h3>
+              <p class="text-body text-sm leading-relaxed">
+                Comprehensive search engine optimization retainers, structured keyword frameworks, technical audits, and content maps built to scale organic visibility.
+              </p>
+            </div>
+            <a href="/projects" class="btn btn-ghost mt-6 self-start">Learn More &rarr;</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card border-t-2 border-l-2 border-[var(--color-amber)] flex flex-col justify-between min-h-[280px]">
+            <div>
+              <div class="text-[var(--color-amber)] mb-6">
+                <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+              </div>
+              <h3 class="card-title text-xl mb-3">Training & Education</h3>
+              <p class="text-body text-sm leading-relaxed">
+                Hands-on training batches at NDMIT and ASDC Kanpur. Instructing over 300+ students and corporate teams in live, performance-driven digital marketing.
+              </p>
+            </div>
+            <a href="/training" class="btn btn-ghost mt-6 self-start">Learn More &rarr;</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card border-t-2 border-l-2 border-accent/80 flex flex-col justify-between min-h-[280px]">
+            <div>
+              <div class="text-accent mb-6">
+                <i data-lucide="trending-up" class="w-8 h-8"></i>
+              </div>
+              <h3 class="card-title text-xl mb-3">Meta Ads & Performance</h3>
+              <p class="text-body text-sm leading-relaxed">
+                Strategic campaigns targeted toward ROI. Setting up landing pages, optimizing ad creatives, custom conversion events, and budgeting algorithms.
+              </p>
+            </div>
+            <a href="/projects" class="btn btn-ghost mt-6 self-start">Learn More &rarr;</a>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card border-t-2 border-l-2 border-[var(--color-amber)] flex flex-col justify-between min-h-[280px]">
+            <div>
+              <div class="text-[var(--color-amber)] mb-6">
+                <i data-lucide="zap" class="w-8 h-8"></i>
+              </div>
+              <h3 class="card-title text-xl mb-3">Automation & AI</h3>
+              <p class="text-body text-sm leading-relaxed">
+                Building autonomous workflows using n8n and HubSpot CRM. Setting up automated email/SMS lead notifications, CRM routing, and database syncing.
+              </p>
+            </div>
+            <a href="/contact" class="btn btn-ghost mt-6 self-start">Learn More &rarr;</a>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card border-t-2 border-l-2 border-accent/80 flex flex-col justify-between min-h-[280px]">
+            <div>
+              <div class="text-accent mb-6">
+                <i data-lucide="globe" class="w-8 h-8"></i>
+              </div>
+              <h3 class="card-title text-xl mb-3">Web Development</h3>
+              <p class="text-body text-sm leading-relaxed">
+                Developing responsive, fast-loading, SEO-ready agency and brand websites. Delivering 8 live client sites using clean, optimized frontend architectures.
+              </p>
+            </div>
+            <a href="/projects" class="btn btn-ghost mt-6 self-start">Learn More &rarr;</a>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card border-t-2 border-l-2 border-[var(--color-amber)] flex flex-col justify-between min-h-[280px]">
+            <div>
+              <div class="text-[var(--color-amber)] mb-6">
+                <i data-lucide="instagram" class="w-8 h-8"></i>
+              </div>
+              <h3 class="card-title text-xl mb-3">Social Media</h3>
+              <p class="text-body text-sm leading-relaxed">
+                Social presence management and growth. Implementing organic strategies, reels distribution, and local visibility driving over 27K+ monthly impressions.
+              </p>
+            </div>
+            <a href="/projects" class="btn btn-ghost mt-6 self-start">Learn More &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 — Numbers (Stats bar) -->
+      <section class="stats-section py-16 bg-surface border-y border-border overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-border-mid/50 text-center">
+            
+            <div class="stat-item flex flex-col items-center justify-center p-4">
+              <span class="stat-number"><span class="stat-counter" data-target="6" data-suffix="+">0</span></span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+
+            <div class="stat-item flex flex-col items-center justify-center p-4 pt-8 lg:pt-4">
+              <span class="stat-number"><span class="stat-counter" data-target="300" data-suffix="+">0</span></span>
+              <span class="stat-label">Learners Trained</span>
+            </div>
+
+            <div class="stat-item flex flex-col items-center justify-center p-4 pt-8 lg:pt-4">
+              <span class="stat-number"><span class="stat-counter" data-target="8" data-suffix="">0</span></span>
+              <span class="stat-label">Websites Delivered</span>
+            </div>
+
+            <div class="stat-item flex flex-col items-center justify-center p-4 pt-8 lg:pt-4">
+              <span class="stat-number"><span class="stat-counter" data-target="5" data-suffix="">0</span></span>
+              <span class="stat-label">SEO Retainers</span>
+            </div>
+
+            <div class="stat-item flex flex-col items-center justify-center p-4 pt-8 lg:pt-4">
+              <span class="stat-number"><span class="stat-counter" data-target="27" data-suffix="K+">0</span></span>
+              <span class="stat-label">Monthly IG Views</span>
+            </div>
+
+            <div class="stat-item flex flex-col items-center justify-center p-4 pt-8 lg:pt-4">
+              <span class="stat-number"><span class="stat-counter" data-target="47" data-suffix="">0</span></span>
+              <span class="stat-label">Leads in 27 Days</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5 — Featured Work -->
+      <section class="section-deep py-24 border-b border-border">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div>
+              <p class="section-label mb-3">Portfolio Highlights</p>
+              <h2 class="section-heading text-heading font-medium tracking-tight uppercase">Featured Work</h2>
+            </div>
+            <a href="/projects" class="btn btn-ghost">
+              See All Projects
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Work Cards Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <div class="card flex flex-col justify-between overflow-hidden relative group">
+              <div class="space-y-6">
+                <!-- Mini Browser Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-md aspect-[16/10] flex flex-col relative">
+                  <div class="bg-[#181818] px-3 py-2 flex items-center space-x-1.5 border-b border-border">
+                    <div class="flex space-x-1">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                    </div>
+                    <div class="bg-bg text-text-muted text-[8px] py-0.5 px-2 rounded flex-grow text-center font-mono truncate select-none">
+                      veloxis-global.vercel.app
+                    </div>
+                  </div>
+                  <div class="flex-grow relative overflow-hidden bg-surface-2">
+                    <img src="/images/projects/veloxis.png" alt="Veloxis Global" class="w-full h-full object-cover object-top pointer-events-none group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  </div>
+                </div>
+                <div>
+                  <span class="block text-mono text-[10px] uppercase tracking-wider mb-2">Agency Website</span>
+                  <h3 class="card-title text-xl font-bold text-text-primary mb-3">Veloxis Global</h3>
+                  <p class="text-body text-sm leading-relaxed">
+                    Enterprise systems intelligence infrastructure and client acquisitions platform. Designed for maximum trust and scale.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-8">
+                <a href="/projects" class="btn btn-ghost w-full justify-center">
+                  View Project &rarr;
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="card flex flex-col justify-between overflow-hidden relative group">
+              <div class="space-y-6">
+                <!-- Mini Browser Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-md aspect-[16/10] flex flex-col relative">
+                  <div class="bg-[#181818] px-3 py-2 flex items-center space-x-1.5 border-b border-border">
+                    <div class="flex space-x-1">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                    </div>
+                    <div class="bg-bg text-text-muted text-[8px] py-0.5 px-2 rounded flex-grow text-center font-mono truncate select-none">
+                      asdckanpur.vercel.app
+                    </div>
+                  </div>
+                  <div class="flex-grow relative overflow-hidden bg-surface-2">
+                    <img src="/images/projects/asdckanpur.png" alt="Skill Development Institute" class="w-full h-full object-cover object-top pointer-events-none group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  </div>
+                </div>
+                <div>
+                  <span class="block text-mono text-[10px] uppercase tracking-wider mb-2">Educational Institute</span>
+                  <h3 class="card-title text-xl font-bold text-text-primary mb-3">Skill Development Institute</h3>
+                  <p class="text-body text-sm leading-relaxed">
+                    Fully optimized educational website. Drives lead inquiries and processes registrations for onsite professional training.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-8">
+                <a href="/projects" class="btn btn-ghost w-full justify-center">
+                  View Project &rarr;
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="card flex flex-col justify-between overflow-hidden relative group">
+              <div class="space-y-6">
+                <!-- Mini Browser Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-md aspect-[16/10] flex flex-col relative">
+                  <div class="bg-[#181818] px-3 py-2 flex items-center space-x-1.5 border-b border-border">
+                    <div class="flex space-x-1">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                    </div>
+                    <div class="bg-bg text-text-muted text-[8px] py-0.5 px-2 rounded flex-grow text-center font-mono truncate select-none">
+                      skyline-estate-project.vercel.app
+                    </div>
+                  </div>
+                  <div class="flex-grow relative overflow-hidden bg-surface-2">
+                    <img src="/images/projects/skyline.png" alt="Skyline Estate" class="w-full h-full object-cover object-top pointer-events-none group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  </div>
+                </div>
+                <div>
+                  <span class="block text-mono text-[10px] uppercase tracking-wider mb-2">Real Estate</span>
+                  <h3 class="card-title text-xl font-bold text-text-primary mb-3">Skyline Estate</h3>
+                  <p class="text-body text-sm leading-relaxed">
+                    High-converting lead collection funnel and brochure portal designed to target HNIs for premium real estate.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-8">
+                <a href="/projects" class="btn btn-ghost w-full justify-center">
+                  View Project &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 — CTA Strip -->
+      <section class="cta-strip py-24 border-t border-border bg-surface">
+        <div class="max-w-4xl mx-auto px-6 text-center z-10 relative">
+          <h2 class="section-heading text-heading font-medium uppercase mb-6 tracking-tight">Ready to grow?</h2>
+          <p class="text-body mb-10 max-w-2xl mx-auto leading-relaxed">
+            Let's work on SEO, ads, training, or automation together. Set up a tailored client acquisition strategy.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/contact" class="btn btn-primary">
+              Hire Me
+            </a>
+            <a href="/projects" class="btn btn-secondary">
+              See My Work
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Upper Footer -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12">
+          <!-- Branding -->
+          <div class="flex flex-col space-y-4">
+            <h3 class="footer-name">Muddassir Ali</h3>
+            <p class="footer-tagline">
+              Systems-driven Digital Marketing Educator and Consultant. Rebuilding operations and pipeline acquisitions.
+            </p>
+          </div>
+
+          <!-- Links -->
+          <div class="flex flex-col space-y-4">
+            <h4 class="font-mono text-xs uppercase tracking-widest text-[var(--color-teal)] font-bold">Quick Navigation</h4>
+            <nav class="flex flex-col space-y-2 text-sm font-body font-light">
+              <a href="/" class="footer-link transition-colors">Home</a>
+              <a href="/projects" class="footer-link transition-colors">Work</a>
+              <a href="/training" class="footer-link transition-colors">Training</a>
+              <a href="/about" class="footer-link transition-colors">About</a>
+              <a href="/contact" class="footer-link transition-colors">Contact</a>
+            </nav>
+          </div>
+
+          <!-- Socials / Contacts -->
+          <div class="flex flex-col space-y-4">
+            <h4 class="font-mono text-xs uppercase tracking-widest text-[var(--color-teal)] font-bold">Connect</h4>
+            <div class="flex items-center space-x-6 text-[var(--color-teal)]">
+              <a href="https://linkedin.com/in/muddassirali" target="_blank" rel="noopener noreferrer" class="footer-social-icon transition-colors" aria-label="LinkedIn">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </a>
+              <a href="https://instagram.com/asdc_kanpur" target="_blank" rel="noopener noreferrer" class="footer-social-icon transition-colors" aria-label="Instagram">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="mailto:theofficialmuddassir@gmail.com" class="footer-social-icon transition-colors" aria-label="Email">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <p class="text-text-muted font-body text-xs mt-2">
+              Kanpur, India &middot; Open to remote
+            </p>
+          </div>
+        </div>
+
+        <!-- Lower Footer -->
+        <div class="footer-bottom pt-8 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+          <div>
+            &copy; 2025 Muddassir Ali. All rights reserved.
+          </div>
+          <div class="tracking-widest uppercase text-[10px]">
+            Built with intention
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Entry Script -->
+</body>
+</html>

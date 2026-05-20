@@ -1,0 +1,14 @@
+# Professional SEO Robots.txt for Muddassir Ali
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /dist/
+
+# Optimization for crawlers
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://muddassirali.com/sitemap.xml
+
+# Host identification
+Host: https://muddassirali.com
