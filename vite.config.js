@@ -8,7 +8,22 @@ export default defineConfig({
   ],
   server: {
     port: 3000,
-    open: true
+    open: true,
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        const url = req.url.split('?')[0];
+        if (url === '/about') {
+          req.url = '/about.html';
+        } else if (url === '/projects') {
+          req.url = '/projects.html';
+        } else if (url === '/training') {
+          req.url = '/training.html';
+        } else if (url === '/contact') {
+          req.url = '/contact.html';
+        }
+        next();
+      });
+    }
   },
   build: {
     outDir: 'dist',

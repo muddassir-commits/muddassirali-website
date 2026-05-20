@@ -1,7 +1,28 @@
 import './style.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { createIcons, icons } from 'lucide';
+import { 
+  createIcons, 
+  Linkedin, 
+  Instagram, 
+  Mail, 
+  Search, 
+  GraduationCap, 
+  TrendingUp, 
+  Zap, 
+  Globe, 
+  Phone, 
+  MapPin, 
+  Layers, 
+  Target, 
+  Facebook, 
+  Palette, 
+  Bot, 
+  Cpu, 
+  Activity, 
+  Terminal, 
+  Code 
+} from 'lucide';
 import { initCursor } from './cursor.js';
 import { initNav } from './nav.js';
 import { initCounters } from './counter.js';
@@ -15,7 +36,29 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.style.opacity = '1';
 
   // Initialize Lucide Icons
-  createIcons({ icons });
+  createIcons({
+    icons: {
+      Linkedin,
+      Instagram,
+      Mail,
+      Search,
+      GraduationCap,
+      TrendingUp,
+      Zap,
+      Globe,
+      Phone,
+      MapPin,
+      Layers,
+      Target,
+      Facebook,
+      Palette,
+      Bot,
+      Cpu,
+      Activity,
+      Terminal,
+      Code
+    }
+  });
 
   // Initialize Custom Cursor
   initCursor();

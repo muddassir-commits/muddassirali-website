@@ -13,17 +13,26 @@ function splitChars(el) {
 
 // Counter animation with amber glow pulse on complete
 function animateCounter(el) {
+  if (el.dataset.animating === 'true') return;
+  el.dataset.animating = 'true';
+
   const target = parseInt(el.dataset.target);
   const suffix = el.dataset.suffix || '';
   let current = 0;
   const duration = 2000;
   const step = target / (duration / 16);
   
-  const interval = setInterval(() => {
+  if (el.counterInterval) {
+    clearInterval(el.counterInterval);
+  }
+  
+  el.counterInterval = setInterval(() => {
     current = Math.min(current + step, target);
     el.textContent = Math.floor(current) + suffix;
     if (current >= target) {
-      clearInterval(interval);
+      clearInterval(el.counterInterval);
+      delete el.counterInterval;
+      el.dataset.animating = 'false';
       // Amber glow pulse on complete
       gsap.fromTo(el, 
         { textShadow: '0 0 40px rgba(245,166,35,0.8)' },

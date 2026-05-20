@@ -53,19 +53,31 @@ export function initNav() {
 
   // Highlight active link based on current path
   const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
 
   navLinks.forEach((link) => {
     const href = link.getAttribute('href');
     const isHome = currentPath === '/' || currentPath.endsWith('index.html');
     const linkIsHome = href === '/' || href === 'index.html';
 
-    if ((isHome && linkIsHome) || (!isHome && !linkIsHome && currentPath.includes(href.replace('.html', '')))) {
+    const normalizedHref = href.replace(/^\//, '').replace('.html', '');
+    const normalizedPath = currentPath.replace(/^\//, '').replace('.html', '');
+
+    const isMatch = (isHome && linkIsHome) || 
+                    (!isHome && !linkIsHome && normalizedPath.startsWith(normalizedHref) && normalizedHref !== '');
+
+    if (isMatch) {
       link.classList.add('text-accent');
-      link.style.borderBottom = '1px solid var(--color-accent)';
+      link.style.color = 'var(--color-accent)';
+      if (link.classList.contains('nav-link')) {
+        link.style.borderBottom = '1px solid var(--color-accent)';
+      }
     } else {
       link.classList.remove('text-accent');
-      link.style.borderBottom = '1px solid transparent';
+      link.style.color = '';
+      if (link.classList.contains('nav-link')) {
+        link.style.borderBottom = '1px solid transparent';
+      }
     }
   });
 }

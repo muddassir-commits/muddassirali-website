@@ -5,19 +5,26 @@
     /* Anti-FOUC: hide body until CSS is ready */
     body { visibility: hidden; opacity: 0; }
   </style>
+  <script>
+    // Fallback: make body visible if JS fails to run
+    setTimeout(() => {
+      document.body.style.visibility = 'visible';
+      document.body.style.opacity = '1';
+    }, 800);
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- SEO Meta Tags -->
   <title>Contact — Muddassir Ali</title>
   <meta name="description" content="Get in touch with Muddassir Ali for SEO, Meta Ads, training, web projects, or automation." />
-  <link rel="canonical" href="https://muddassirali.com/contact.html" />
+  <link rel="canonical" href="https://muddassirali.com/contact" />
 
   <!-- Open Graph Tags -->
   <meta property="og:title" content="Contact — Muddassir Ali" />
   <meta property="og:description" content="Get in touch with Muddassir Ali for SEO, Meta Ads, training, web projects, or automation." />
   <meta property="og:image" content="https://muddassirali.com/images/Muddassir_Ali.webp" />
-  <meta property="og:url" content="https://muddassirali.com/contact.html" />
+  <meta property="og:url" content="https://muddassirali.com/contact" />
   <meta property="og:type" content="website" />
 
   <!-- Favicon -->
@@ -48,9 +55,6 @@
   <!-- Noise Overlay -->
   <div class="noise-overlay"></div>
 
-  <!-- Global Wrapper -->
-  <div class="page-wrapper min-h-screen flex flex-col">
-
     <!-- Fixed Header -->
     <header id="navbar" class="nav fixed top-0 left-0 w-full z-50 transition-all duration-300">
       <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -60,10 +64,10 @@
         <!-- Desktop Nav Links -->
         <nav class="hidden md:flex items-center space-x-10">
           <a href="/" class="nav-link">Home</a>
-          <a href="/projects.html" class="nav-link">Work</a>
-          <a href="/training.html" class="nav-link">Training</a>
-          <a href="/about.html" class="nav-link">About</a>
-          <a href="/contact.html" class="nav-link">Contact</a>
+          <a href="/projects" class="nav-link">Work</a>
+          <a href="/training" class="nav-link">Training</a>
+          <a href="/about" class="nav-link">About</a>
+          <a href="/contact" class="nav-link">Contact</a>
         </nav>
 
         <!-- Mobile Menu Hamburger Button -->
@@ -79,12 +83,15 @@
     <div id="mobile-menu" class="mobile-menu-overlay md:hidden">
       <div class="flex flex-col space-y-8 text-center">
         <a href="/" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Home</a>
-        <a href="/projects.html" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Work</a>
-        <a href="/training.html" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Training</a>
-        <a href="/about.html" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">About</a>
-        <a href="/contact.html" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Contact</a>
+        <a href="/projects" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Work</a>
+        <a href="/training" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Training</a>
+        <a href="/about" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">About</a>
+        <a href="/contact" class="mobile-nav-link font-display text-4xl font-extrabold text-text-primary hover:text-accent transition-colors">Contact</a>
       </div>
     </div>
+
+  <!-- Global Wrapper -->
+  <div class="page-wrapper min-h-screen flex flex-col">
 
     <!-- Main Content Area -->
     <main class="flex-grow pt-32 pb-24">
@@ -147,13 +154,19 @@
               </div>
 
               <!-- Mentorship Link -->
-              <div class="card p-6 flex items-start space-x-4">
-                <div class="text-[var(--color-teal)] mt-1 flex-shrink-0">
-                  <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+              <div class="card p-6 flex flex-col space-y-4 group">
+                <div class="flex items-start space-x-4">
+                  <div class="text-[var(--color-teal)] mt-1 flex-shrink-0">
+                    <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <span class="block font-mono text-xs text-text-muted uppercase tracking-wider mb-1">Mentorship Platform</span>
+                    <a href="https://mentorship.muddassirali.com" target="_blank" rel="noopener noreferrer" class="font-body font-bold text-text-primary hover:text-[var(--color-teal)] transition-colors">mentorship.muddassirali.com</a>
+                  </div>
                 </div>
-                <div>
-                  <span class="block font-mono text-xs text-text-muted uppercase tracking-wider mb-1">Mentorship Platform</span>
-                  <a href="https://mentorship.muddassirali.com" target="_blank" rel="noopener noreferrer" class="font-body font-bold text-text-primary hover:text-[var(--color-teal)] transition-colors">mentorship.muddassirali.com</a>
+                <!-- Portal Image/Mockup -->
+                <div class="bg-surface border border-border rounded-lg overflow-hidden shadow-md aspect-[16/10] select-none bg-surface-2">
+                  <img src="/images/projects/mentorship.png" alt="Mentorship Studio Portal" class="w-full h-full object-cover object-top pointer-events-none group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -226,7 +239,7 @@
           
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Card 1 -->
-            <a href="/projects.html" class="card p-6 text-center flex flex-col justify-between group">
+            <a href="/projects" class="card p-6 text-center flex flex-col justify-between group">
               <div>
                 <span class="text-[var(--color-teal)] inline-block mb-4"><i data-lucide="globe" class="w-8 h-8"></i></span>
                 <h3 class="card-title text-lg font-bold mb-2">Want a website?</h3>
@@ -236,7 +249,7 @@
             </a>
 
             <!-- Card 2 -->
-            <a href="/training.html" class="card p-6 text-center flex flex-col justify-between group">
+            <a href="/training" class="card p-6 text-center flex flex-col justify-between group">
               <div>
                 <span class="text-[var(--color-teal)] inline-block mb-4"><i data-lucide="graduation-cap" class="w-8 h-8"></i></span>
                 <h3 class="card-title text-lg font-bold mb-2">Looking for training?</h3>
@@ -287,10 +300,10 @@
             <h4 class="font-mono text-xs uppercase tracking-widest text-[var(--color-teal)] font-bold">Quick Navigation</h4>
             <nav class="flex flex-col space-y-2 text-sm font-body font-light">
               <a href="/" class="footer-link transition-colors">Home</a>
-              <a href="/projects.html" class="footer-link transition-colors">Work</a>
-              <a href="/training.html" class="footer-link transition-colors">Training</a>
-              <a href="/about.html" class="footer-link transition-colors">About</a>
-              <a href="/contact.html" class="footer-link transition-colors">Contact</a>
+              <a href="/projects" class="footer-link transition-colors">Work</a>
+              <a href="/training" class="footer-link transition-colors">Training</a>
+              <a href="/about" class="footer-link transition-colors">About</a>
+              <a href="/contact" class="footer-link transition-colors">Contact</a>
             </nav>
           </div>
 
