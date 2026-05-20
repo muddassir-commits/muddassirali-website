@@ -1,11 +1,7 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/projects", "destination": "/projects.html" },
-    { "source": "/training", "destination": "/training.html" },
-    { "source": "/contact", "destination": "/contact.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -34,3 +30,4 @@
     }
   ]
 }
+
