@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Download, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "./Button";
 
 const ROTATING_WORDS = ["Performance", "Meta Ads", "Automation", "AI Systems"];
@@ -149,10 +149,7 @@ export function Hero() {
           <Button href="#work" icon={<ArrowRight className="w-4 h-4" />}>
             View selected work
           </Button>
-          <Button variant="secondary" href="/Muddassir_Ali_Resume.pdf" download icon={<Download className="w-4 h-4" />}>
-            Résumé
-          </Button>
-          <Button variant="ghost" href="mailto:theofficialmuddassir@gmail.com" icon={<Mail className="w-4 h-4" />}>
+          <Button variant="secondary" href="mailto:theofficialmuddassir@gmail.com" icon={<Mail className="w-4 h-4" />}>
             Email
           </Button>
         </motion.div>

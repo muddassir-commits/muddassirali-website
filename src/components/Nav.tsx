@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Download, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 
@@ -120,8 +120,8 @@ export function Nav() {
               </span>
             </div>
 
-            <Button variant="secondary" href="/Muddassir_Ali_Resume.pdf" download icon={<Download className="w-4 h-4" />}>
-              Résumé
+            <Button variant="secondary" href="#contact">
+              Contact
             </Button>
           </div>
         </nav>
@@ -178,8 +178,8 @@ export function Nav() {
                 </span>
               </div>
 
-              <Button variant="secondary" href="/Muddassir_Ali_Resume.pdf" download className="w-full">
-                Download Résumé
+              <Button variant="secondary" href="#contact" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
+                Contact
               </Button>
             </motion.div>
           </motion.div>
