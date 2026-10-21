@@ -1,5 +1,4 @@
 import './style.css';
-import Lenis from 'lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { 
@@ -59,25 +58,6 @@ import { initLeakageCalculator } from './calculator.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Initialize Lenis Smooth Scrolling (Awwwards / Godly Standard)
-function initSmoothScroll() {
-  // Only on non-touch devices
-  if (window.matchMedia('(pointer: coarse)').matches) return;
-
-  const lenis = new Lenis({
-    duration: 1.1,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smoothWheel: true,
-  });
-
-  lenis.on('scroll', ScrollTrigger.update);
-
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-
-  gsap.ticker.lagSmoothing(0);
-}
 
 // Aceternity UI / Magic UI Card Mouse Spotlight Effect
 function initCardSpotlight() {
@@ -146,8 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Initialize Lenis Smooth Inertia Scrolling
-  initSmoothScroll();
 
   // Initialize Hero Interactive Light Canvas
   initHeroCanvas('hero-canvas');

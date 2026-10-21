@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manrope:wght@200..800&display=swap');
 @import "tailwindcss";
 
 /* Reveal body once stylesheet is parsed */
@@ -29,11 +29,11 @@ body {
   --color-emerald-light:#10B981;
   --color-emerald-glow: rgba(16, 185, 129, 0.15);
 
-  --font-display: 'Space Grotesk', 'Bebas Neue', sans-serif;
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-sans:    'Plus Jakarta Sans', sans-serif;
-  --font-body:    'Plus Jakarta Sans', sans-serif;
-  --font-mono:    'Space Mono', monospace;
+  --font-display: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans:    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Monaco, Consolas, monospace;
 }
 
 :root {
@@ -52,6 +52,7 @@ body {
 
   /* === ELECTRIC SAPPHIRE & INDIGO === */
   --color-blue:         #2563EB;   /* Royal Blue */
+  --color-accent:       #2563EB;   /* Accent Blue */
   --color-indigo:       #4F46E5;   /* Electric Indigo */
   --color-blue-glow:    rgba(37, 99, 235, 0.16);
 
@@ -71,17 +72,16 @@ body {
   --shadow-card-hover:  0 12px 32px -4px rgba(37, 99, 235, 0.12), 0 4px 12px 0 rgba(0, 0, 0, 0.04);
   --shadow-button:      0 4px 16px rgba(37, 99, 235, 0.25);
 
-  /* === FONTS === */
-  --font-display: 'Space Grotesk', 'Bebas Neue', sans-serif;
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-sans:    'Plus Jakarta Sans', sans-serif;
-  --font-body:    'Plus Jakarta Sans', sans-serif;
-  --font-mono:    'Space Mono', monospace;
+  /* === FONTS (100% Free & Open-Source OFL Typography Architecture) === */
+  --font-display: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans:    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Monaco, Consolas, monospace;
 }
 
 /* Base resets & typography */
 html {
-  scroll-behavior: smooth;
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
@@ -91,23 +91,18 @@ html {
 body {
   overflow-x: hidden;
   background-color: #FAFAFA;
-  /* Modern dot-matrix grid + ambient light orbs (Magic UI & 21st.dev style) */
-  background-image: 
-    radial-gradient(#CBD5E1 1px, transparent 1px),
-    radial-gradient(circle at 50% -10%, rgba(37, 99, 235, 0.07) 0%, transparent 60%),
-    radial-gradient(circle at 85% 25%, rgba(79, 70, 229, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 12% 60%, rgba(16, 185, 129, 0.04) 0%, transparent 50%);
-  background-size: 28px 28px, 100% 100%, 100% 100%, 100% 100%;
-  background-attachment: fixed;
+  background-image: radial-gradient(#CBD5E1 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+  min-height: 100vh;
 }
 
-/* === TYPOGRAPHY SCALE === */
+/* === TYPOGRAPHY SCALE (Manrope Display + Inter Body + JetBrains Mono) === */
 .text-display {
   font-family: var(--font-display);
   font-size: clamp(34px, 5.2vw, 74px);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 800;
   color: #09090B;
 }
 
@@ -124,7 +119,8 @@ body {
   font-family: var(--font-body);
   font-size: clamp(17px, 1.8vw, 22px);
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
   color: #475569;
 }
 
@@ -133,6 +129,7 @@ body {
   font-size: 15.5px;
   font-weight: 400;
   line-height: 1.7;
+  letter-spacing: -0.006em;
   color: #475569;
 }
 
@@ -140,8 +137,9 @@ body {
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  font-feature-settings: "tnum" 1, "zero" 1;
 }
 
 .text-stat {
@@ -149,6 +147,8 @@ body {
   font-size: clamp(36px, 4.5vw, 64px);
   font-weight: 700;
   line-height: 1;
+  letter-spacing: -0.02em;
+  font-feature-settings: "tnum" 1, "zero" 1;
   color: #059669;
 }
 
@@ -407,7 +407,7 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 99999;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 16px;
@@ -417,6 +417,7 @@ body {
 }
 
 .cert-modal-backdrop.active {
+  display: flex !important;
   opacity: 1;
   pointer-events: auto;
 }
@@ -532,36 +533,11 @@ body {
   }
 }
 
-/* Subtle Noise Overlay */
+/* Subtle Noise Overlay (Disabled to prevent GPU compositor tile drops) */
 .noise-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 40;
-  opacity: 0.015;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  display: none !important;
 }
 
-/* Navigation styling in Light Mode */
-#navbar {
-  z-index: 100;
-  background-color: transparent;
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  border-bottom: 1px solid transparent;
-  transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
-}
-
-#navbar.nav-scrolled {
-  background-color: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid #E2E8F0 !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-}
 
 /* Scroll progress indicator */
 .scroll-progress {
@@ -772,7 +748,7 @@ body {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   z-index: 99999;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -782,6 +758,7 @@ body {
 }
 
 .presentation-modal-backdrop.active {
+  display: flex !important;
   opacity: 1;
   pointer-events: auto;
 }
@@ -914,7 +891,7 @@ body {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 49;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -924,10 +901,63 @@ body {
 }
 
 .mobile-menu-overlay.active {
+  display: flex !important;
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
 
+/* ========================================================================= */
+/* GLOBAL HEADER & NAVIGATION BAR                                             */
+/* ========================================================================= */
+#navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 100;
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
 
+#navbar.nav-scrolled {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
 
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2563EB;
+  border-radius: 9999px;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.active-nav-link::after {
+  width: 100%;
+}
+
+.nav-link.active-nav-link {
+  color: #2563EB !important;
+  font-weight: 600 !important;
+}
+
+.mobile-nav-link.active-nav-link {
+  color: #2563EB !important;
+  font-weight: 800 !important;
+}

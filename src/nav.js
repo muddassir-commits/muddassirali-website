@@ -8,17 +8,15 @@ export function initNav() {
 
   if (!navbar) return;
 
-  // Track scroll position to toggle border
+  // Track scroll position to toggle border and frosted background
   const handleScroll = () => {
-    if (window.scrollY > 80) {
+    if (window.scrollY > 30) {
       navbar.classList.add('nav-scrolled');
-      navbar.style.borderBottom = '1px solid var(--color-border-mid)';
     } else {
       navbar.classList.remove('nav-scrolled');
-      navbar.style.borderBottom = '1px solid transparent';
     }
   };
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll(); // Initial check
 
   // Mobile menu interaction
@@ -52,31 +50,33 @@ export function initNav() {
   }
 
   // Highlight active link based on current path
-  const currentPath = window.location.pathname;
+  const currentPath = (window.location.pathname || '/').toLowerCase();
+  const isHome = currentPath === '/' || 
+                 currentPath.endsWith('/index.html') || 
+                 currentPath === '/index.html' || 
+                 currentPath === '';
+
   const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
 
   navLinks.forEach((link) => {
     const href = link.getAttribute('href');
-    const isHome = currentPath === '/' || currentPath.endsWith('index.html');
-    const linkIsHome = href === '/' || href === 'index.html';
+    if (!href || href.startsWith('#')) return;
 
-    const normalizedHref = href.replace(/^\//, '').replace('.html', '');
-    const normalizedPath = currentPath.replace(/^\//, '').replace('.html', '');
+    const linkIsHome = href === '/' || href === 'index.html' || href === '/index.html';
+
+    const normalizedHref = href.replace(/^\//, '').replace(/\.html$/, '').replace(/\/$/, '');
+    const normalizedPath = currentPath.replace(/^\//, '').replace(/\.html$/, '').replace(/\/$/, '');
 
     const isMatch = (isHome && linkIsHome) || 
-                    (!isHome && !linkIsHome && normalizedPath.startsWith(normalizedHref) && normalizedHref !== '');
+                    (!isHome && !linkIsHome && normalizedPath === normalizedHref);
 
     if (isMatch) {
-      link.classList.add('text-accent');
-      link.style.color = 'var(--color-accent)';
-      if (link.classList.contains('nav-link')) {
-        link.style.borderBottom = '1px solid var(--color-accent)';
-      }
+      link.classList.add('active-nav-link', 'text-blue-600', 'font-semibold');
+      link.classList.remove('text-slate-600');
     } else {
-      link.classList.remove('text-accent');
-      link.style.color = '';
-      if (link.classList.contains('nav-link')) {
-        link.style.borderBottom = '1px solid transparent';
+      link.classList.remove('active-nav-link', 'text-blue-600', 'font-semibold');
+      if (!link.classList.contains('btn') && !link.classList.contains('mobile-nav-link')) {
+        link.classList.add('text-slate-600');
       }
     }
   });

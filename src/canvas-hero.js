@@ -164,9 +164,9 @@ export function initHeroCanvas(canvasId = 'hero-canvas') {
   }
 
   function resize() {
-    const rect = canvas.parentElement.getBoundingClientRect();
-    width = rect.width;
-    height = rect.height;
+    const rect = canvas.parentElement ? canvas.parentElement.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight };
+    width = rect.width || window.innerWidth;
+    height = rect.height || window.innerHeight;
     dpr = Math.min(window.devicePixelRatio || 1, 2);
 
     canvas.width = width * dpr;

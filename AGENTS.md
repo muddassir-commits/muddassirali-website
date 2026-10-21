@@ -76,6 +76,19 @@ This website must NOT look like a generic developer portfolio or basic resume. I
    - Slate Navy Surfaces: `#0F172A` with 60% glassmorphism opacity (`backdrop-blur-xl`)
    - Accent Blue: `#2563EB` & Electric Indigo `#4F46E5`
    - Energetic Emerald / Cyber Lime: `#34D399` & `#10B981` (for live indicators and stats)
-2. **Typography**: Google Fonts (Plus Jakarta Sans or Space Grotesk / Inter).
-3. **Micro-Interactions**: Hover magnetic buttons, glowing border-radius shaders, smooth inertia scrolling.
+2. **Typography**: 100% Free & Open-Source (SIL Open Font License) Architecture:
+   - Display & Headings: `Manrope` (Variable weights 200..800)
+   - Body & UI Text: `Inter` (Variable weights 100..900, optical size 14..32)
+   - Telemetry, Badges, Metrics & Numbers: `JetBrains Mono` (Weights 100..800, tabular numerals)
+3. **Micro-Interactions**: Hover magnetic buttons, glowing border-radius shaders, clean instant rendering.
 4. **No Generic Placeholders**: Keep real credentials, real research data, and real system architecture.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

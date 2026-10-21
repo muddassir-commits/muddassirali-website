@@ -95,44 +95,10 @@ export function initAnimations() {
     });
   }
 
-  // 1. Page fade-in transition
+  // 1. Page transition (guarantee fully visible)
   const pageWrapper = document.querySelector('.page-wrapper');
   if (pageWrapper) {
-    gsap.fromTo(pageWrapper,
-      { opacity: 0, y: 12 },
-      { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }
-    );
-
-    // Intercept local link transitions for page exit sweep
-    document.querySelectorAll('a').forEach((link) => {
-      const href = link.getAttribute('href');
-      const target = link.getAttribute('target');
-      
-      if (
-        href && 
-        !target && 
-        !href.startsWith('#') && 
-        !href.startsWith('mailto:') && 
-        !href.startsWith('tel:') && 
-        !href.startsWith('javascript:')
-      ) {
-        const isLocal = href.startsWith('/') || !href.includes('://');
-        if (isLocal) {
-          link.addEventListener('click', (e) => {
-            e.preventDefault();
-            gsap.to(pageWrapper, {
-              opacity: 0,
-              y: -10,
-              duration: 0.2,
-              ease: 'power2.in',
-              onComplete: () => {
-                window.location.href = href;
-              }
-            });
-          });
-        }
-      }
-    });
+    pageWrapper.style.opacity = '1';
   }
 
   // 2. Hero Orchestrated Entrance Timeline
@@ -216,109 +182,39 @@ export function initAnimations() {
     });
   });
 
-  // 4. Safe Section Scroll Animations (Ensure items are visible immediately if in view)
-  const isElementInViewport = (el) => {
-    const rect = el.getBoundingClientRect();
-    return rect.top <= window.innerHeight * 0.95;
+  // 4. Resilient Scroll Entrance Reveals (Never pre-hide with opacity: 0)
+  const animateOnEntry = (elements, options = {}) => {
+    if (!('IntersectionObserver' in window)) {
+      elements.forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          observer.unobserve(el);
+          gsap.from(el, { 
+            y: options.y || 14, 
+            duration: options.duration || 0.4, 
+            ease: 'power2.out', 
+            clearProps: 'transform' 
+          });
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '60px 0px 0px 0px' });
+
+    elements.forEach(el => observer.observe(el));
   };
 
-  // Section Headings
-  document.querySelectorAll('.section-heading').forEach((heading) => {
-    if (isElementInViewport(heading)) {
-      gsap.to(heading, { opacity: 1, x: 0, duration: 0.5 });
-    } else {
-      gsap.fromTo(heading,
-        { opacity: 0, x: -24 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 0.7,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: heading,
-            start: 'top 95%',
-            once: true
-          }
-        }
-      );
-    }
-  });
-
-  // Section Labels
-  document.querySelectorAll('.section-label').forEach((label) => {
-    if (isElementInViewport(label)) {
-      gsap.to(label, { opacity: 1, y: 0, duration: 0.4 });
-    } else {
-      gsap.fromTo(label,
-        { opacity: 0, y: 10 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: label,
-            start: 'top 95%',
-            once: true
-          }
-        }
-      );
-    }
-  });
-
-  // 5. Certification Cards: Stagger reveal
-  const certSection = document.getElementById('certifications');
-  const certCards = document.querySelectorAll('.cert-card');
-  if (certCards.length > 0) {
-    certCards.forEach((card, idx) => {
-      if (isElementInViewport(card)) {
-        gsap.to(card, { opacity: 1, y: 0, scale: 1, duration: 0.5 });
-      } else {
-        gsap.fromTo(card,
-          { opacity: 0, y: 28, scale: 0.98 },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.6,
-            delay: (idx % 2) * 0.1,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: card,
-              start: 'top 95%',
-              once: true
-            }
-          }
-        );
-      }
-    });
-  }
-
-  // 6. Generic Bento / Feature Cards
-  const genericCards = document.querySelectorAll('.card, .presentation-card, .glass-card');
-  genericCards.forEach((card, idx) => {
-    if (!card.closest('#certifications')) {
-      if (isElementInViewport(card)) {
-        gsap.to(card, { opacity: 1, y: 0, duration: 0.5 });
-      } else {
-        gsap.fromTo(card,
-          { opacity: 0, y: 24 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.55,
-            delay: (idx % 3) * 0.08,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: card,
-              start: 'top 95%',
-              once: true
-            }
-          }
-        );
-      }
-    }
-  });
+  // Animate headings, labels, and cards on natural entry without pre-hiding
+  animateOnEntry(document.querySelectorAll('.section-heading'), { y: 16, duration: 0.5 });
+  animateOnEntry(document.querySelectorAll('.section-label'), { y: 10, duration: 0.4 });
+  animateOnEntry(document.querySelectorAll('.cert-card'), { y: 20, duration: 0.5 });
+  animateOnEntry(document.querySelectorAll('.card, .presentation-card, .glass-card'), { y: 16, duration: 0.45 });
 
   // 7. Stats: fade in and trigger counters
   const statsSection = document.querySelector('.stats-section, #research-benchmark');

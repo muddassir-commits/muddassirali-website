@@ -11,7 +11,7 @@ export default defineConfig({
     open: true,
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
-        const url = req.url.split('?')[0];
+        const url = req.url.split('?')[0].replace(/\/$/, '') || '/';
         if (url === '/about') {
           req.url = '/about.html';
         } else if (url === '/projects') {
@@ -42,7 +42,6 @@ export default defineConfig({
             if (id.includes('three')) return 'vendor-three';
             if (id.includes('gsap')) return 'vendor-gsap';
             if (id.includes('lucide')) return 'vendor-lucide';
-            if (id.includes('lenis')) return 'vendor-lenis';
             return 'vendor';
           }
         }

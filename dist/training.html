@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-    /* Anti-FOUC: hide body until CSS is ready */
-    body { visibility: hidden; opacity: 0; }
-  </style>
-  <script>
-    setTimeout(() => {
-      document.body.style.visibility = 'visible';
-      document.body.style.opacity = '1';
-    }, 600);
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -29,10 +19,12 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- Google Fonts Stack -->
+  <!-- Core Render-Blocking Stylesheet (Prevents FOUC on page navigation) -->
+
+  <!-- Typography Architecture: Manrope (Display/Heading) + Inter (Body/UI) + JetBrains Mono (Stats/Telemetry) [100% Free OFL] -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
   <!-- GA4 tracking ID (Preserved) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8JPSTDLC1"></script>
@@ -101,12 +93,11 @@
     ]
   }
   </script>
-  <script type="module" crossorigin src="/assets/vendor-lenis-9qxpAu3p.js"></script>
   <script type="module" crossorigin src="/assets/vendor-gsap-CiEuWA-R.js"></script>
   <script type="module" crossorigin src="/assets/vendor-lucide-CGeN2D73.js"></script>
   <script type="module" crossorigin src="/assets/vendor-three-DgkruVSp.js"></script>
-  <script type="module" crossorigin src="/assets/main-C2W93q1q.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-na9kVs7b.css">
+  <script type="module" crossorigin src="/assets/main-DMbyoXC7.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-BMZICBRE.css">
 </head>
 <body class="bg-[#FAFAFA] text-[#09090B] selection:bg-blue-600 selection:text-white">
 
@@ -139,7 +130,7 @@
       <nav class="hidden md:flex items-center space-x-8">
         <a href="/" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Home</a>
         <a href="/projects" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Work</a>
-        <a href="/training" class="nav-link text-sm font-medium text-blue-600 font-semibold transition-colors">Training</a>
+        <a href="/training" class="nav-link text-sm font-semibold text-blue-600 active-nav-link transition-colors">Training</a>
         <a href="/about" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">About</a>
         <a href="/contact" class="btn btn-primary !py-2 !px-4 !text-xs !shadow-none">Contact</a>
       </nav>
@@ -158,7 +149,7 @@
     <div class="flex flex-col space-y-6 text-center">
       <a href="/" class="mobile-nav-link font-heading text-3xl font-bold text-slate-900 hover:text-blue-600 transition-colors">Home</a>
       <a href="/projects" class="mobile-nav-link font-heading text-3xl font-bold text-slate-900 hover:text-blue-600 transition-colors">Work</a>
-      <a href="/training" class="mobile-nav-link font-heading text-3xl font-bold text-blue-600 transition-colors">Training</a>
+      <a href="/training" class="mobile-nav-link font-heading text-3xl font-bold text-blue-600 active-nav-link transition-colors">Training</a>
       <a href="/about" class="mobile-nav-link font-heading text-3xl font-bold text-slate-900 hover:text-blue-600 transition-colors">About</a>
       <a href="/contact" class="mobile-nav-link font-heading text-3xl font-bold text-slate-900 hover:text-blue-600 transition-colors">Contact</a>
     </div>

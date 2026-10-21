@@ -131,9 +131,9 @@ export function initThreeHero(containerId = 'three-hero-container') {
   // Resize handler
   function onResize() {
     if (!container) return;
-    const newWidth = container.clientWidth;
-    const newHeight = container.clientHeight;
-    camera.aspect = newWidth / newHeight;
+    const newWidth = container.clientWidth || 480;
+    const newHeight = container.clientHeight || 480;
+    camera.aspect = newWidth / (newHeight || 1);
     camera.updateProjectionMatrix();
     renderer.setSize(newWidth, newHeight);
   }
