@@ -7,3 +7,6 @@ dist-ssr/
 .env.*.local
 .DS_Store
 .next/
+out/
+dist.zip
+deploy_hostinger.zip
