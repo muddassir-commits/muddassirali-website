@@ -1,39 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Core Authority Pages -->
   <url>
     <loc>https://muddassirali.com/</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://muddassirali.com/og-image.png</image:loc>
-      <image:title>Muddassir Ali - Growth & Automation Systems</image:title>
-      <image:caption>Visualizing high-ticket lead generation systems and n8n automation workflows by Muddassir Ali.</image:caption>
+      <image:loc>https://muddassirali.com/images/Muddassir_Ali.webp</image:loc>
+      <image:title>Muddassir Ali - Founder &amp; AI Systems Architect</image:title>
+      <image:caption>Personal authority hub and AI systems portfolio of Muddassir Ali.</image:caption>
     </image:image>
   </url>
   <url>
+    <loc>https://muddassirali.com/blog</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://muddassirali.com/projects</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://muddassirali.com/training</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://muddassirali.com/about</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://muddassirali.com/contact</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- High-Income Career & AI Blog Guides -->
+  <url>
+    <loc>https://muddassirali.com/blog/beginners-guide-to-n8n-automation-2026</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://muddassirali.com/blog/corporate-english-communication-playbook</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://muddassirali.com/blog/salary-negotiation-playbook-freshers-india</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://muddassirali.com/blog/claude-prompting-guide-work-productivity</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://muddassirali.com/blog/roadmap-to-1-lakh-per-month-skills</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://muddassirali.com/blog/how-to-politely-say-no-to-boss-client</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Legal & Compliance Endpoints -->
+  <url>
+    <loc>https://muddassirali.com/privacy-policy</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://muddassirali.com/terms-of-service</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://muddassirali.com/disclaimer</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

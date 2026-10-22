@@ -24,6 +24,7 @@ export default function Footer() {
             <h4 className="font-mono text-xs uppercase tracking-widest text-blue-700 font-bold">Navigation</h4>
             <nav className="flex flex-col space-y-2 text-sm text-slate-600 font-medium">
               <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
+              <Link href="/blog" className="hover:text-slate-900 transition-colors font-semibold text-blue-600">Career &amp; AI Blog</Link>
               <Link href="/projects" className="hover:text-slate-900 transition-colors">Systems &amp; Work</Link>
               <Link href="/training" className="hover:text-slate-900 transition-colors">Training</Link>
               <Link href="/about" className="hover:text-slate-900 transition-colors">About</Link>
@@ -76,9 +77,15 @@ export default function Footer() {
         </div>
 
         {/* Lower Footer */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 space-y-4 sm:space-y-0">
-          <div>
-            &copy; {new Date().getFullYear()} Muddassir Ali &middot; Veloxis Global. All rights reserved.
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span>&copy; {new Date().getFullYear()} Muddassir Ali &middot; Veloxis Global.</span>
+            <span className="hidden sm:inline">&middot;</span>
+            <Link href="/privacy-policy" className="hover:text-blue-600 transition-colors">Privacy Policy</Link>
+            <span>&middot;</span>
+            <Link href="/terms-of-service" className="hover:text-blue-600 transition-colors">Terms of Service</Link>
+            <span>&middot;</span>
+            <Link href="/disclaimer" className="hover:text-blue-600 transition-colors">Disclaimer</Link>
           </div>
           <div className="tracking-widest uppercase text-[10px] font-mono text-slate-500 flex items-center gap-1.5 font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
