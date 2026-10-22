@@ -30,36 +30,36 @@ export default function ProjectsPage() {
 
   const clientPortals = [
     {
-      title: 'Veloxis Global AI Command Center',
-      subtitle: 'PropTech Growth & Performance Engine',
+      title: 'Veloxis Global Marketing Platform',
+      subtitle: 'Real Estate Growth Agency Platform',
       category: 'website automation paid-growth',
-      tag: 'Bespoke Agency Platform',
-      metrics: 'Institutional Real Estate Marketing Infrastructure',
-      desc: 'Engineered high-velocity acquisition microsite architectures, sub-60s WhatsApp qualification integrations, and enterprise Meta/Google tracking models.',
-      tech: ['Next.js', 'Tailwind CSS', 'Vite', 'Three.js', 'GSAP'],
-      img: '/images/tech/ai_command_center.jpg',
+      tag: 'Agency Platform',
+      metrics: 'Turnkey Marketing Systems for Real Estate',
+      desc: 'High-speed landing pages, 60-second WhatsApp lead capture, and full conversion tracking on Meta and Google Ads.',
+      tech: ['Next.js', 'Tailwind CSS', 'Vite', 'Three.js'],
+      img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop',
       url: 'https://veloxisglobal.com',
     },
     {
-      title: 'Autonomous WhatsApp AI Lead Qualifier',
-      subtitle: 'Real-Time PropTech Conversational Engine',
+      title: 'Automated WhatsApp Lead Qualifier',
+      subtitle: '24/7 Fast Lead Qualification',
       category: 'automation paid-growth',
-      tag: 'AI Qualification Engine',
-      metrics: '88.6% Response Rate // <60s First Touch',
-      desc: 'Conversational qualification agent integrated with Meta WhatsApp Cloud API. Automatically verifies buyer budget, floor plan preferences, and locks weekend site visits.',
-      tech: ['n8n', 'WhatsApp Cloud API', 'Meta CAPI', 'HubSpot CRM'],
-      img: '/images/tech/whatsapp_ai_qualifier.jpg',
+      tag: 'AI WhatsApp Engine',
+      metrics: 'Fast 60-Second Reply &middot; 88% Response Rate',
+      desc: 'An automated WhatsApp assistant that replies instantly to Facebook ad leads, shares project brochures, verifies buyer budgets, and books site visits.',
+      tech: ['n8n', 'WhatsApp Cloud API', 'Meta CAPI', 'CRM'],
+      img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop',
       url: '#',
     },
     {
       title: 'Skyline Luxury Residences',
-      subtitle: 'Noida Expressway High-Ticket Real Estate',
+      subtitle: 'Noida Luxury Real Estate',
       category: 'website paid-growth automation',
-      tag: 'Real Estate Microsite',
-      metrics: '₹1.5Cr–₹4.5Cr Inventories // Sub-60s Capture',
-      desc: 'High-speed project microsite built for paid ad conversions. Features 1-tap WhatsApp brochure downloads, interactive 3D floor plan viewer, and CRM synchronization.',
-      tech: ['Vite', 'Vanilla CSS', 'WhatsApp Cloud API', 'n8n'],
-      img: '/images/tech/proptech_digital_twin.jpg',
+      tag: 'Project Microsite',
+      metrics: '₹1.5Cr – ₹4.5Cr Units &middot; 1-Tap WhatsApp',
+      desc: 'High-converting mobile project microsite. Features instant 1-tap WhatsApp brochure downloads, interactive floor plans, and automatic CRM lead entry.',
+      tech: ['Vite', 'Vanilla CSS', 'WhatsApp API', 'n8n'],
+      img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop',
       url: '#',
     },
     {
@@ -283,16 +283,16 @@ export default function ProjectsPage() {
                     <h3 className="font-heading text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-1">
                       {portal.title}
                     </h3>
-                    <span className="text-xs text-slate-500 block mb-3">{portal.subtitle}</span>
-                    <p className="text-xs text-slate-600 leading-relaxed mb-4">{portal.desc}</p>
-                    <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200 text-[11px] font-mono text-slate-700 font-semibold mb-4">
+                    <span className="text-xs text-slate-600 block mb-3 font-medium">{portal.subtitle}</span>
+                    <p className="text-sm text-slate-700 leading-relaxed mb-4 font-normal">{portal.desc}</p>
+                    <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-mono text-slate-800 font-semibold mb-4">
                       {portal.metrics}
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                       {portal.tech.map((t, i) => (
                         <span
                           key={i}
-                          className="px-2 py-0.5 rounded bg-slate-100 text-slate-600 text-[10px] font-mono"
+                          className="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 text-xs font-mono font-medium"
                         >
                           {t}
                         </span>

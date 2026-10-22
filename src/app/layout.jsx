@@ -3,7 +3,6 @@ import { Inter, Manrope, JetBrains_Mono } from 'next/font/google';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CustomCursor from '../components/CustomCursor';
-import SmoothScroll from '../components/SmoothScroll';
 import Script from 'next/script';
 
 const inter = Inter({
@@ -152,7 +151,6 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body className="bg-[#FAFAFA] text-[#09090B] selection:bg-blue-600 selection:text-white">
-        <SmoothScroll />
         <Navbar />
         <CustomCursor />
         <div className="page-wrapper min-h-screen flex flex-col">

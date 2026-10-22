@@ -6,7 +6,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://a.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.clarity.ms https://a.clarity.ms https://muddassirali.com; connect-src 'self' https://www.clarity.ms https://automation.veloxisglobal.com https://region1.google-analytics.com https://www.google-analytics.com; object-src 'none'; frame-ancestors 'none';"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://a.clarity.ms https://pagead2.googlesyndication.com https://partner.googleadservices.com https://tpc.googlesyndication.com https://adservice.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.clarity.ms https://a.clarity.ms https://muddassirali.com https://pagead2.googlesyndication.com https://tpc.googlesyndication.com; frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com; connect-src 'self' https://www.clarity.ms https://automation.veloxisglobal.com https://region1.google-analytics.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net; object-src 'none'; frame-ancestors 'none';"
         },
         {
           "key": "X-Frame-Options",

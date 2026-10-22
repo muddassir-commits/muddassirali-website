@@ -211,17 +211,17 @@ export default function SystemArchitectureFlow() {
               {selectedNode.subtitle}
             </p>
 
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-slate-700 text-sm leading-relaxed font-normal">
               {selectedNode.description}
             </p>
 
             <div className="space-y-2 pt-2">
-              <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500 font-semibold block">
+              <span className="font-mono text-xs uppercase tracking-wider text-slate-600 font-semibold block">
                 Protocol Architecture Specs:
               </span>
               {selectedNode.details.map((detail, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                <div key={idx} className="flex items-start gap-2.5 text-sm text-slate-700 font-medium">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <span>{detail}</span>
                 </div>
               ))}
@@ -230,10 +230,10 @@ export default function SystemArchitectureFlow() {
 
           <div className="lg:col-span-5 bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-              <span className="font-mono text-xs text-slate-500 uppercase tracking-wider">
-                Telemetry Telemetry
+              <span className="font-mono text-xs text-slate-600 uppercase tracking-wider font-semibold">
+                Live Node Telemetry
               </span>
-              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-mono text-[10px] font-semibold">
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-mono text-xs font-semibold">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 Live Node
               </span>
@@ -241,7 +241,7 @@ export default function SystemArchitectureFlow() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="p-3 bg-slate-50 rounded-lg border border-slate-100">
-                <span className="text-[10px] font-mono text-slate-500 block uppercase">
+                <span className="text-xs font-mono text-slate-600 block uppercase font-medium">
                   Node Latency
                 </span>
                 <span className="font-mono text-lg font-bold text-slate-900">
@@ -249,7 +249,7 @@ export default function SystemArchitectureFlow() {
                 </span>
               </div>
               <div className="p-3 bg-slate-50 rounded-lg border border-slate-100">
-                <span className="text-[10px] font-mono text-slate-500 block uppercase">
+                <span className="text-xs font-mono text-slate-600 block uppercase font-medium">
                   Measured Lift
                 </span>
                 <span className="font-mono text-lg font-bold text-blue-600">
@@ -259,10 +259,10 @@ export default function SystemArchitectureFlow() {
             </div>
 
             <div className="p-3.5 rounded-lg bg-blue-50/50 border border-blue-100 space-y-1">
-              <span className="text-[10.5px] font-mono text-blue-800 font-semibold block">
+              <span className="text-xs font-mono text-blue-900 font-semibold block">
                 Core Stack Integration:
               </span>
-              <p className="text-xs font-mono text-slate-600">
+              <p className="text-xs font-mono text-slate-800 font-medium">
                 {selectedNode.tech}
               </p>
             </div>

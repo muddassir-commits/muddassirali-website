@@ -12,22 +12,22 @@ import {
 } from 'lucide-react';
 
 const CURRICULUM_STEPS = [
-  { num: '01', category: 'Foundation', title: 'Marketing Ecosystems', desc: 'Core economic models, metrics (CAC, LTV, CPA), and market dynamics.', color: 'blue' },
-  { num: '02', category: 'Positioning', title: 'Brand Strategy', desc: 'Visual tone, value propositions, and core differentiation angles.', color: 'blue' },
-  { num: '03', category: 'Targeting', title: 'Audience Segmentation', desc: 'Demographic scoping, interest layering, and in-market buyer signals.', color: 'blue' },
-  { num: '04', category: 'Psychology', title: 'Buyer Persona Mapping', desc: 'Pain-point mapping, decision criteria, and trigger events.', color: 'blue' },
-  { num: '05', category: 'Architecture', title: 'Customer Journey Maps', desc: 'Tracking touchpoints from first click to physical visit & close.', color: 'blue' },
-  { num: '06', category: 'Conversion', title: 'High-Velocity Funnels', desc: 'Eliminating drop-offs with single-focus landing microsites.', color: 'blue' },
-  { num: '07', category: 'Channels', title: 'Omnichannel Distribution', desc: 'Balancing paid search, paid social, and organic search indexing.', color: 'blue' },
-  { num: '08', category: 'Web Platform', title: 'WordPress & CMS Systems', desc: 'Modern layout engineering, responsive CSS, and conversion blocks.', color: 'blue' },
-  { num: '09', category: 'Search', title: 'Technical & On-Page SEO', desc: 'Schema markup, site speed, crawlability, and keyword intent trees.', color: 'emerald' },
-  { num: '10', category: 'Organic Social', title: 'Content & Reels Growth', desc: 'Short-form video hooks, retention curves, and algorithmic distribution.', color: 'emerald' },
-  { num: '11', category: 'Media Buying', title: 'Meta Ads Algorithmic Buying', desc: 'Advantage+ campaigns, creative testing matrices, and CBO structures.', color: 'emerald' },
-  { num: '12', category: 'Search Buying', title: 'Google Ads Smart Bidding', desc: 'tCPA, tROAS, negative keyword architectures, and Quality Score.', color: 'emerald' },
-  { num: '13', category: 'Automation', title: 'WhatsApp & n8n Workflows', desc: 'Sub-second webhook response triggers and conversational bot scripts.', color: 'indigo' },
-  { num: '14', category: 'Measurement', title: 'Google Analytics 4 & GTM', desc: 'Event-driven taxonomy, server-side tracking, and conversion triggers.', color: 'indigo' },
-  { num: '15', category: 'Diagnostic', title: 'Google Search Console', desc: 'Crawl error resolution, Core Web Vitals, and index coverage audits.', color: 'indigo' },
-  { num: '16', category: 'Commercial', title: 'Client Retainers & Closing', desc: 'Pitch proposals, audit presentations, and value-based pricing models.', color: 'indigo' },
+  { num: '01', category: 'Foundation', title: 'Marketing Fundamentals', desc: 'How marketing generates revenue, key numbers (CAC, ROI, profit), and customer economics.', color: 'blue' },
+  { num: '02', category: 'Positioning', title: 'Brand Strategy', desc: 'Finding your brand voice, unique selling point, and why customers choose you.', color: 'blue' },
+  { num: '03', category: 'Targeting', title: 'Audience Targeting', desc: 'Finding the exact people who need your service using smart interest and demographic filters.', color: 'blue' },
+  { num: '04', category: 'Psychology', title: 'Buyer Psychology', desc: 'Understanding customer doubts, objections, and the triggers that make them buy.', color: 'blue' },
+  { num: '05', category: 'Funnel', title: 'Customer Journey', desc: 'Guiding a stranger from seeing your first ad to becoming a paying client.', color: 'blue' },
+  { num: '06', category: 'Conversion', title: 'High-Converting Pages', desc: 'Building fast, simple mobile landing pages that turn visitors into calls and leads.', color: 'blue' },
+  { num: '07', category: 'Channels', title: 'Multi-Channel Growth', desc: 'Combining Google Search, Instagram Ads, and SEO for predictable growth.', color: 'blue' },
+  { num: '08', category: 'Web Platform', title: 'WordPress & Modern Web', desc: 'Building clean, mobile-friendly websites with zero layout shift.', color: 'blue' },
+  { num: '09', category: 'Search', title: 'SEO & Google Ranking', desc: 'Ranking on page 1 of Google with keyword research and clean technical optimization.', color: 'emerald' },
+  { num: '10', category: 'Organic Social', title: 'Reels & Video Content', desc: 'Writing strong video hooks and making short-form content that reaches thousands.', color: 'emerald' },
+  { num: '11', category: 'Media Buying', title: 'Meta & Instagram Ads', desc: 'Running profitable Facebook and Instagram ads with creative video testing.', color: 'emerald' },
+  { num: '12', category: 'Search Buying', title: 'Google Search Ads', desc: 'Capturing high-intent buyers who are searching to buy your service right now.', color: 'emerald' },
+  { num: '13', category: 'Automation', title: 'WhatsApp & n8n Workflows', desc: 'Setting up automated 60-second WhatsApp replies and automated lead alerts.', color: 'indigo' },
+  { num: '14', category: 'Measurement', title: 'Google Analytics 4 & GTM', desc: 'Setting up custom event tracking so you know which ad produced each sale.', color: 'indigo' },
+  { num: '15', category: 'Diagnostic', title: 'Search Console Audits', desc: 'Finding indexing errors, checking site health, and boosting search visibility.', color: 'indigo' },
+  { num: '16', category: 'Commercial', title: 'Landing Retainers & Clients', desc: 'How to pitch clients, present audits, and close ₹25,000/month recurring contracts.', color: 'indigo' },
 ];
 
 export default function TrainingPage() {
@@ -38,42 +38,42 @@ export default function TrainingPage() {
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 mb-4 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
           <span className="font-mono text-xs uppercase tracking-wider text-blue-700 font-semibold">
-            Executive Education &amp; Mentorship
+            Practical Education &amp; Mentorship
           </span>
         </div>
 
         <h1 className="text-display font-bold text-slate-900 mb-6">
           Training The Next Generation <br className="hidden sm:block" />
           <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-600 bg-clip-text text-transparent">
-            of Systems-Driven Marketers
+            of Practical Marketers
           </span>
         </h1>
 
-        <p className="text-sub text-slate-600 max-w-2xl mx-auto mb-12 text-base leading-relaxed">
+        <p className="text-sub text-slate-700 max-w-2xl mx-auto mb-12 text-base leading-relaxed font-normal">
           300+ learners trained &middot; 17+ batches instructed &middot; Lead Educator across NDMIT &amp;
-          ASDC Kanpur. Real-world campaigns, zero generic theory.
+          ASDC Kanpur. Real-world campaigns, practical systems, zero fluff.
         </p>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto pt-8 border-t border-slate-200">
           <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
             <span className="text-stat text-blue-600 font-bold block mb-1">17+</span>
-            <span className="font-mono text-xs uppercase tracking-wider text-slate-500 font-semibold block">
+            <span className="font-mono text-xs uppercase tracking-wider text-slate-600 font-semibold block">
               Batches Trained
             </span>
           </div>
 
           <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
             <span className="text-stat text-emerald-600 font-bold block mb-1">300+</span>
-            <span className="font-mono text-xs uppercase tracking-wider text-slate-500 font-semibold block">
+            <span className="font-mono text-xs uppercase tracking-wider text-slate-600 font-semibold block">
               Learners Instructed
             </span>
           </div>
 
           <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
             <span className="text-stat text-indigo-600 font-bold block mb-1">6+</span>
-            <span className="font-mono text-xs uppercase tracking-wider text-slate-500 font-semibold block">
-              Years Field Experience
+            <span className="font-mono text-xs uppercase tracking-wider text-slate-600 font-semibold block">
+              Years Experience
             </span>
           </div>
         </div>
@@ -83,12 +83,11 @@ export default function TrainingPage() {
       <section className="py-16 max-w-7xl mx-auto px-6 mb-20">
         <div className="mb-12 text-center">
           <span className="font-mono text-xs uppercase tracking-wider text-blue-600 font-bold block mb-2">
-            Structured Execution
+            Structured Learning
           </span>
           <h2 className="text-heading text-slate-900 font-bold">The 16-Step Practical Curriculum</h2>
-          <p className="text-sm text-slate-600 mt-2 max-w-xl mx-auto">
-            From basic audience psychology to automated n8n webhook routing and algorithmic ad
-            optimization.
+          <p className="text-sm text-slate-700 mt-2 max-w-xl mx-auto">
+            From basic marketing psychology to automated WhatsApp replies and high-converting Google ads.
           </p>
         </div>
 
@@ -101,16 +100,16 @@ export default function TrainingPage() {
               <span
                 className={`font-mono text-xs font-bold block mb-1 ${
                   step.color === 'emerald'
-                    ? 'text-emerald-600'
+                    ? 'text-emerald-700'
                     : step.color === 'indigo'
-                    ? 'text-indigo-600'
-                    : 'text-blue-600'
+                    ? 'text-indigo-700'
+                    : 'text-blue-700'
                 }`}
               >
                 {step.num} / {step.category}
               </span>
               <h3 className="font-heading font-bold text-slate-900 text-sm mb-1">{step.title}</h3>
-              <p className="text-xs text-slate-500 leading-relaxed">{step.desc}</p>
+              <p className="text-xs text-slate-700 leading-relaxed font-normal">{step.desc}</p>
             </div>
           ))}
         </div>

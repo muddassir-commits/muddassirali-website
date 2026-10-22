@@ -49,37 +49,37 @@ export default function AboutPage() {
       period: '2024 — Present',
       title: 'Founder & Managing Director — Veloxis Global',
       color: 'bg-blue-600 shadow-blue-500/30',
-      desc: 'Founding partner architecting end-to-end AI marketing infrastructure, automated lead qualifiers, and algorithmic media buying retainers for high-growth real estate developers and enterprise clients.',
+      desc: 'Leading a specialized growth agency that builds high-converting paid ad campaigns and 60-second WhatsApp lead systems for real estate developers and growing brands.',
     },
     {
       period: '2024 — Present',
       title: 'Lead Digital Marketing Educator — ASDC Kanpur',
       color: 'bg-emerald-600',
-      desc: 'Training and mentoring executive cohorts, agency founders, and ambitious professionals in SEO engineering, Meta Ads algorithmic buying, server-side tracking, and n8n automated workflows.',
+      desc: 'Mentoring students, freshers, and professionals in Google Ads, Meta Ads, conversion tracking, and automated n8n workflows.',
     },
     {
       period: '2024 — 2025',
       title: 'Principal Researcher — 749 PropTech Benchmark Study',
       color: 'bg-indigo-600',
-      desc: 'Conducted the largest regional benchmark audit across 749 live property developer portals in UP & Delhi NCR, discovering the speed-to-lead decay curve and conversion tracking deficit in Indian real estate.',
+      desc: 'Conducted a deep benchmark study of 749 live property websites in UP and Delhi NCR, uncovering why most developers lose 70% of their ad spend through slow response times.',
     },
     {
       period: '2023 — 2024',
       title: 'Digital Marketing Trainer — NDMIT',
       color: 'bg-slate-400',
-      desc: 'Lectured across multiple batches, structured hands-on live agency simulations, and developed conversion-led curriculum modules.',
+      desc: 'Trained multiple student batches with hands-on live agency simulations and practical campaign building.',
     },
     {
       period: '2022 — 2023',
       title: 'B2B Business Development & Outreach Lead',
       color: 'bg-slate-400',
-      desc: 'Constructed corporate client acquisition setups, outbound email sequencing, and HubSpot pipeline automations at JNJ Technologies and Global Trade Plaza.',
+      desc: 'Built outbound email systems, CRM automations, and sales pipelines for B2B tech companies.',
     },
     {
       period: '2018 — 2021',
-      title: 'High-Velocity Outbound Telesales Executive',
+      title: 'Outbound Telesales Specialist',
       color: 'bg-slate-400',
-      desc: 'Mastered human buying psychology, objections handling, and rapid qualification on international healthcare and enterprise marketing campaigns.',
+      desc: 'Mastered direct human communication, objection handling, and fast customer qualification on high-volume international campaigns.',
     },
   ];
 
@@ -93,7 +93,7 @@ export default function AboutPage() {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-              <span className="section-label !text-blue-700 !text-[10px]">EXECUTIVE PROFILE // IDENTITY &amp; VISION</span>
+              <span className="section-label !text-blue-700 !text-xs">ABOUT MUDDASSIR ALI</span>
             </div>
             
             <h1 className="text-display font-bold text-slate-900 leading-tight">
@@ -104,11 +104,11 @@ export default function AboutPage() {
             <p className="font-mono text-xs font-semibold tracking-wider text-emerald-600 uppercase flex items-center gap-2">
               <span>Founder &amp; MD @ Veloxis Global</span>
               <span>&middot;</span>
-              <span>Google Certified Performance Marketer</span>
+              <span>Google Certified Marketer</span>
             </p>
 
-            <p className="text-sub text-slate-600 leading-relaxed max-w-2xl">
-              I architect, audit, and scale high-velocity AI marketing infrastructures. Rather than relying on vanity impressions, I design algorithmic paid ad acquisitions and 60-second WhatsApp qualification pipelines that convert ad spend directly into verified revenue.
+            <p className="text-sub text-slate-700 leading-relaxed max-w-2xl font-normal">
+              I build marketing systems that turn ad clicks into real revenue. Instead of chasing vanity impressions, I design high-converting paid ads and automated WhatsApp systems that reply to interested buyers in under 60 seconds.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
@@ -196,8 +196,8 @@ export default function AboutPage() {
                     <ShieldCheck className="w-4 h-4 text-blue-600" />
                   </div>
                   <div>
-                    <strong className="text-slate-900 block font-semibold">4x Google Skillshop Certified</strong>
-                    <span className="text-slate-500">Search, Apps, Measurement, and GA4 Analytics verified credentials.</span>
+                    <strong className="text-slate-900 block font-semibold text-sm">4x Google Skillshop Certified</strong>
+                    <span className="text-slate-700 text-xs font-medium">Search, Apps, Measurement, and GA4 Analytics verified credentials.</span>
                   </div>
                 </div>
 
@@ -206,8 +206,8 @@ export default function AboutPage() {
                     <Bot className="w-4 h-4 text-emerald-600" />
                   </div>
                   <div>
-                    <strong className="text-slate-900 block font-semibold">AI Lead Architecture Pioneer</strong>
-                    <span className="text-slate-500">Architect of the 60-second WhatsApp automated buyer qualification engine.</span>
+                    <strong className="text-slate-900 block font-semibold text-sm">AI Lead Systems Architect</strong>
+                    <span className="text-slate-700 text-xs font-medium">Creator of the 60-second WhatsApp automated buyer qualification engine.</span>
                   </div>
                 </div>
 
@@ -216,8 +216,8 @@ export default function AboutPage() {
                     <GraduationCap className="w-4 h-4 text-purple-600" />
                   </div>
                   <div>
-                    <strong className="text-slate-900 block font-semibold">Lead Educator (300+ Alumni)</strong>
-                    <span className="text-slate-500">Instructor across ASDC Kanpur &amp; NDMIT teaching modern growth frameworks.</span>
+                    <strong className="text-slate-900 block font-semibold text-sm">Lead Educator (300+ Students)</strong>
+                    <span className="text-slate-700 text-xs font-medium">Instructor across ASDC Kanpur &amp; NDMIT teaching modern marketing skills.</span>
                   </div>
                 </div>
 
@@ -226,8 +226,8 @@ export default function AboutPage() {
                     <TrendingUp className="w-4 h-4 text-amber-600" />
                   </div>
                   <div>
-                    <strong className="text-slate-900 block font-semibold">$2.4M+ Ad Spend Directed</strong>
-                    <span className="text-slate-500">Algorithmic bidding and data-driven attribution models deployed.</span>
+                    <strong className="text-slate-900 block font-semibold text-sm">$2.4M+ Ad Spend Managed</strong>
+                    <span className="text-slate-700 text-xs font-medium">Smart bidding and data-driven tracking models deployed.</span>
                   </div>
                 </div>
               </div>

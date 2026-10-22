@@ -123,7 +123,7 @@ export default function HomePage() {
         </section>
 
         {/* ========================================================================= */}
-        {/* TELEMETRY HUD BAR (Ultra-Tech Live System Metrics)                         */}
+        {/* TELEMETRY HUD BAR (Live System Metrics)                                    */}
         {/* ========================================================================= */}
         <section className="border-y border-slate-200/80 bg-white/60 backdrop-blur-md py-4 relative z-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -131,21 +131,21 @@ export default function HomePage() {
               <div className="flex items-center gap-3">
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
                 <div>
-                  <span className="text-[10px] text-slate-400 block uppercase">SYSTEM RUNTIME</span>
-                  <span className="text-xs font-bold text-slate-800">VELOXIS CORE v4.8</span>
+                  <span className="text-xs text-slate-600 block uppercase font-medium">SYSTEM RUNTIME</span>
+                  <span className="text-sm font-bold text-slate-900">VELOXIS CORE v4.8</span>
                 </div>
               </div>
               <div>
-                <span className="text-[10px] text-slate-400 block uppercase">WHATSAPP DISPATCH</span>
-                <span className="text-xs font-bold text-emerald-600">&lt;60s SLA RECORD</span>
+                <span className="text-xs text-slate-600 block uppercase font-medium">WHATSAPP DISPATCH</span>
+                <span className="text-sm font-bold text-emerald-600">&lt;60s FAST RESPONSE</span>
               </div>
               <div>
-                <span className="text-[10px] text-slate-400 block uppercase">ATTRIBUTION MATCH</span>
-                <span className="text-xs font-bold text-blue-600">99.4% EVENT QUALITY</span>
+                <span className="text-xs text-slate-600 block uppercase font-medium">ATTRIBUTION MATCH</span>
+                <span className="text-sm font-bold text-blue-600">99.4% EVENT QUALITY</span>
               </div>
               <div>
-                <span className="text-[10px] text-slate-400 block uppercase">DIRECTED AD SPEND</span>
-                <span className="text-xs font-bold text-slate-800">$2.4M+ OPTIMIZED</span>
+                <span className="text-xs text-slate-600 block uppercase font-medium">DIRECTED AD SPEND</span>
+                <span className="text-sm font-bold text-slate-900">$2.4M+ OPTIMIZED</span>
               </div>
             </div>
           </div>
@@ -186,28 +186,27 @@ export default function HomePage() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-[#4285F4]" />
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-emerald-600 font-semibold flex items-center gap-1.5">
+                    <span className="font-mono text-xs uppercase tracking-wider text-emerald-700 font-semibold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                      Google Skillshop Verified
+                      Google Verified
                     </span>
-                    <span className="font-mono text-xs text-slate-400">ID: GOOG-SEARCH-892401</span>
+                    <span className="font-mono text-xs text-slate-500 font-medium">ID: GOOG-SEARCH-892401</span>
                   </div>
                   <h3 className="font-heading text-xl font-bold text-slate-900 mb-2">
                     Google Ads Search Certification
                   </h3>
-                  <p className="text-body text-slate-600 text-sm mb-6 leading-relaxed">
-                    Algorithmic bidding strategies (tCPA, tROAS), query match clustering, Smart
-                    Bidding machine learning signals, and high-intent buyer acquisition.
+                  <p className="text-body text-slate-700 text-sm mb-6 leading-relaxed font-normal">
+                    Setting up Google Search ads that convert. Smart bidding, target CPA, and negative keywords so you only pay for genuine high-intent buyers.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
                       Smart Bidding ML
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
-                      Target CPA / ROAS
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
+                      Target CPA &amp; ROAS
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
-                      High-Intent Structuring
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
+                      Buyer Search Intent
                     </span>
                   </div>
                 </div>
@@ -216,7 +215,7 @@ export default function HomePage() {
                     onClick={() => setActiveCert('goog-search')}
                     className="btn btn-secondary !py-2 !px-4 !text-xs flex items-center gap-1 cursor-pointer"
                   >
-                    <span>Inspect Specs</span>
+                    <span>View Details</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                   <a
@@ -236,28 +235,27 @@ export default function HomePage() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-[#EA4335]" />
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-emerald-600 font-semibold flex items-center gap-1.5">
+                    <span className="font-mono text-xs uppercase tracking-wider text-emerald-700 font-semibold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                      Google Skillshop Verified
+                      Google Verified
                     </span>
-                    <span className="font-mono text-xs text-slate-400">ID: GOOG-APPS-719342</span>
+                    <span className="font-mono text-xs text-slate-500 font-medium">ID: GOOG-APPS-719342</span>
                   </div>
                   <h3 className="font-heading text-xl font-bold text-slate-900 mb-2">
                     Google Ads Apps Certification
                   </h3>
-                  <p className="text-body text-slate-600 text-sm mb-6 leading-relaxed">
-                    App Campaigns for Installs &amp; In-App Actions (ACi/ACe), deep linking, Firebase
-                    conversion mapping, and automated creative rotation.
+                  <p className="text-body text-slate-700 text-sm mb-6 leading-relaxed font-normal">
+                    App Campaigns for real installs and purchases. Setting up Firebase analytics, deep links, and creative tests that scale mobile app growth.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
                       Firebase Analytics
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
                       App Deep Linking
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
-                      ACe Action Bidding
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
+                      In-App Conversions
                     </span>
                   </div>
                 </div>
@@ -266,7 +264,7 @@ export default function HomePage() {
                     onClick={() => setActiveCert('goog-apps')}
                     className="btn btn-secondary !py-2 !px-4 !text-xs flex items-center gap-1 cursor-pointer"
                   >
-                    <span>Inspect Specs</span>
+                    <span>View Details</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                   <a
@@ -286,27 +284,26 @@ export default function HomePage() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-[#FBBC05]" />
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-emerald-600 font-semibold flex items-center gap-1.5">
+                    <span className="font-mono text-xs uppercase tracking-wider text-emerald-700 font-semibold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                      Google Skillshop Verified
+                      Google Verified
                     </span>
-                    <span className="font-mono text-xs text-slate-400">ID: GOOG-MEAS-652981</span>
+                    <span className="font-mono text-xs text-slate-500 font-medium">ID: GOOG-MEAS-652981</span>
                   </div>
                   <h3 className="font-heading text-xl font-bold text-slate-900 mb-2">
                     Google Ads Measurement Certification
                   </h3>
-                  <p className="text-body text-slate-600 text-sm mb-6 leading-relaxed">
-                    Server-Side Tag Management (sGTM), Enhanced Conversions API, data-driven
-                    attribution modeling, and first-party data privacy architecture.
+                  <p className="text-body text-slate-700 text-sm mb-6 leading-relaxed font-normal">
+                    Accurate conversion tracking with Google Tag Manager and Conversions API. Fixes lost data from iOS privacy updates so every sale is attributed.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
                       Server-Side GTM
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
-                      Enhanced Conversions API
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
+                      Conversions API (CAPI)
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
                       Consent Mode v2
                     </span>
                   </div>
@@ -316,7 +313,7 @@ export default function HomePage() {
                     onClick={() => setActiveCert('goog-measurement')}
                     className="btn btn-secondary !py-2 !px-4 !text-xs flex items-center gap-1 cursor-pointer"
                   >
-                    <span>Inspect Specs</span>
+                    <span>View Details</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                   <a
@@ -336,28 +333,27 @@ export default function HomePage() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-[#34A853]" />
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-emerald-600 font-semibold flex items-center gap-1.5">
+                    <span className="font-mono text-xs uppercase tracking-wider text-emerald-700 font-semibold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                      Google Skillshop Verified
+                      Google Verified
                     </span>
-                    <span className="font-mono text-xs text-slate-400">ID: GA4-ENTERPRISE-504193</span>
+                    <span className="font-mono text-xs text-slate-500 font-medium">ID: GA4-ENTERPRISE-504193</span>
                   </div>
                   <h3 className="font-heading text-xl font-bold text-slate-900 mb-2">
                     Google Analytics (GA4) Certification
                   </h3>
-                  <p className="text-body text-slate-600 text-sm mb-6 leading-relaxed">
-                    Event-driven taxonomies, BigQuery raw cloud export, predictive ML purchase
-                    audiences, and advanced customer exploration workspaces.
+                  <p className="text-body text-slate-700 text-sm mb-6 leading-relaxed font-normal">
+                    Advanced Google Analytics 4 setups. Custom event tracking, user journeys, BigQuery export, and seeing which channels actually bring revenue.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
                       BigQuery Cloud Export
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
-                      Predictive ML Modeling
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
+                      Custom Event Tracking
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 text-xs font-mono">
-                      Multi-Touch Attribution
+                    <span className="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-medium">
+                      Revenue Attribution
                     </span>
                   </div>
                 </div>
@@ -366,7 +362,7 @@ export default function HomePage() {
                     onClick={() => setActiveCert('ga4-cert')}
                     className="btn btn-secondary !py-2 !px-4 !text-xs flex items-center gap-1 cursor-pointer"
                   >
-                    <span>Inspect Specs</span>
+                    <span>View Details</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                   <a
@@ -428,18 +424,18 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Digital Twin Image Visual */}
+              {/* Real High-Rise Architecture Visual */}
               <div className="lg:col-span-5 relative group">
                 <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-xl relative aspect-[16/10]">
                   <img
-                    src="/images/tech/proptech_digital_twin.jpg"
-                    alt="PropTech Digital Twin Skyscraper Audit"
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop"
+                    alt="Delhi NCR Commercial and Residential High-Rise Real Estate"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent flex items-end p-4">
-                    <span className="font-mono text-[11px] text-white/90 font-semibold flex items-center gap-1.5">
+                    <span className="font-mono text-xs text-white/95 font-semibold flex items-center gap-1.5">
                       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      749 NCR High-Rise Ad Telemetry &amp; Speed Audit
+                      749 NCR High-Rise Ad Speed &amp; Lead Audit
                     </span>
                   </div>
                 </div>
@@ -453,9 +449,8 @@ export default function HomePage() {
                 <h4 className="font-heading font-bold text-slate-900 text-base mb-1">
                   Zero Conversion Tracking
                 </h4>
-                <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                  Ran ad spend without Meta CAPI or GA4 conversion triggers configured on thank-you
-                  endpoints.
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  Ran live ad campaigns without conversion tracking on thank-you pages, wasting ad budgets blindly.
                 </p>
               </div>
 
@@ -464,9 +459,8 @@ export default function HomePage() {
                 <h4 className="font-heading font-bold text-slate-900 text-base mb-1">
                   No Instant WhatsApp
                 </h4>
-                <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                  Zero automated 60-second WhatsApp capture; buyer leads sat dormant for 6+ hours
-                  before first touch.
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  Zero automated WhatsApp reply; customer inquiries sat untouched for over 6 hours before anyone called.
                 </p>
               </div>
 
@@ -475,9 +469,8 @@ export default function HomePage() {
                 <h4 className="font-heading font-bold text-slate-900 text-base mb-1">
                   Broken Inquiry Forms
                 </h4>
-                <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                  Suffered validation errors, broken webhooks, or slow multi-field desktop forms on
-                  mobile traffic.
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  Forms failed on mobile phones due to slow loading, broken submit buttons, or too many confusing fields.
                 </p>
               </div>
 
@@ -486,9 +479,8 @@ export default function HomePage() {
                 <h4 className="font-heading font-bold text-slate-900 text-base mb-1">
                   Double Defect Failure
                 </h4>
-                <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                  Had neither functional web inquiry forms nor instant WhatsApp connectivity on live
-                  ad budgets.
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  Had neither working forms nor instant WhatsApp connections while spending active daily budgets.
                 </p>
               </div>
             </div>
@@ -517,9 +509,8 @@ export default function HomePage() {
                   Veloxis Autonomous Real Estate Lead Engine
                 </h2>
 
-                <p className="text-sub text-slate-600 text-base leading-relaxed">
-                  A high-velocity four-stage automated acquisition pipeline engineered to replace
-                  slow manual telecalling with 60-second conversational WhatsApp qualification.
+                <p className="text-sub text-slate-700 text-base leading-relaxed">
+                  A modern 3-step automated lead system built to replace slow manual phone calls with instant 60-second WhatsApp qualification.
                 </p>
 
                 <div className="space-y-4 pt-2">
@@ -529,11 +520,10 @@ export default function HomePage() {
                     </span>
                     <div>
                       <h4 className="font-heading font-bold text-sm text-slate-900">
-                        Algorithmic Meta &amp; Google Ad Ingestion
+                        1. Targeted Ads on Meta &amp; Google
                       </h4>
-                      <p className="text-xs text-slate-600 mt-1">
-                        High-intent search keywords and hyper-targeted Meta lifestyle creatives
-                        funneled directly into dedicated project landing microsites.
+                      <p className="text-sm text-slate-700 mt-1 leading-relaxed">
+                        High-intent search ads and targeted mobile video ads funneled directly into dedicated project landing pages.
                       </p>
                     </div>
                   </div>
@@ -544,11 +534,10 @@ export default function HomePage() {
                     </span>
                     <div>
                       <h4 className="font-heading font-bold text-sm text-slate-900">
-                        Sub-60s WhatsApp Cloud AI Qualifier
+                        2. Fast WhatsApp Reply Under 60 Seconds
                       </h4>
-                      <p className="text-xs text-slate-600 mt-1">
-                        Instant webhook triggers an AI conversational bot asking configuration,
-                        budget bracket, and self-use vs. investment intent.
+                      <p className="text-sm text-slate-700 mt-1 leading-relaxed">
+                        An automated WhatsApp assistant replies instantly, sharing floor plan PDFs and verifying the buyer&apos;s budget and timeline.
                       </p>
                     </div>
                   </div>
@@ -559,11 +548,10 @@ export default function HomePage() {
                     </span>
                     <div>
                       <h4 className="font-heading font-bold text-sm text-slate-900">
-                        Automated Site Visit Scheduling
+                        3. Automated Site Visit Booking
                       </h4>
-                      <p className="text-xs text-slate-600 mt-1">
-                        Qualified prospects are booked directly into sales rep calendars for
-                        physical weekend site visits without human lag.
+                      <p className="text-sm text-slate-700 mt-1 leading-relaxed">
+                        Serious buyers are booked directly into the sales team&apos;s calendar for a weekend site visit without human delay.
                       </p>
                     </div>
                   </div>
@@ -611,15 +599,14 @@ export default function HomePage() {
               {/* Deck 1 */}
               <div className="glass-card p-6 flex flex-col justify-between">
                 <div>
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-blue-600 font-semibold block mb-2">
+                  <span className="font-mono text-xs uppercase tracking-wider text-blue-700 font-semibold block mb-2">
                     Research Benchmark Deck &middot; 4 Slides
                   </span>
                   <h3 className="font-heading font-bold text-lg text-slate-900 mb-2">
                     2026 North India Real Estate Ad Cost Benchmarks
                   </h3>
-                  <p className="text-xs text-slate-600 mb-6 leading-relaxed">
-                    Audit of 749 active property developer portals, rising CPA trends, and the
-                    transition to conversational acquisition.
+                  <p className="text-sm text-slate-700 mb-6 leading-relaxed font-normal">
+                    A detailed audit of 749 property websites in Delhi NCR and UP, showing why ad costs are rising and how top brands fix it.
                   </p>
                 </div>
                 <button
@@ -634,15 +621,14 @@ export default function HomePage() {
               {/* Deck 2 */}
               <div className="glass-card p-6 flex flex-col justify-between">
                 <div>
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-indigo-600 font-semibold block mb-2">
+                  <span className="font-mono text-xs uppercase tracking-wider text-indigo-700 font-semibold block mb-2">
                     Technical Blueprint &middot; 3 Slides
                   </span>
                   <h3 className="font-heading font-bold text-lg text-slate-900 mb-2">
                     The Architecture of an Automated Real Estate Lead System
                   </h3>
-                  <p className="text-xs text-slate-600 mb-6 leading-relaxed">
-                    Technical architecture breakdown for Meta CAPI, edge landing pages, n8n webhook
-                    logic, and WhatsApp Cloud automation.
+                  <p className="text-sm text-slate-700 mb-6 leading-relaxed font-normal">
+                    A step-by-step technical blueprint showing how to connect Meta ads, landing pages, and WhatsApp bots to double site visits.
                   </p>
                 </div>
                 <button
@@ -657,15 +643,14 @@ export default function HomePage() {
               {/* Deck 3 */}
               <div className="glass-card p-6 flex flex-col justify-between">
                 <div>
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-rose-600 font-semibold block mb-2">
+                  <span className="font-mono text-xs uppercase tracking-wider text-rose-700 font-semibold block mb-2">
                     Strategic Diagnostic &middot; 3 Slides
                   </span>
                   <h3 className="font-heading font-bold text-lg text-slate-900 mb-2">
                     Why 70% of Real Estate Ad Budgets Leak in India
                   </h3>
-                  <p className="text-xs text-slate-600 mb-6 leading-relaxed">
-                    Commercial analysis of lead response latency, junk leads, and the 7-day turnkey
-                    recovery roadmap for real estate firms.
+                  <p className="text-sm text-slate-700 mb-6 leading-relaxed font-normal">
+                    Where real estate ad money gets lost, why slow response times kill sales, and how developers fix leaks in 7 days.
                   </p>
                 </div>
                 <button
