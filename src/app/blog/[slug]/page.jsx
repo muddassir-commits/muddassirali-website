@@ -287,9 +287,24 @@ export default async function BlogPostPage({ params }) {
                     .replace(/`([^`]+)`/g, '<code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono font-medium">$1</code>')
                     // Parse blockquotes
                     .replace(/> (.*?)\n/g, '<blockquote class="border-l-4 border-blue-600 pl-4 py-2 italic text-slate-700 my-4 bg-blue-50/40 rounded-r-xl">$1</blockquote>')
+                    // Parse horizontal rules
+                    .replace(/---/g, '<hr class="my-8 border-slate-200" />')
                     // Parse paragraphs and line breaks
                     .split('\n\n')
-                    .map((p) => (p.startsWith('<h') || p.startsWith('<pre') || p.startsWith('<blockquote') || p.startsWith('<table') ? p : `<p class="my-4 text-slate-700 leading-relaxed">${p}</p>`))
+                    .map((p) => {
+                      const trimmed = p.trim();
+                      if (!trimmed) return '';
+                      if (
+                        trimmed.startsWith('<h') ||
+                        trimmed.startsWith('<pre') ||
+                        trimmed.startsWith('<blockquote') ||
+                        trimmed.startsWith('<table') ||
+                        trimmed.startsWith('<hr')
+                      ) {
+                        return trimmed;
+                      }
+                      return `<p class="my-4 text-slate-700 leading-relaxed font-normal">${trimmed.replace(/\n/g, '<br />')}</p>`;
+                    })
                     .join(''),
                 }}
               />
