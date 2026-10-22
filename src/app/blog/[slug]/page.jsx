@@ -249,7 +249,7 @@ export default async function BlogPostPage({ params }) {
             <div className="flex items-center gap-2 mb-2 text-emerald-800">
               <Zap className="w-4 h-4 text-emerald-600 fill-emerald-600" />
               <span className="font-mono text-xs uppercase tracking-wider font-bold">
-                EXECUTIVE QUICK-ANSWER // SUMMARY
+                QUICK SUMMARY &middot; KEY TAKEAWAYS
               </span>
             </div>
             <p className="text-slate-800 text-sm md:text-base leading-relaxed font-medium">
@@ -270,9 +270,15 @@ export default async function BlogPostPage({ params }) {
               <div
                 dangerouslySetInnerHTML={{
                   __html: post.body
-                    // Parse markdown headings
-                    .replace(/### (.*?)\n/g, '<h3 class="font-heading text-xl md:text-2xl font-bold text-slate-900 mt-10 mb-4">$1</h3>')
-                    .replace(/#### (.*?)\n/g, '<h4 class="font-heading text-base md:text-lg font-bold text-slate-800 mt-6 mb-2">$1</h4>')
+                    // Parse markdown headings with anchor IDs
+                    .replace(/### (.*?)(?:\s*\{#(.*?)\})?\n/g, (match, title, id) => {
+                      const cleanId = id || title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                      return `<h3 id="${cleanId}" class="font-heading text-xl md:text-2xl font-bold text-slate-900 mt-10 mb-4 scroll-mt-28">${title.trim()}</h3>`;
+                    })
+                    .replace(/#### (.*?)(?:\s*\{#(.*?)\})?\n/g, (match, title, id) => {
+                      const cleanId = id || title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                      return `<h4 id="${cleanId}" class="font-heading text-base md:text-lg font-bold text-slate-800 mt-6 mb-2 scroll-mt-28">${title.trim()}</h4>`;
+                    })
                     // Parse markdown bold
                     .replace(/\*\*(.*?)\*\*/g, '<strong class="text-slate-900 font-semibold">$1</strong>')
                     // Parse markdown code blocks
