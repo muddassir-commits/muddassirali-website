@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CustomCursor from '../components/CustomCursor';
 import GoogleAnalyticsTracker from '../components/GoogleAnalyticsTracker';
-import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -68,6 +67,9 @@ export const metadata = {
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.png',
+  },
+  verification: {
+    google: 'XOtyYOYEfIvHdx078CsKX-_F1UCQjVxa6yz94M5W3Og',
   },
 };
 
@@ -135,30 +137,41 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        {/* Google Site Verification (Search Console & Analytics) */}
+        <meta
+          name="google-site-verification"
+          content="XOtyYOYEfIvHdx078CsKX-_F1UCQjVxa6yz94M5W3Og"
+        />
+
         {/* Semantic SEO JSON-LD Person Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Google Analytics GA4 */}
-        <Script
-          strategy="afterInteractive"
+
+        {/* Google Analytics GA4 (Direct Static Tag) */}
+        <script
+          async
           src="https://www.googletagmanager.com/gtag/js?id=G-W8JPSTDLC1"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-W8JPSTDLC1');
-          `}
-        </Script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-W8JPSTDLC1', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+
         {/* Google AdSense Script for Site Verification & Auto Ads */}
-        <Script
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4045389773179069"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
         />
       </head>
       <body className="bg-[#FAFAFA] text-[#09090B] selection:bg-blue-600 selection:text-white">
