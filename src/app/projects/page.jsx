@@ -1,244 +1,159 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
-import {
-  ExternalLink,
-  ChevronRight,
-  ShieldCheck,
-  TrendingUp,
-  Globe,
-  Award,
-  Layers,
-  Sparkles,
-  ArrowRight,
-  Play,
-} from 'lucide-react';
-import PresentationModal from '../../components/PresentationModal';
+import { site, study, whatsappLink } from '../../lib/site';
+import { pageMeta } from '../../lib/meta';
+import TrackedLink from '../../components/TrackedLink';
 
-export default function ProjectsPage() {
-  const [filter, setFilter] = useState('all');
-  const [activeDeck, setActiveDeck] = useState(null);
-  const [openAccordions, setOpenAccordions] = useState({});
+export const metadata = pageMeta({
+  title: 'Work',
+  description:
+    'What Muddassir Ali has built: the Veloxis Global website and audit tool, a check of 749 real estate websites, an outreach tracker and more.',
+  path: '/projects',
+});
 
-  const toggleAccordion = (id) => {
-    setOpenAccordions((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
+const work = [
+  {
+    key: 'veloxis-site',
+    kind: 'Website · live',
+    title: 'veloxisglobal.com',
+    summary:
+      'The website for my company. Service pages, a blog with practical real estate marketing guides, a free audit tool and an enquiry form.',
+    why: 'Builders and brokers judge an agency by its own site first, so ours had to be fast, clear and honest.',
+    built: 'Next.js, hosted on Vercel, Google Analytics and Search Console.',
+    link: { href: site.company.url, label: 'Visit veloxisglobal.com' },
+    shot: {
+      src: '/images/work/veloxisglobal-home.jpg',
+      alt: 'Screenshot of the veloxisglobal.com homepage with the headline about filling site visits',
+      caption: 'veloxisglobal.com homepage, October 2026',
+    },
+  },
+  {
+    key: 'audit-tool',
+    kind: 'Free tool · live',
+    title: 'Website audit tool',
+    summary:
+      'Type in any web page and get a plain-English report on SEO basics, lead capture, tracking, speed and trust, with the five fixes to do first.',
+    why: 'Most business owners cannot tell what is wrong with their site. This gives them a starting list in under a minute, free.',
+    built: 'Part of veloxisglobal.com. Checks one page at a time and stores nothing.',
+    link: { href: `${site.company.url}/tools/website-audit`, label: 'Try the audit tool' },
+    shot: {
+      src: '/images/work/veloxisglobal-website-audit.jpg',
+      alt: 'Screenshot of the free website audit tool page with a web address box and an Audit my site button',
+      caption: 'The audit tool page, October 2026',
+    },
+  },
+  {
+    key: 'study',
+    kind: 'Research · published',
+    title: `The ${study.sample}-website check`,
+    summary: `On ${study.dates} a script I wrote read the homepages of ${study.sample} real estate businesses found on Google Maps in ${study.cities} cities. ${study.findings[0].count} of them (${study.findings[0].pct}%) had no ad or analytics tracking. ${study.findings[1].count} (${study.findings[1].pct}%) had no WhatsApp link. ${study.findings[2].count} (${study.findings[2].pct}%) had no form.`,
+    why: 'I wanted real numbers on how local property businesses handle enquiries before telling anyone what to fix.',
+    built: 'Python. Only the homepage was checked, so some sites may have tracking or forms on other pages.',
+    link: { href: study.source, label: 'Read the write-up' },
+  },
+  {
+    key: 'tracker',
+    kind: 'Internal tool',
+    title: 'Outreach tracker',
+    summary:
+      'Keeps every email, follow-up, reply and bounce for each business in one small database. It shows what is due today and will not log a fourth email to the same business.',
+    why: 'Cold email goes wrong when you lose track. Three emails at most, and a reply or a "no" stops the sequence at once.',
+    built: 'Python and SQLite. Private, because it holds other people’s contact details.',
+  },
+  {
+    key: 'social',
+    kind: 'Internal tool',
+    title: 'Scheduled social posting',
+    summary:
+      'Posts approved Instagram and Facebook content at set times each day, and lists new comments so I can answer them myself.',
+    why: 'Posting on time every day is easy to miss by hand. I approve a week of posts once and they go out on schedule.',
+    built: 'Python, Meta’s official API and GitHub Actions.',
+  },
+  {
+    key: 'this-site',
+    kind: 'Website · live',
+    title: 'This website',
+    summary:
+      'My personal site. Rebuilt in October 2026 with every unprovable claim taken out. The contact form opens WhatsApp or your email app, so no message gets lost.',
+    why: 'A personal site should sound like the person and only say true things.',
+    built: 'Next.js static export on Vercel.',
+  },
+];
 
-  const clientPortals = [
-    {
-      title: 'Veloxis Global Marketing Platform',
-      subtitle: 'Real Estate Growth Agency Platform',
-      category: 'website automation paid-growth',
-      tag: 'Agency Platform',
-      metrics: 'Turnkey Marketing Systems for Real Estate',
-      desc: 'High-speed landing pages, 60-second WhatsApp lead capture, and full conversion tracking on Meta and Google Ads.',
-      tech: ['Next.js', 'Tailwind CSS', 'Vite', 'Three.js'],
-      img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop',
-      url: 'https://veloxisglobal.com',
-    },
-    {
-      title: 'Automated WhatsApp Lead Qualifier',
-      subtitle: '24/7 Fast Lead Qualification',
-      category: 'automation paid-growth',
-      tag: 'AI WhatsApp Engine',
-      metrics: 'Fast WhatsApp reply',
-      desc: 'An automated WhatsApp assistant that replies instantly to Facebook ad leads, shares project brochures, verifies buyer budgets, and books site visits.',
-      tech: ['n8n', 'WhatsApp Cloud API', 'Meta CAPI', 'CRM'],
-      img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop',
-      url: '#',
-    },
-    {
-      title: 'Skyline Luxury Residences',
-      subtitle: 'Noida Luxury Real Estate',
-      category: 'website paid-growth automation',
-      tag: 'Project Microsite',
-      metrics: '₹1.5Cr – ₹4.5Cr Units &middot; 1-Tap WhatsApp',
-      desc: 'High-converting mobile project microsite. Features instant 1-tap WhatsApp brochure downloads, interactive floor plans, and automatic CRM lead entry.',
-      tech: ['Vite', 'Vanilla CSS', 'WhatsApp API', 'n8n'],
-      img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop',
-      url: '#',
-    },
-    {
-      title: 'Liz Rogers Photography',
-      subtitle: 'High-End Editorial & Portrait Studio',
-      category: 'website seo',
-      tag: 'Luxury Portfolio',
-      metrics: 'Full Retina Gallery // Custom Booking Pipeline',
-      desc: 'Minimalist luxury portfolio showcasing fine-art photography with lazy-loaded WebP galleries, dynamic client intake forms, and zero layout shift.',
-      tech: ['HTML5', 'Vanilla CSS', 'WebP Optimizer', 'Netlify'],
-      img: '/images/projects/lizrogers.png',
-      url: '#',
-    },
-    {
-      title: 'Elite Apparel Retainer',
-      subtitle: 'D2C E-Commerce Fashion Platform',
-      category: 'website paid-growth',
-      tag: 'E-Commerce Store',
-      metrics: '4.8x Blended ROAS // Meta Catalog Ads',
-      desc: 'Full-stack storefront built with responsive product carousels, dynamic checkout upsells, and pixel-accurate server-side conversion tracking.',
-      tech: ['Shopify Liquid', 'Meta CAPI', 'GA4 E-Commerce', 'Klaviyo'],
-      img: '/images/projects/cloth.png',
-      url: '#',
-    },
-    {
-      title: 'Aura Aesthetics Studio',
-      subtitle: 'Medical Aesthetics & Derma Clinic',
-      category: 'website seo',
-      tag: 'Clinical Booking Engine',
-      metrics: 'Hyper-Local SEO // 48 Appointment Inquiries/Mo',
-      desc: 'Consultation booking platform optimized for local high-intent search keywords (Kanpur & Lucknow). Features treatment pricing tiers and WhatsApp appointment routing.',
-      tech: ['Next.js', 'Tailwind CSS', 'Google Maps API', 'Twilio'],
-      img: '/images/projects/makeup.png',
-      url: '#',
-    },
-  ];
-
-  const filterTabs = [
-    { id: 'all', label: 'All Systems' },
-    { id: 'paid-growth', label: 'Paid Growth & Performance' },
-    { id: 'website', label: 'Client Portals' },
-    { id: 'seo', label: 'SEO Retainers' },
-    { id: 'automation', label: 'AI & Lead Engines' },
-  ];
-
-  const filteredPortals =
-    filter === 'all'
-      ? clientPortals
-      : clientPortals.filter((p) => p.category.includes(filter));
-
+export default function WorkPage() {
   return (
     <>
-      <main className="flex-grow pt-32 pb-24">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Header */}
-          <section className="mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 mb-4 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-              <span className="font-mono text-xs uppercase tracking-wider text-blue-700 font-semibold">
-                Delivered Client Blueprints &middot; Systems Architecture
-              </span>
-            </div>
-            <h1 className="text-display font-bold text-slate-900 mb-4">
-              Things I&apos;ve Architected <br className="hidden sm:block" />&amp; Delivered
-            </h1>
-            <p className="text-sub text-slate-600 max-w-2xl text-base leading-relaxed">
-              Live client platforms &middot; enterprise SEO retainers &middot; autonomous lead
-              pipelines &middot; verified ad performance impact.
-            </p>
-          </section>
-
-          {/* Filter Tabs */}
-          <div className="flex flex-wrap gap-2.5 border-b border-slate-200 pb-6 mb-16">
-            {filterTabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setFilter(tab.id)}
-                className={`filter-tab px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all ${
-                  filter === tab.id
-                    ? 'active bg-blue-600 text-white shadow-md'
-                    : 'bg-white text-slate-700 border border-slate-200 hover:border-blue-400'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Client Portals & Web Systems Grid */}
-          <section className="mb-24">
-            <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-200">
-              <h2 className="text-heading text-xl md:text-2xl font-bold text-slate-900">
-                Delivered Web Platforms &amp; Client Systems
-              </h2>
-              <span className="font-mono text-xs text-slate-500 font-medium">
-                {filteredPortals.length} Platforms Displayed
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredPortals.map((portal, idx) => (
-                <div
-                  key={idx}
-                  className="glass-card flex flex-col justify-between overflow-hidden group hover:shadow-xl transition-all"
-                >
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-blue-600 font-semibold px-2 py-0.5 rounded bg-blue-50 border border-blue-200">
-                        {portal.tag}
-                      </span>
-                      {portal.url !== '#' && (
-                        <a
-                          href={portal.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-slate-400 hover:text-blue-600 transition-colors"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      )}
-                    </div>
-                    <h3 className="font-heading text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-1">
-                      {portal.title}
-                    </h3>
-                    <span className="text-xs text-slate-600 block mb-3 font-medium">{portal.subtitle}</span>
-                    <p className="text-sm text-slate-700 leading-relaxed mb-4 font-normal">{portal.desc}</p>
-                    <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-mono text-slate-800 font-semibold mb-4">
-                      {portal.metrics}
-                    </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {portal.tech.map((t, i) => (
-                        <span
-                          key={i}
-                          className="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 text-xs font-mono font-medium"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* CTA Banner */}
-          <section className="cta-strip py-16 px-8 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center shadow-xl">
-            <h3 className="font-heading text-2xl font-bold mb-3">
-              Need Institutional Growth Systems for Your Firm?
-            </h3>
-            <p className="text-sm text-blue-100 max-w-xl mx-auto mb-6 leading-relaxed">
-              Whether you need automated real estate lead qualification, high-intent Google Search
-              infrastructure, or full-funnel tracking architecture, let&apos;s build.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/contact"
-                className="btn !bg-white !text-blue-700 hover:!bg-blue-50 !shadow-none !px-6 !py-3 text-xs font-semibold"
-              >
-                Initiate Strategic Brief &rarr;
-              </Link>
-              <Link
-                href="/training"
-                className="btn !bg-blue-700/60 hover:!bg-blue-700 !text-white !border-white/20 !shadow-none !px-6 !py-3 text-xs font-semibold"
-              >
-                Explore Training Program &rarr;
-              </Link>
-            </div>
-            <div className="mt-6 pt-4 border-t border-white/20 text-xs font-mono text-blue-100 flex items-center justify-center gap-2">
-              <span>Looking for free blueprints?</span>
-              <Link href="/blog" className="underline font-bold text-white hover:text-blue-200">
-                Read Career &amp; AI Playbooks &rarr;
-              </Link>
-            </div>
-          </section>
+      <header className="page-head">
+        <div className="wrap">
+          <p className="label">Work</p>
+          <h1 className="page-title">Things I&apos;ve built, and why.</h1>
+          <p className="page-lede">
+            Real projects only. Where something is live, there is a link so you can see it yourself. Where it is
+            private, I say so.
+          </p>
         </div>
-      </main>
+      </header>
 
-      <PresentationModal deckId={activeDeck} onClose={() => setActiveDeck(null)} />
+      <section className="section section--tight">
+        <div className="wrap">
+          <ol className="work-list">
+            {work.map((w) => (
+              <li key={w.key} className="work" id={w.key}>
+                <div>
+                  <p className="label">{w.kind}</p>
+                  <h2 className="work__title">{w.title}</h2>
+                  <p style={{ marginTop: 12 }}>{w.summary}</p>
+                  <dl>
+                    <dt>Why</dt>
+                    <dd>{w.why}</dd>
+                    <dt>Built with</dt>
+                    <dd>{w.built}</dd>
+                  </dl>
+                  {w.link && (
+                    <p style={{ marginTop: 8 }}>
+                      <a className="arrow-link" href={w.link.href} target="_blank" rel="noopener noreferrer">
+                        {w.link.label}
+                      </a>
+                    </p>
+                  )}
+                </div>
+                {w.shot ? (
+                  <figure className="work__shot">
+                    <img src={w.shot.src} alt={w.shot.alt} width="1280" height="800" loading="lazy" />
+                    <figcaption className="label">{w.shot.caption}</figcaption>
+                  </figure>
+                ) : (
+                  <div aria-hidden="true" />
+                )}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="closing" aria-labelledby="work-closing">
+        <div className="wrap">
+          <h2 id="work-closing" className="closing__title">
+            Need something like this?
+          </h2>
+          <p>
+            For property marketing, Veloxis Global is the place. For anything else, send me a message and I&apos;ll
+            tell you honestly if I can help.
+          </p>
+          <div className="hero__actions">
+            <TrackedLink
+              className="btn"
+              href={whatsappLink('Hi Muddassir, I saw your work page.')}
+              method="whatsapp"
+              location="work"
+            >
+              Message me on WhatsApp
+            </TrackedLink>
+            <Link className="arrow-link" href="/contact">
+              Contact page
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
