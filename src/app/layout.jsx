@@ -149,6 +149,13 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-W8JPSTDLC1');
           `}
         </Script>
+        {/* Google AdSense Script for Site Verification & Auto Ads */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4045389773179069"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="bg-[#FAFAFA] text-[#09090B] selection:bg-blue-600 selection:text-white">
         <Navbar />

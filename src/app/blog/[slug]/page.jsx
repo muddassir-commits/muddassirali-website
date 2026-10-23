@@ -41,7 +41,7 @@ export async function generateMetadata({ params }) {
 
   const url = `https://muddassirali.com/blog/${post.slug}`;
   const ogImage = post.image
-    ? `https://muddassirali.com${post.image}`
+    ? (post.image.startsWith('http') ? post.image : `https://muddassirali.com${post.image}`)
     : 'https://muddassirali.com/images/og-image.png';
 
   return {
@@ -93,7 +93,9 @@ export default async function BlogPostPage({ params }) {
     '@type': 'TechArticle',
     headline: post.title,
     description: post.excerpt,
-    image: post.image ? `https://muddassirali.com${post.image}` : 'https://muddassirali.com/images/og-image.png',
+    image: post.image
+      ? (post.image.startsWith('http') ? post.image : `https://muddassirali.com${post.image}`)
+      : 'https://muddassirali.com/images/og-image.png',
     datePublished: post.date,
     dateModified: post.date,
     author: {
