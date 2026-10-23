@@ -24,7 +24,7 @@ const NODES = [
     icon: Globe,
     color: 'blue',
     latency: '12ms',
-    metrics: '+340% Higher Intent',
+    metrics: 'Instant WhatsApp reply',
     tech: 'Google Ads API & Meta CAPI',
     description:
       'High-velocity buyer acquisition engineered across Google search query intent clusters and Meta high-ticket Advantage+ creative testing matrices.',
@@ -42,7 +42,7 @@ const NODES = [
     icon: Activity,
     color: 'indigo',
     latency: '24ms',
-    metrics: '99.4% Event Match Quality',
+    metrics: 'Tracked lead source',
     tech: 'Cloudflare Workers & BigQuery',
     description:
       'Server-side container bypassing client ad-blockers and iOS privacy constraints. Synced directly to GA4 data warehouses for true closed-loop ROAS.',

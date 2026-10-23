@@ -45,7 +45,7 @@ export default function ProjectsPage() {
       subtitle: '24/7 Fast Lead Qualification',
       category: 'automation paid-growth',
       tag: 'AI WhatsApp Engine',
-      metrics: 'Fast 60-Second Reply &middot; 88% Response Rate',
+      metrics: 'Fast WhatsApp reply',
       desc: 'An automated WhatsApp assistant that replies instantly to Facebook ad leads, shares project brochures, verifies buyer budgets, and books site visits.',
       tech: ['n8n', 'WhatsApp Cloud API', 'Meta CAPI', 'CRM'],
       img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop',
@@ -147,105 +147,6 @@ export default function ProjectsPage() {
               </button>
             ))}
           </div>
-
-          {/* Performance Marketing Case Studies Spotlight */}
-          {(filter === 'all' || filter === 'paid-growth') && (
-            <section className="mb-24 space-y-12">
-              <div className="flex items-center justify-between pb-4 border-b border-slate-200">
-                <div>
-                  <span className="font-mono text-xs uppercase tracking-wider text-blue-600 font-bold block mb-1">
-                    Featured Case Study
-                  </span>
-                  <h2 className="text-heading text-xl md:text-2xl font-bold text-slate-900">
-                    On-Demand App User Acquisition Engine (Google UAC)
-                  </h2>
-                </div>
-                <span className="px-3 py-1 rounded bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-mono font-semibold">
-                  -62% CPI Slashed
-                </span>
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                {/* Metric Dashboard Mockup */}
-                <div className="lg:col-span-7 bg-slate-950 p-6 rounded-2xl border border-slate-800 shadow-xl text-white">
-                  <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-5">
-                    <span className="font-mono text-[11px] text-slate-400">
-                      ads.google.com // Campaign: 24165958487 // Central Noida UAC
-                    </span>
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-                    <div className="p-3 bg-slate-900 rounded-xl border border-slate-800">
-                      <span className="text-[10px] font-mono text-slate-400 block uppercase">
-                        Optimized CPI
-                      </span>
-                      <span className="text-xl font-bold text-emerald-400 font-mono">₹12.50</span>
-                      <span className="text-[10px] text-emerald-500 font-mono">-62% Reduction</span>
-                    </div>
-                    <div className="p-3 bg-slate-900 rounded-xl border border-slate-800">
-                      <span className="text-[10px] font-mono text-slate-400 block uppercase">
-                        Impressions
-                      </span>
-                      <span className="text-xl font-bold text-white font-mono">10,441</span>
-                      <span className="text-[10px] text-blue-400 font-mono">100% Mobile Feed</span>
-                    </div>
-                    <div className="p-3 bg-slate-900 rounded-xl border border-slate-800">
-                      <span className="text-[10px] font-mono text-slate-400 block uppercase">
-                        Verified Installs
-                      </span>
-                      <span className="text-xl font-bold text-blue-400 font-mono">177+</span>
-                      <span className="text-[10px] text-slate-400 font-mono">Targeted Geo</span>
-                    </div>
-                    <div className="p-3 bg-slate-900 rounded-xl border border-slate-800">
-                      <span className="text-[10px] font-mono text-slate-400 block uppercase">
-                        Budget Leak Cut
-                      </span>
-                      <span className="text-xl font-bold text-amber-400 font-mono">10%</span>
-                      <span className="text-[10px] text-slate-400 font-mono">Tablets Purged</span>
-                    </div>
-                  </div>
-                  <p className="text-xs text-slate-400 font-mono">
-                    Geofenced 3km Central Noida radius (Pincodes 201309 &amp; 201307 generated 84%
-                    of total verified app installations).
-                  </p>
-                </div>
-
-                {/* Case Study Details */}
-                <div className="lg:col-span-5 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-blue-600 uppercase">
-                      Case 01 / App Acquisition
-                    </span>
-                    <span className="px-2.5 py-0.5 rounded bg-emerald-50 text-emerald-700 text-[10px] font-mono font-semibold">
-                      Verified Client Impact
-                    </span>
-                  </div>
-                  <h3 className="font-heading text-xl font-bold text-slate-900">
-                    On-Demand Marketplace Funnel Overhaul
-                  </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Google Universal App Campaigns (UAC) re-architected from an untracked, high-cost
-                    funnel into a hyper-local conversion machine with dayparting bid schedules and
-                    device hygiene filters.
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 pt-2">
-                    <span className="px-2 py-1 rounded bg-slate-100 text-slate-700 text-[10px] font-mono">
-                      Google Ads UAC
-                    </span>
-                    <span className="px-2 py-1 rounded bg-slate-100 text-slate-700 text-[10px] font-mono">
-                      Firebase Analytics
-                    </span>
-                    <span className="px-2 py-1 rounded bg-slate-100 text-slate-700 text-[10px] font-mono">
-                      Bid Dayparting
-                    </span>
-                    <span className="px-2 py-1 rounded bg-slate-100 text-slate-700 text-[10px] font-mono">
-                      Device Hygiene
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </section>
-          )}
 
           {/* Client Portals & Web Systems Grid */}
           <section className="mb-24">

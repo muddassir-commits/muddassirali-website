@@ -40,50 +40,16 @@ export default function ContactPage() {
     }));
   };
 
-  const N8N_WEBHOOK_URL =
-    'https://automation.veloxisglobal.com/webhook/18bba731-ff30-4640-a209-407dd837b5df';
-
-  const handleSubmit = async (e) => {
+  // The old n8n webhook domain does not exist, so the form used to show "success" and drop every message.
+  // Now the message opens in the visitor's own email app, addressed to the founder.
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus('submitting');
-
-    try {
-      const response = await fetch(N8N_WEBHOOK_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        // Dispatch GA4 Recommended Conversion Event
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'generate_lead', {
-            event_category: 'Contact',
-            event_label: formData.subject || 'Strategic Consultation',
-            value: 1,
-          });
-        }
-
-        setStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: '',
-        });
-      } else {
-        // Fallback gracefully so the user is never blocked
-        setStatus('success');
-      }
-    } catch (error) {
-      console.warn('n8n Webhook Notice:', error);
-      // Fallback gracefully to success message so the client experience remains smooth
-      setStatus('success');
-    }
+    const subject = encodeURIComponent(`Website enquiry: ${formData.subject || 'General'}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\n${formData.message}`
+    );
+    window.location.href = `mailto:theofficialmuddassir@gmail.com?subject=${subject}&body=${body}`;
+    setStatus('mailto');
   };
 
   return (
@@ -247,6 +213,12 @@ export default function ContactPage() {
                 </div>
               </div>
               
+              {status === 'mailto' && (
+                <p className="text-sm text-slate-700 mb-4">
+                  Your email app should open with your message. If it did not, email{' '}
+                  <a className="font-bold text-blue-700 underline" href="mailto:theofficialmuddassir@gmail.com">theofficialmuddassir@gmail.com</a> directly.
+                </p>
+              )}
               {status === 'success' ? (
                 <div className="py-12 text-center space-y-4">
                   <div className="w-16 h-16 rounded-full bg-emerald-50 border-2 border-emerald-500 text-emerald-600 flex items-center justify-center mx-auto">

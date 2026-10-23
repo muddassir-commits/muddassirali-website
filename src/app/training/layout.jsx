@@ -1,14 +1,14 @@
 export const metadata = {
   title: '16-Step Practical Performance Marketing & Automation Curriculum — Muddassir Ali',
   description:
-    '16-step hands-on training curriculum instructing 300+ learners across NDMIT & ASDC Kanpur on Google Ads, Meta CAPI, and n8n automations.',
+    '16-step hands-on training curriculum covering Google Ads, Meta CAPI, and n8n automations.',
   alternates: {
     canonical: 'https://muddassirali.com/training',
   },
   openGraph: {
     title: '16-Step Practical Performance Marketing & Automation Curriculum — Muddassir Ali',
     description:
-      '16-step hands-on training curriculum instructing 300+ learners across NDMIT & ASDC Kanpur on Google Ads, Meta CAPI, and n8n automations.',
+      '16-step hands-on training curriculum covering Google Ads, Meta CAPI, and n8n automations.',
     url: 'https://muddassirali.com/training',
     siteName: 'Muddassir Ali',
     images: [
@@ -25,7 +25,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: '16-Step Practical Performance Marketing & Automation Curriculum — Muddassir Ali',
     description:
-      '16-step hands-on training curriculum instructing 300+ learners on Google Ads, Meta CAPI, and n8n automations.',
+      '16-step hands-on training curriculum covering Google Ads, Meta CAPI, and n8n automations.',
     images: ['https://muddassirali.com/images/Muddassir_Ali.webp'],
     creator: '@veloxisglobal',
   },

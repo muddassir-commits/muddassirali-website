@@ -51,7 +51,7 @@ export default function ThreeHero() {
       <div className="absolute bottom-6 right-6 z-10 pointer-events-none">
         <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-lg shadow-indigo-500/5 text-[11px] font-mono text-slate-800">
           <Activity className="w-3.5 h-3.5 text-indigo-600" />
-          <span className="text-slate-700 font-semibold">Attribution: 100% Verified</span>
+          <span className="text-slate-700 font-semibold">Google certified founder</span>
         </div>
       </div>
     </div>

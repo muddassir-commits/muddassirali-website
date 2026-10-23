@@ -50,33 +50,9 @@ export default function TrainingPage() {
         </h1>
 
         <p className="text-sub text-slate-700 max-w-2xl mx-auto mb-12 text-base leading-relaxed font-normal">
-          300+ learners trained &middot; 17+ batches instructed &middot; Lead Educator across NDMIT &amp;
-          ASDC Kanpur. Real-world campaigns, practical systems, zero fluff.
+          Practical training on Google Ads, Meta and automation. Real campaigns, practical systems, zero fluff.
         </p>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto pt-8 border-t border-slate-200">
-          <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-            <span className="text-stat text-blue-600 font-bold block mb-1">17+</span>
-            <span className="font-mono text-xs uppercase tracking-wider text-slate-600 font-semibold block">
-              Batches Trained
-            </span>
-          </div>
-
-          <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-            <span className="text-stat text-emerald-600 font-bold block mb-1">300+</span>
-            <span className="font-mono text-xs uppercase tracking-wider text-slate-600 font-semibold block">
-              Learners Instructed
-            </span>
-          </div>
-
-          <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
-            <span className="text-stat text-indigo-600 font-bold block mb-1">6+</span>
-            <span className="font-mono text-xs uppercase tracking-wider text-slate-600 font-semibold block">
-              Years Experience
-            </span>
-          </div>
-        </div>
       </section>
 
       {/* 16-Step Curriculum Journey */}

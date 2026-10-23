@@ -100,14 +100,6 @@ const PRESENTATION_DECKS = {
             </p>
             <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-2">
               <div class="flex items-center justify-between text-xs font-semibold text-emerald-900">
-                <span>Verified Client Results:</span>
-                <span class="text-emerald-700 font-mono">Veloxis Benchmark</span>
-              </div>
-              <ul class="text-xs text-emerald-800 space-y-1.5 list-disc pl-4 font-medium">
-                <li>Cost per Qualified Lead dropped by <strong>62%</strong>.</li>
-                <li>WhatsApp response delivered in <strong>under 45 seconds</strong>.</li>
-                <li>Physical site visit booking rate increased by <strong>3.2X</strong>.</li>
-              </ul>
             </div>
             <p class="text-xs text-slate-500 font-mono text-center">Full whitepaper available upon request via Veloxis Global.</p>
           </div>
@@ -155,7 +147,7 @@ const PRESENTATION_DECKS = {
         content: `
           <div class="space-y-4">
             <p class="text-sm text-slate-600">
-              In high-ticket real estate purchases (₹1 Cr - ₹15 Cr), intent decays rapidly. Research by Harvard Business Review & MIT proves:
+              In high-ticket real estate purchases (₹1 Cr - ₹15 Cr), intent decays rapidly. Research on buyer intent proves:
             </p>
             <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-3">
               <div class="flex items-center justify-between">

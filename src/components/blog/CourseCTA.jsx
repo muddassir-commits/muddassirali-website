@@ -3,7 +3,7 @@ import { Sparkles, ArrowRight, CheckCircle2, Users, Calendar } from 'lucide-reac
 
 export default function CourseCTA({
   title = 'Want to Master AI Automations & High-Income Ad Buying in 30 Days?',
-  subtitle = 'Skip 6 months of trial and error. Join 300+ students and working professionals trained by Muddassir Ali. Practical case studies, live cohorts, and direct mentorship.',
+  subtitle = 'Skip 6 months of trial and error. Learn the practical steps from Muddassir Ali. Practical case studies, live cohorts, and direct mentorship.',
   badge = 'Accelerated Masterclass &middot; Live Cohorts',
   ctaText = 'Explore Syllabi & Reserve Spot',
   ctaHref = '/training',
@@ -37,7 +37,7 @@ export default function CourseCTA({
           </div>
           <div className="flex items-center gap-2">
             <Users className="w-4 h-4 text-blue-400 shrink-0" />
-            <span>300+ Students Mentored</span>
+            <span>Practical Training</span>
           </div>
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4 text-indigo-400 shrink-0" />

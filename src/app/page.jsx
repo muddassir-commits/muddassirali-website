@@ -86,7 +86,7 @@ export default function HomePage() {
                 </span>
                 <span className="px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm font-mono text-xs text-slate-700 flex items-center gap-1.5">
                   <Award className="w-3.5 h-3.5 text-emerald-600" />
-                  4x Google Certified Marketer
+                  Google Certified Founder
                 </span>
                 <span className="px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm font-mono text-xs text-slate-700 flex items-center gap-1.5">
                   <Zap className="w-3.5 h-3.5 text-indigo-600" />
@@ -141,7 +141,7 @@ export default function HomePage() {
               </div>
               <div>
                 <span className="text-xs text-slate-600 block uppercase font-medium">ATTRIBUTION MATCH</span>
-                <span className="text-sm font-bold text-blue-600">99.4% EVENT QUALITY</span>
+                <span className="text-sm font-bold text-blue-600">GOOGLE CERTIFIED</span>
               </div>
               <div>
                 <span className="text-xs text-slate-600 block uppercase font-medium">DIRECTED AD SPEND</span>
