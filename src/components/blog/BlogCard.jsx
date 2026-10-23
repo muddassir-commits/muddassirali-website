@@ -23,6 +23,7 @@ export default function BlogCard({ post, featured = false }) {
           src={post.image || '/images/tech/ai_command_center.jpg'}
           alt={post.imageAlt || post.title}
           fill
+          loading="eager"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           sizes={featured ? '(max-width: 1024px) 100vw, 50vw' : '(max-width: 768px) 100vw, 33vw'}
         />
