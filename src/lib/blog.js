@@ -7,28 +7,17 @@ export function getAllPosts() {
 }
 
 export function getPostBySlug(slug) {
-  return ALL_POSTS.find((post) => post.slug === slug);
-}
-
-export function getPostsByCategory(category) {
-  if (!category || category === 'All') return getAllPosts();
-  return getAllPosts().filter((post) => post.category.toLowerCase() === category.toLowerCase());
+  return ALL_POSTS.find((post) => post.slug === slug && !post.draft);
 }
 
 export function getAllCategories() {
-  const categories = new Set(ALL_POSTS.map((post) => post.category));
-  return ['All', ...Array.from(categories)];
+  return ['All', ...new Set(getAllPosts().map((post) => post.category))];
 }
 
+// Same-topic posts first, then the newest others, so every post links onward.
 export function getRelatedPosts(currentSlug, category, limit = 3) {
-  return ALL_POSTS.filter(
-    (post) => post.slug !== currentSlug && post.category === category
-  ).slice(0, limit);
-}
-
-export function calculateReadingTime(text) {
-  const wordsPerMinute = 220;
-  const words = text ? text.trim().split(/\s+/).length : 0;
-  const minutes = Math.ceil(words / wordsPerMinute);
-  return `${minutes} min read`;
+  const others = getAllPosts().filter((post) => post.slug !== currentSlug);
+  const same = others.filter((post) => post.category === category);
+  const rest = others.filter((post) => post.category !== category);
+  return [...same, ...rest].slice(0, limit);
 }
