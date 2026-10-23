@@ -74,7 +74,7 @@ export default function QualifierSimulator() {
   const currentOptions = CONVERSATION_STEPS[stepIndex]?.options || [];
 
   return (
-    <div className="relative mx-auto max-w-[360px] rounded-[36px] bg-slate-900 p-3 shadow-2xl border-4 border-slate-700">
+    <div className="relative mx-auto w-full max-w-[360px] rounded-[36px] bg-slate-900 p-3 shadow-2xl border-4 border-slate-700">
       {/* Phone Notch & Speaker */}
       <div className="absolute top-4 left-1/2 -translate-x-1/2 w-28 h-4 bg-slate-800 rounded-full z-20 flex items-center justify-center">
         <span className="w-10 h-1 bg-slate-700 rounded-full" />

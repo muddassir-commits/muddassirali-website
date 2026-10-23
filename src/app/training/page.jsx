@@ -124,13 +124,27 @@ export default function TrainingPage() {
           Custom corporate marketing workshops on Google Ads smart bidding, Meta CAPI conversion
           pipelines, and automated lead qualifier state machines.
         </p>
-        <Link
-          href="/contact"
-          className="btn !bg-white !text-blue-700 hover:!bg-blue-50 !shadow-none !px-6 !py-3 text-xs font-semibold inline-flex items-center gap-2"
-        >
-          <span>Inquire for Corporate Training</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            href="/contact"
+            className="btn !bg-white !text-blue-700 hover:!bg-blue-50 !shadow-none !px-6 !py-3 text-xs font-semibold inline-flex items-center gap-2"
+          >
+            <span>Inquire for Corporate Training</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          <Link
+            href="/projects"
+            className="btn !bg-blue-700/60 hover:!bg-blue-700 !text-white !border-white/20 !shadow-none !px-6 !py-3 text-xs font-semibold"
+          >
+            See Delivered Client Systems &rarr;
+          </Link>
+        </div>
+        <div className="mt-6 pt-4 border-t border-white/20 text-xs font-mono text-blue-100 flex items-center justify-center gap-2">
+          <span>Looking for free practical guides?</span>
+          <Link href="/blog" className="underline font-bold text-white hover:text-blue-200">
+            Read Free Career &amp; AI Playbooks &rarr;
+          </Link>
+        </div>
       </section>
     </main>
   );

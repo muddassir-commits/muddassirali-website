@@ -666,7 +666,116 @@ export default function HomePage() {
         </section>
 
         {/* ========================================================================= */}
-        {/* 7. STRATEGIC CTA STRIP                                                    */}
+        {/* 7. FEATURED CAREER, AI & MARKETING PLAYBOOKS (INTERNAL LINKING HUB)       */}
+        {/* ========================================================================= */}
+        <section id="featured-guides" className="py-24 border-t border-slate-200 bg-slate-50/60 relative">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 mb-3 shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+                  <span className="font-mono text-xs uppercase tracking-wider text-blue-700 font-semibold">
+                    Free Knowledge Base &middot; Career &amp; AI
+                  </span>
+                </div>
+                <h2 className="text-heading font-bold text-slate-900 tracking-tight">
+                  High-Income Skills &amp; Career Playbooks
+                </h2>
+                <p className="text-sub text-slate-600 max-w-xl text-base mt-2">
+                  Battle-tested tutorials, corporate communication scripts, and AI automation guides designed for students, freshers, and professionals.
+                </p>
+              </div>
+              <Link
+                href="/blog"
+                className="btn btn-secondary !py-2.5 !px-5 text-xs font-semibold inline-flex items-center gap-2 self-start md:self-auto hover:text-blue-600 transition-colors"
+              >
+                <span>Browse All Guides</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* 3 Featured Guide Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Card 1: n8n */}
+              <Link
+                href="/blog/beginners-guide-to-n8n-automation-2026"
+                className="glass-card group overflow-hidden flex flex-col justify-between hover:shadow-xl hover:border-blue-500/50 transition-all bg-white"
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="px-2.5 py-0.5 rounded-md bg-blue-50 text-blue-700 font-mono text-[10.5px] font-semibold border border-blue-200/60">
+                      AI &amp; Automation
+                    </span>
+                    <span className="text-xs font-mono text-slate-500">8 min read</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors mb-2 leading-snug">
+                    The Beginner’s Guide to n8n in 2026: Automate Real Work for ₹0 Without Code
+                  </h3>
+                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                    Learn how beginners use free open-source n8n to automate lead notifications, scrape data, and deliver paid client workflows.
+                  </p>
+                </div>
+                <div className="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between text-xs font-mono font-semibold text-blue-600 group-hover:text-blue-700">
+                  <span>Read Tutorial</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+
+              {/* Card 2: Salary Negotiation */}
+              <Link
+                href="/blog/salary-negotiation-playbook-freshers-india"
+                className="glass-card group overflow-hidden flex flex-col justify-between hover:shadow-xl hover:border-blue-500/50 transition-all bg-white"
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="px-2.5 py-0.5 rounded-md bg-emerald-50 text-emerald-700 font-mono text-[10.5px] font-semibold border border-emerald-200/60">
+                      Career Growth
+                    </span>
+                    <span className="text-xs font-mono text-slate-500">7 min read</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors mb-2 leading-snug">
+                    Salary Negotiation Playbook for Freshers &amp; Professionals in India
+                  </h3>
+                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                    Exact word-for-word email templates and phone scripts to ask for 25% to 40% higher pay without feeling awkward or losing the offer.
+                  </p>
+                </div>
+                <div className="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between text-xs font-mono font-semibold text-blue-600 group-hover:text-blue-700">
+                  <span>Read Playbook</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+
+              {/* Card 3: Corporate English */}
+              <Link
+                href="/blog/corporate-english-communication-playbook"
+                className="glass-card group overflow-hidden flex flex-col justify-between hover:shadow-xl hover:border-blue-500/50 transition-all bg-white"
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="px-2.5 py-0.5 rounded-md bg-purple-50 text-purple-700 font-mono text-[10.5px] font-semibold border border-purple-200/60">
+                      Communication
+                    </span>
+                    <span className="text-xs font-mono text-slate-500">9 min read</span>
+                  </div>
+                  <h3 className="font-heading font-bold text-lg text-slate-900 group-hover:text-blue-600 transition-colors mb-2 leading-snug">
+                    Corporate English &amp; Communication: Speak with Confidence at Work
+                  </h3>
+                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                    How non-native English speakers can stop hesitating in meetings, write professional emails, and communicate clearly with managers.
+                  </p>
+                </div>
+                <div className="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between text-xs font-mono font-semibold text-blue-600 group-hover:text-blue-700">
+                  <span>Read Playbook</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================================================= */}
+        {/* 8. STRATEGIC CTA STRIP                                                    */}
         {/* ========================================================================= */}
         <section className="cta-strip py-24 border-t border-slate-200 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
           <div className="max-w-4xl mx-auto px-6 text-center z-10 relative">

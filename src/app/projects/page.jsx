@@ -313,12 +313,24 @@ export default function ProjectsPage() {
               Whether you need automated real estate lead qualification, high-intent Google Search
               infrastructure, or full-funnel tracking architecture, let&apos;s build.
             </p>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
                 className="btn !bg-white !text-blue-700 hover:!bg-blue-50 !shadow-none !px-6 !py-3 text-xs font-semibold"
               >
                 Initiate Strategic Brief &rarr;
+              </Link>
+              <Link
+                href="/training"
+                className="btn !bg-blue-700/60 hover:!bg-blue-700 !text-white !border-white/20 !shadow-none !px-6 !py-3 text-xs font-semibold"
+              >
+                Explore Training Program &rarr;
+              </Link>
+            </div>
+            <div className="mt-6 pt-4 border-t border-white/20 text-xs font-mono text-blue-100 flex items-center justify-center gap-2">
+              <span>Looking for free blueprints?</span>
+              <Link href="/blog" className="underline font-bold text-white hover:text-blue-200">
+                Read Career &amp; AI Playbooks &rarr;
               </Link>
             </div>
           </section>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import {
   Mail,
   Phone,
@@ -357,6 +358,39 @@ export default function ContactPage() {
                 </form>
               )}
             </div>
+          </div>
+        </section>
+
+        {/* Internal Hub Navigation */}
+        <section className="mt-8 pt-12 border-t border-slate-200 text-center max-w-4xl mx-auto">
+          <span className="font-mono text-xs uppercase tracking-widest text-slate-500 font-bold block mb-4">
+            Explore Free Resources &amp; Credentials
+          </span>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link
+              href="/blog"
+              className="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all text-left group"
+            >
+              <span className="text-xs font-mono text-blue-600 font-bold uppercase tracking-wider block mb-1">Playbooks</span>
+              <h3 className="font-heading font-bold text-slate-900 group-hover:text-blue-600 text-sm mb-1">Career &amp; AI Guides</h3>
+              <p className="text-xs text-slate-600">Free practical tutorials on n8n, salary scripts, and workplace English.</p>
+            </Link>
+            <Link
+              href="/training"
+              className="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all text-left group"
+            >
+              <span className="text-xs font-mono text-emerald-600 font-bold uppercase tracking-wider block mb-1">Education</span>
+              <h3 className="font-heading font-bold text-slate-900 group-hover:text-emerald-600 text-sm mb-1">16-Step Curriculum</h3>
+              <p className="text-xs text-slate-600">Practical performance marketing and automation mentorship.</p>
+            </Link>
+            <Link
+              href="/projects"
+              className="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all text-left group"
+            >
+              <span className="text-xs font-mono text-indigo-600 font-bold uppercase tracking-wider block mb-1">Work</span>
+              <h3 className="font-heading font-bold text-slate-900 group-hover:text-indigo-600 text-sm mb-1">Client Systems</h3>
+              <p className="text-xs text-slate-600">PropTech lead funnels and live web systems delivered.</p>
+            </Link>
           </div>
         </section>
 

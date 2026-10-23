@@ -334,6 +334,15 @@ export default function AboutPage() {
               Email Directly
             </a>
           </div>
+
+          <div className="mt-8 pt-6 border-t border-slate-200 flex flex-wrap items-center justify-center gap-4 text-xs font-mono font-medium text-slate-600">
+            <span>Explore More:</span>
+            <Link href="/projects" className="text-blue-600 hover:text-blue-800 underline underline-offset-2 font-semibold">Client Systems &amp; Work</Link>
+            <span>&middot;</span>
+            <Link href="/training" className="text-blue-600 hover:text-blue-800 underline underline-offset-2 font-semibold">16-Step Curriculum</Link>
+            <span>&middot;</span>
+            <Link href="/blog" className="text-blue-600 hover:text-blue-800 underline underline-offset-2 font-semibold">Career &amp; AI Playbooks</Link>
+          </div>
         </section>
 
       </div>

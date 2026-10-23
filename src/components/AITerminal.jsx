@@ -131,7 +131,7 @@ export default function AITerminal() {
       </div>
 
       {/* Terminal Footer Status Bar */}
-      <div className="bg-slate-950 px-6 py-3 border-t border-slate-800/80 flex items-center justify-between text-[10.5px] text-slate-400">
+      <div className="bg-slate-950 px-6 py-3 border-t border-slate-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between text-[10.5px] text-slate-400 gap-1.5">
         <div className="flex items-center gap-2">
           <Bot className="w-3.5 h-3.5 text-emerald-400" />
           <span>Conversational Agent Active &middot; Automated Qualification</span>
