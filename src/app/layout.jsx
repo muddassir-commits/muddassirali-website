@@ -3,6 +3,7 @@ import { Inter, Manrope, JetBrains_Mono } from 'next/font/google';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CustomCursor from '../components/CustomCursor';
+import GoogleAnalyticsTracker from '../components/GoogleAnalyticsTracker';
 import Script from 'next/script';
 
 const inter = Inter({
@@ -33,6 +34,9 @@ export const metadata = {
   },
   description:
     'Personal authority hub of Muddassir Ali (Founder & Managing Director of Veloxis Global). Architecting scalable AI growth systems, PropTech real estate engines, and high-velocity acquisition pipelines.',
+  alternates: {
+    canonical: 'https://muddassirali.com',
+  },
   authors: [{ name: 'Muddassir Ali', url: 'https://muddassirali.com' }],
   creator: 'Muddassir Ali',
   openGraph: {
@@ -158,6 +162,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="bg-[#FAFAFA] text-[#09090B] selection:bg-blue-600 selection:text-white">
+        <GoogleAnalyticsTracker />
         <Navbar />
         <CustomCursor />
         <div className="page-wrapper min-h-screen flex flex-col">
