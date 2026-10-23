@@ -1,187 +1,124 @@
 import './globals.css';
-import { Inter, Manrope, JetBrains_Mono } from 'next/font/google';
-import Navbar from '../components/Navbar';
+import Script from 'next/script';
+import { Schibsted_Grotesk, Newsreader, IBM_Plex_Mono } from 'next/font/google';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
-import CustomCursor from '../components/CustomCursor';
-import GoogleAnalyticsTracker from '../components/GoogleAnalyticsTracker';
+import { site, personSchema } from '../lib/site';
 
-const inter = Inter({
+const schibsted = Schibsted_Grotesk({
   subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-schibsted',
   display: 'swap',
 });
 
-const manrope = Manrope({
+const newsreader = Newsreader({
   subsets: ['latin'],
-  variable: '--font-heading',
+  variable: '--font-newsreader',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const plexMono = IBM_Plex_Mono({
   subsets: ['latin'],
-  variable: '--font-mono',
+  variable: '--font-plex-mono',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '500'],
 });
+
+const description =
+  'Muddassir Ali is a marketer from Kanpur and the founder of Veloxis Global. He sets up ads, landing pages and fast WhatsApp replies for property businesses, and writes plain guides on careers, AI tools and automation.';
 
 export const metadata = {
-  metadataBase: new URL('https://muddassirali.com'),
+  metadataBase: new URL(site.url),
   title: {
-    default: 'Muddassir Ali — Founder @ Veloxis Global | AI Growth Systems Architect',
-    template: '%s | Muddassir Ali',
+    default: 'Muddassir Ali · Marketer in Kanpur, founder of Veloxis Global',
+    template: '%s · Muddassir Ali',
   },
-  description:
-    'Personal authority hub of Muddassir Ali (Founder & Managing Director of Veloxis Global). Architecting scalable AI growth systems, PropTech real estate engines, and high-velocity acquisition pipelines.',
-  alternates: {
-    canonical: 'https://muddassirali.com',
-  },
-  authors: [{ name: 'Muddassir Ali', url: 'https://muddassirali.com' }],
+  description,
+  applicationName: 'Muddassir Ali',
+  authors: [{ name: 'Muddassir Ali', url: site.url }],
   creator: 'Muddassir Ali',
+  alternates: { canonical: site.url },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: 'https://muddassirali.com',
+    locale: 'en_IN',
+    url: site.url,
     siteName: 'Muddassir Ali',
-    title: 'Muddassir Ali — Founder @ Veloxis Global | AI Growth Systems Architect',
-    description:
-      'Architecting scalable AI systems, PropTech real estate engines, and high-velocity acquisition pipelines.',
-    images: [
-      {
-        url: '/images/Muddassir_Ali.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Muddassir Ali — Founder @ Veloxis Global',
-      },
-    ],
+    title: 'Muddassir Ali · Marketer in Kanpur, founder of Veloxis Global',
+    description,
+    images: [{ url: site.ogImage, width: 1200, height: 630, alt: 'Muddassir Ali' }],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@veloxisglobal',
-    creator: '@veloxisglobal',
-    title: 'Muddassir Ali — Founder @ Veloxis Global',
-    description:
-      'Architecting scalable AI systems, PropTech real estate engines, and high-velocity acquisition pipelines.',
-    images: ['/images/Muddassir_Ali.webp'],
+    creator: '@muddassir_alii',
+    title: 'Muddassir Ali · Marketer in Kanpur',
+    description,
+    images: [site.ogImage],
   },
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.png',
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }, { url: '/favicon.png', type: 'image/png' }],
+    apple: '/apple-touch-icon.png',
   },
   verification: {
     google: 'XOtyYOYEfIvHdx078CsKX-_F1UCQjVxa6yz94M5W3Og',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-4045389773179069',
+  },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Muddassir Ali',
-  jobTitle: 'Founder & Managing Director',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Veloxis Global',
-    url: 'https://www.veloxisglobal.com',
-  },
-  url: 'https://muddassirali.com',
-  image: 'https://muddassirali.com/images/Muddassir_Ali.webp',
-  description:
-    'Founder & Managing Director of Veloxis Global, AI Marketing Systems Architect, and Google Certified Performance Marketer.',
-  knowsAbout: [
-    'Real Estate Lead Systems',
-    'AI Marketing Systems',
-    'Performance Marketing & Algorithmic Ad Buying',
-    'PropTech Growth Automation',
-    'Google Ads Search & Measurement',
-    'Server-Side Tag Management',
-    'Google Analytics 4 (GA4)',
-  ],
-  hasCredential: [
-    {
-      '@type': 'EducationalOccupationalCredential',
-      name: 'Google Ads Search Certification',
-      credentialCategory: 'Professional Certification',
-      recognizedBy: { '@type': 'Organization', name: 'Google' },
-    },
-    {
-      '@type': 'EducationalOccupationalCredential',
-      name: 'Google Ads Apps Certification',
-      credentialCategory: 'Professional Certification',
-      recognizedBy: { '@type': 'Organization', name: 'Google' },
-    },
-    {
-      '@type': 'EducationalOccupationalCredential',
-      name: 'Google Ads Measurement Certification',
-      credentialCategory: 'Professional Certification',
-      recognizedBy: { '@type': 'Organization', name: 'Google' },
-    },
-    {
-      '@type': 'EducationalOccupationalCredential',
-      name: 'Google Analytics (GA4) Certification',
-      credentialCategory: 'Professional Certification',
-      recognizedBy: { '@type': 'Organization', name: 'Google' },
-    },
-  ],
-  sameAs: [
-    'https://www.linkedin.com/in/muddassir-alii/',
-    'https://x.com/veloxisglobal',
-    'https://github.com/muddassir-commits',
-    'https://www.crunchbase.com/person/muddassir-ali',
-  ],
+export const viewport = {
+  themeColor: '#f2f3ef',
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable}`}
-    >
+    <html lang="en-IN" className={`${schibsted.variable} ${newsreader.variable} ${plexMono.variable}`}>
       <head>
-        {/* Google Site Verification (Search Console & Analytics) */}
-        <meta
-          name="google-site-verification"
-          content="XOtyYOYEfIvHdx078CsKX-_F1UCQjVxa6yz94M5W3Og"
-        />
-
-        {/* Semantic SEO JSON-LD Person Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-
-        {/* Google Analytics GA4 (Direct Static Tag) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-W8JPSTDLC1"
-        />
-        <script
           dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-W8JPSTDLC1', {
-                page_path: window.location.pathname,
-              });
-            `,
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                personSchema,
+                {
+                  '@type': 'WebSite',
+                  '@id': `${site.url}/#website`,
+                  url: site.url,
+                  name: 'Muddassir Ali',
+                  inLanguage: 'en-IN',
+                  publisher: { '@id': `${site.url}/#person` },
+                },
+              ],
+            }),
           }}
         />
-
-        {/* Google AdSense Script for Site Verification & Auto Ads */}
+        {/* Google AdSense (auto ads). Kept in the head so AdSense can verify the site. */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4045389773179069"
           crossOrigin="anonymous"
         />
       </head>
-      <body className="bg-[#FAFAFA] text-[#09090B] selection:bg-blue-600 selection:text-white">
-        <GoogleAnalyticsTracker />
-        <Navbar />
-        <CustomCursor />
-        <div className="page-wrapper min-h-screen flex flex-col">
-          {children}
-        </div>
+      <body>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
+        <Header />
+        <main id="main">{children}</main>
         <Footer />
+
+        {/* Google Analytics 4. Page changes inside the site are counted by GA4's enhanced measurement. */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-W8JPSTDLC1" strategy="afterInteractive" />
+        <Script id="ga4" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W8JPSTDLC1');`}
+        </Script>
       </body>
     </html>
   );
