@@ -58,6 +58,15 @@ export default function ContactPage() {
       });
 
       if (response.ok) {
+        // Dispatch GA4 Recommended Conversion Event
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'generate_lead', {
+            event_category: 'Contact',
+            event_label: formData.subject || 'Strategic Consultation',
+            value: 1,
+          });
+        }
+
         setStatus('success');
         setFormData({
           name: '',
